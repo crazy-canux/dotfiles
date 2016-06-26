@@ -1,0 +1,108 @@
+###############################################################################
+# Canux's bash
+# canuxcheng@gmail.com
+# https://github.com/crazy-canux/xDevOps
+###############################################################################
+
+
+###############################################################################
+# oh-my-zsh
+# export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(curl -fsSL
+# https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+###############################################################################
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.zsh.d/oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+#ZSH_THEME="robbyrussell"
+ZSH_THEME="ys"
+
+# Random the theme
+#ZSH_THEME_RANDOM_CANDIDATES=( robbyrussell agnoster bureau mortalscumbag ys )
+#if [ "${(t)ZSH_THEME_RANDOM_CANDIDATES}" = "array" ] && [ "${#ZSH_THEME_RANDOM_CANDIDATES[@]}" -gt 0 ]; then
+#    themes=(${^ZSH_THEME_RANDOM_CANDIDATES})
+#    N=${#themes[@]}
+#    ((N=(RANDOM%N)+1))
+#    ZSH_THEME=${themes[$N]}
+#    echo $ZSH_THEME
+#fi
+
+# Uncomment the following line to use case-sensitive completion.
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion. Case
+# sensitive completion must be off. _ and - will be interchangeable.
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment the following line to disable bi-weekly auto-update checks.
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment the following line to change how often to auto-update (in days).
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line to disable colors in ls.
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+# under VCS as dirty. This makes repository status check for large repositories
+# much, much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+# stamp shown in the history command output.
+# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(git apache2-macports autopep8 branch command-not-found common-aliases compleat django docker docker-compose fabric git-extras gitfast git-flow git-flow-avh github git-hubflow gitignore git-prompt git-remote-branch history history-substring-search man mysql-macports npm node nvm pep8 pip postgres pyenv pylint python repo screen spring ssh-agent sudo systemd systemadmin terminitor themes tmux tmux-cssh tmuxinator ubuntu vagrant vim-interaction vi-mode virtualenv virtualenvwrapper vundle yum zsh-navigation-tools zsh_reload ant)
+
+# User configuration
+
+# PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+export PATH="$HOME/myCode/xshell:$PATH"
+# export MANPATH="/usr/local/man:$MANPATH"
+
+source $ZSH/oh-my-zsh.sh
+
+# You may need to manually set your language environment
+export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+if [[ -n $SSH_CONNECTION ]]; then
+    export EDITOR='vim'
+else
+    export EDITOR='vim'
+fi
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+export SSH_KEY_PATH="~/.ssh/id_rsa.pub"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
