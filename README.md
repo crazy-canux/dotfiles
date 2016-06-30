@@ -24,7 +24,7 @@ Incluse:
 
 ![pic](/data/all.png)
 
-![pic1](/data/vim/png)
+![pic1](/data/vim.png)
 
 ![pic2](/data/tmux.png)
 
