@@ -121,8 +121,9 @@ if ! shopt -oq posix; then
 fi
 
 ###############################################################################
-# Put some bash script file in ~/.bash.d
+# You own configuration
 ###############################################################################
+# Put some bash script file in ~/.bash.d
 if [[ -d ~/.bash.d ]]; then
     for i in ~/.bash.d/*.bash; do
         if [[ -r $i ]]; then
@@ -132,14 +133,27 @@ if [[ -d ~/.bash.d ]]; then
     unset i
 fi
 
-###############################################################################
-# https://github.com/crazy-canux/xshell
+# Put your own aliases here
+# Use cman to check the chinese manual.
+alias cman='man -M /usr/share/man/zh_CN'
+
 # Add your shell script to $PATH
-###############################################################################
+# https://github.com/crazy-canux/xshell
 CHENG=~/myCode/xshell
 if [[ -d $CHENG ]]; then
     PATH=$CHENG:$PATH
 fi
+
+# For vim to use ctrl+s
+# No ttyctl, so we need to save and then restore terminal settings
+vim()
+{
+    # osx users, use stty -g
+    local STTYOPTS="$(stty --save)"
+    stty stop '' -ixoff
+    command vim "$@"
+    stty "$STTYOPTS"
+}
 
 ###############################################################################
 # Bash-it

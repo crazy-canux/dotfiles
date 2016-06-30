@@ -36,12 +36,7 @@ Use pathogen to manage plugins:
 
 Ctrl+s - Save file
 
-Ctrl+w - Strip trailing whitespace
-
 Ctrl+d - Open stardict
-
-\+8 - Run autopep8 to format code.
-
 
 F1 - VIM help, default
 
@@ -55,15 +50,17 @@ F5 - Open/Close Minibufexplorer
 
 F6 - Open/Close gundo
 
-F7 - Make clean, just for C/C++
+F7 - For C/C++ run make clean
 
-F8 - Close quickfix windows, just for C/C++
+F8 - For C/C++ close quickfix windows.
 
-F9 - Make and open quickfix windows, just for C/C++
+F8 - For python open PymodeLintAuto
 
-F9 - Compile and run, just for Java
+F9 - For C/C++ run make
 
-F9 - Check syntastic, just for Python
+F9 - For java run javac and java
+
+F9 - For python run PymodeLint
 
 F10 - Use calendar
 

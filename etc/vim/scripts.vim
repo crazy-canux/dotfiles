@@ -7,10 +7,10 @@
 " Default colorscheme define in /usr/share/vim/vim74/colors/
 " This include a lots of colorscheme.
 "colorscheme c
+"c
 "DevC++
 "codeblocks_dark
 "eclipse
-"c
 "python
 "django
 "golden
@@ -24,29 +24,24 @@ set background=dark
 colorscheme solarized
 let g:solarized_termcolors = 256
 
-""""""""""config molokai""""""""""
-"colorscheme molokai
-"let g:molokai_original = 1
-"let g:rehash256 = 1
-
-""""""""""config gruvbox""""""""""
-
 """"""""""config tomorrow-theme""""""""""
 
 """>>> Status line
 
 """""""""config airline"""""""""""""
-" More good than powerline
+" More good than powerline and lightline
 " Need https://github.com/powerline/fonts
 
 " Enable/disable enhanced tabline.
 let g:airline#extensions#tabline#enabled = 1
 " Enable/disable tmuxline.
-let g:airline#extensions#tmuxline#enabled = 1
+let g:airline#extensions#tmuxline#enabled = 0
 " Enable powerline symbols.
 let g:airline_powerline_fonts = 1
 " When no branch detect show this
 let g:airline#extensions#branch#empty_message = 'None'
+" Set theme
+let g:airline_theme = 'dark'
 
 " Define the symbols.
 " This is unicode symbols.
@@ -66,6 +61,11 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
+
+"""""""""config tmuxline"""""""""""""
+" Status line for tmux
+let g:tmuxline_preset = 'powerline'
+let g:tmuxline_theme = 'powerline'
 
 """""""""config lightline"""""""""""""
 
@@ -163,6 +163,8 @@ let g:user_emmet_settings = {
 " Jump from .c and .h
 
 """>>> Java
+
+autocmd BufNewFile,BufReadPre *.java nmap <F9> :!javac %<CR>:!java %:r<CR>
 
 """"""""""config javacomplate2""""""""""
 " omnifunc=javacomplete#Complete
@@ -281,10 +283,10 @@ let g:pymode_doc_bind = '<leader>d'
 " Turn on code checking
 let g:pymode_lint = 1
 
+" Use F8 to run autopep8.
+autocmd FileType python map <buffer> <F8> :PymodeLintAuto<CR>
 " Use F9 to Open/Close checkers windows.
 autocmd FileType python map <buffer> <F9> :PymodeLint<CR>
-" Use \ + 8 to run autopep8.
-autocmd FileType python map <buffer> <leader>8 :PymodeLintAuto<CR>
 
 " Check code on every save, if file has been modified.
 let g:pymode_lint_on_write = 1
@@ -301,7 +303,7 @@ let g:pymode_lint_ignore = "E501, D101, D102, D103"
 " Select some error and warning that you want to see but ignored.
 let g:pymode_lint_select = ""
 " Sort errors by relevance
-let g:pymode_lint_sort = []
+let g:pymode_lint_sort = ['E', 'C']
 " Auto open quickfix windows when any errors have been found
 let g:pymode_lint_cwindow = 1
 " Definitions for sings
@@ -418,8 +420,6 @@ let g:pymode_rope_change_signature_bind = '<C-c>rs'
 """"""""""config vim-fireplace""""""""""
 
 """>>> Develop tools
-
-""""""""""config vim-tmux-navigator""""""""""
 
 """"""""""config vimux""""""""""
 

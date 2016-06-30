@@ -3,6 +3,7 @@
 Include:
 1. zsh
 2. oh-my-zsh
+3. Other plugins/themes
 
 # How to install
 
@@ -31,3 +32,17 @@ Configuration:
     echo "source ~/myCode/xDevOps/etc/zsh/zshrc" > ~/.zshrc
 
 # How to use
+
+## How to add your own plugins
+
+You can manage other plugins with oh-my-zsh
+
+Put it in ~/.zsh.d/oh-my-zsh/custom/plugins and add it in zshrc.
+
+     git clone <pluing-url> ~/.zsh.d/oh-my-zsh/custom/plugins/<plugin-name>
+
+## How to add your own themes
+
+You can manage other themes with oh-my-zsh
+
+Put it in ~/.zsh.d/oh-my-zsh/themes and modify theme in zshrc.

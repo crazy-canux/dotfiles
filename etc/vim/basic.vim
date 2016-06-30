@@ -115,20 +115,22 @@ set fileformats=unix,mac,dos
 
 " How to handle the windows.
 " Default use <C-w>hjkl to switch current window to other windows.
-nnoremap <C-Up> <C-w>k
-nnoremap <C-Down> <C-w>j
-nnoremap <C-Left> <C-w>h
-nnoremap <C-Right> <C-w>l
 
 " autoload file after modify.
 autocmd! bufwritepost ~/.vimrc source %
 
-" Ctrl-s to save file
-nmap <C-w> :W!<CR>
-imap <C-w> <ESC> :W!<CR>
-vmap <C-w> <ESC> :W!<CR>
+""" Use Ctrl+s to save file.
+" didn't work
+command -nargs=0 -bar Update if &modified
+                           \|    if empty(bufname('%'))
+                           \|        browse confirm write
+                           \|    else
+                           \|        confirm write
+                           \|    endif
+                           \|endif
+nnoremap <silent> <C-S> :<C-u>Update<CR>
 
-""""""""""""""config stardict"""""""""""""
+""" Use stardict
 " sudo apt-get install sdcv stardict
 function! MyDict()
     let expl=system('sdcv -n '.expand("<cword>"))
@@ -144,9 +146,8 @@ endfunction
 " Use shift+s to use stardict.
 nmap <C-d> :call MyDict()<CR>
 
-""""""""""""""""""config quickfix""""""""""""""
+""" Use quickfix
 " :help quickfix.txt - see the help doc.
-
 " For c,cpp,h
 " Make clean
 autocmd FileType c,cpp,h nmap <F7> :make clean<CR><CR><CR>
@@ -157,10 +158,6 @@ autocmd FileType c,cpp,h imap <F8> :cclose<CR><CR>
 " Make and open quickfix windows.
 autocmd FileType c,cpp,h nmap <F9> :make<CR><CR><CR> :copen<CR><CR>
 autocmd FileType c,cpp,h imap <F9> :make<CR><CR><CR> :copen<CR><CR>
-
-" For java
-" Compile and run.
-autocmd BufNewFile,bufReadPre *.java nmap <F9> :!javac %<CR>:!java %:r<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " END                                                                        "

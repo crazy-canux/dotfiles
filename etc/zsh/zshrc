@@ -3,7 +3,44 @@
 # canuxcheng@gmail.com
 # https://github.com/crazy-canux/xDevOps
 ###############################################################################
+# Original configuration for zsh.
 
+# Set up the prompt
+autoload -Uz promptinit
+promptinit
+prompt adam1
+
+setopt histignorealldups sharehistory
+
+# Use emacs keybindings even if our EDITOR is set to vi
+bindkey -e
+
+# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+
+# Use modern completion system
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 ###############################################################################
 # oh-my-zsh
@@ -17,18 +54,37 @@ export ZSH=$HOME/.zsh.d/oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
+#ZSH_THEME="random"
 #ZSH_THEME="robbyrussell"
-ZSH_THEME="ys"
+#ZSH_THEME="ys"
 
-# Random the theme
-#ZSH_THEME_RANDOM_CANDIDATES=( robbyrussell agnoster bureau mortalscumbag ys )
-#if [ "${(t)ZSH_THEME_RANDOM_CANDIDATES}" = "array" ] && [ "${#ZSH_THEME_RANDOM_CANDIDATES[@]}" -gt 0 ]; then
-#    themes=(${^ZSH_THEME_RANDOM_CANDIDATES})
-#    N=${#themes[@]}
-#    ((N=(RANDOM%N)+1))
-#    ZSH_THEME=${themes[$N]}
-#    echo $ZSH_THEME
-#fi
+# Extern themes for oh-my-zsh
+# git clone <theme-url> ~/.zsh.d/oh-my-zsh/themes/<theme-name>
+# 801 https://github.com/caiogondim/bullet-train-oh-my-zsh-theme.git
+#ZSH_THEME="bullet-train-oh-my-zsh-theme/bullet-train"
+# 645 https://github.com/bhilburn/powerlevel9k
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_OS_ICON_BACKGROUND="white"
+POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+local user_symbol="$"
+if [[ $(print -P "%#") =~ "#" ]]; then
+    user_symbol = "#"
+fi
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%{%B%F{yellow}%K{blue}%} $user_symbol%{%b%f%k%F{blue}%} %{%f%}"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+POWERLEVEL9K_SHOW_CHANGESET=true
+POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S \uE868  %d.%m.%y}"
+# 506 https://github.com/oskarkrawczyk/honukai-iterm-zsh.git
+#ZSH_THEME="honukai-iterm-zsh/honukai"
+# https://github.com/mashaal/wild-cherry.git(Waiting for support oh-my-zsh)
+#ZSH_THEME="wild-cherry/zsh/wild-cherry"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -72,37 +128,69 @@ ZSH_THEME="ys"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git apache2-macports autopep8 branch command-not-found common-aliases compleat django docker docker-compose fabric git-extras gitfast git-flow git-flow-avh github git-hubflow gitignore git-prompt git-remote-branch history history-substring-search man mysql-macports npm node nvm pep8 pip postgres pyenv pylint python repo screen spring ssh-agent sudo systemd systemadmin terminitor themes tmux tmux-cssh tmuxinator ubuntu vagrant vim-interaction vi-mode virtualenv virtualenvwrapper vundle yum zsh-navigation-tools zsh_reload ant)
+plugins=(vi-mode git apache2-macports autopep8 branch command-not-found common-aliases compleat django docker docker-compose fabric git-extras gitfast git-flow git-flow-avh github git-hubflow gitignore git-prompt git-remote-branch history history-substring-search man mysql-macports npm node nvm pep8 pip postgres pyenv pylint python repo screen spring ssh-agent sudo systemd systemadmin terminitor themes tmux tmux-cssh tmuxinator ubuntu vagrant vim-interaction virtualenv vundle yum zsh-navigation-tools zsh_reload ant)
 
+#####################
 # User configuration
+#####################
+
+# For vim use <C-s>.
+alias vim="stty stop '' -ixoff ; vim"
+# `Frozing' tty, so after any command terminal settings will be restored
+ttyctl -f
 
 # PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 export PATH="$HOME/myCode/xshell:$PATH"
-# export MANPATH="/usr/local/man:$MANPATH"
+export MANPATH="/usr/share/man:/usr/local/man:$MANPATH"
 
-source $ZSH/oh-my-zsh.sh
+# Set the term
+export TERM="xterm-256color"
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='vim'
+    export EDITOR='vi'
 else
-    export EDITOR='vim'
+    export EDITOR='vi'
 fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
 # ssh
-export SSH_KEY_PATH="~/.ssh/id_rsa.pub"
+#export SSH_KEY_PATH="~/.ssh/id_rsa.pub"
 
+#> Your own Aliases
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# Set the term
+# Use cman to check the chinese manual
+alias cman='man -M /usr/share/man/zh_CN'
+
+# Source oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
+###############################################################################
+# Extern plugins for oh-my-zsh
+# git clone <plugin-url> ~/.zsh.d/oh-my-zsh/custom/plugins/<plugin-name>
+###############################################################################
+# https://github.com/zsh-users/zsh-completions
+plugins+=(zsh-completions)
+autoload -U compinit && compinit
+
+# https://github.com/zsh-users/zsh-autosuggestions
+plugins+=(zsh-autosuggestions)
+
+# https://github.com/zsh-users/zsh-syntax-highlighting
+plugins+=(zsh-syntax-highlighting)
+
+###############################################################################
+# END
+###############################################################################

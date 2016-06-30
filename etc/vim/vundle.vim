@@ -3,7 +3,12 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " How to use vundle.
 " Command line: vim +PluginInstall +qall
-" In vim run :PluginInstall
+" In vim run
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 " Be improved
 set nocompatible
@@ -25,11 +30,11 @@ Plugin 'VundleVim/Vundle.vim'
 " Colors
 Plugin 'flazz/vim-colorschemes'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'tomasr/molokai'
-Plugin 'morhetz/gruvbox'
 Plugin 'chriskempson/vim-tomorrow-theme'
 " Status line
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'edkolev/tmuxline.vim'
 "https://github.com/itchyny/lightline.vim
 "https://github.com/powerline/powerline
 
@@ -50,7 +55,6 @@ Plugin 'crazy-canux/icinga2.vim'
 Plugin 'rodjek/vim-puppet'
 Plugin 'evanmiller/nginx-vim-syntax'
 Plugin 'nblock/vim-dokuwiki'
-Plugin 'tmux-plugins/vim-tmux'
 
 " DataBase
 Plugin 'vim-scripts/dbext.vim'
@@ -87,10 +91,9 @@ Plugin 'tpope/vim-fireplace'
 
 " Develop tools
 " Tmux tools
-Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'benmills/vimux'
-Plugin 'edkolev/tmuxline.vim'
 Plugin 'tmux-plugins/vim-tmux-focus-events'
+Plugin 'tmux-plugins/vim-tmux'
 " Find tools
 Plugin 'ctrlpvim/ctrlp.vim'
 "https://github.com/kien/ctrlp.vim
