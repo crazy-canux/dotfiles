@@ -1,7 +1,9 @@
 # xDevOps/etc/bash
 
 Include:
+
 1. bash
+
 2. bash-it
 
 # How to install
@@ -22,9 +24,13 @@ Configuration:
 ## Create your own bash-it
 
 Include:
+
 1. aliases
+
 2. completion
+
 3. plugins
+
 4. themes
 
 Modify bashrc for bash-it part.

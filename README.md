@@ -3,14 +3,34 @@
 Make awesome environment for Linux/Windows developers.
 
 Incluse:
+
 1. vim
+
 2. git
+
 3. tmux
+
 4. bash
+
 5. zsh
+
 6. powershell
+
 7. dpkg
+
 8. rmp
+
+9. stardict
+
+![pic](/data/all.png)
+
+![pic1](/data/vim/png)
+
+![pic2](/data/tmux.png)
+
+![pic3](/data/stardict.png)
+
+![pic4](/data/sdcv.png)
 
 # How to install
 
@@ -30,6 +50,8 @@ Incluse:
     How to use tmux, Just modify $HOME/.tmux.conf, see [here](/etc/tmux/README.md)
 
     Choose to use bash or zsh for linux, Just modify $HOME/.zshrc see [here](/etc/zsh/README.md), or $HOME/.bashrc see [here](/etc/bash/README.md)
+
+    How to use stardict, see [here](/etc/stardict/README.md)
 
     How to use powershell for windows, under developing...
 

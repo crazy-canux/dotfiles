@@ -3,10 +3,14 @@
 vim configuration file.
 
 Include:
-* vundle.vim/pathogen.vim
-* basic.vim
-* header.vim
-* script.vim
+
+1. vundle.vim/pathogen.vim
+
+2. basic.vim
+
+3. header.vim
+
+4. script.vim
 
 # How to install
 

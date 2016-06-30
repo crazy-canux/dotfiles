@@ -1,8 +1,11 @@
 # xDevOps/etc/zsh
 
 Include:
+
 1. zsh
+
 2. oh-my-zsh
+
 3. Other plugins/themes
 
 # How to install
@@ -16,6 +19,8 @@ Install oh-my-zsh Use curl or wget(recommend):
 
     export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(curl -fsSL
     https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+or:
 
     export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(wget
     https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
