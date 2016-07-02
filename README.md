@@ -2,7 +2,7 @@
 
 Make awesome environment for Linux/Windows developers.
 
-Incluse:
+Include:
 
 1. vim
 

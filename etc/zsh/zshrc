@@ -50,42 +50,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.zsh.d/oh-my-zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-#ZSH_THEME="random"
-#ZSH_THEME="robbyrussell"
-#ZSH_THEME="ys"
-
-# Extern themes for oh-my-zsh
-# git clone <theme-url> ~/.zsh.d/oh-my-zsh/themes/<theme-name>
-# 801 https://github.com/caiogondim/bullet-train-oh-my-zsh-theme.git
-#ZSH_THEME="bullet-train-oh-my-zsh-theme/bullet-train"
-# 645 https://github.com/bhilburn/powerlevel9k
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_OS_ICON_BACKGROUND="white"
-POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs status)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-local user_symbol="$"
-if [[ $(print -P "%#") =~ "#" ]]; then
-    user_symbol = "#"
-fi
-POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%{%B%F{yellow}%K{blue}%} $user_symbol%{%b%f%k%F{blue}%} %{%f%}"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-POWERLEVEL9K_SHOW_CHANGESET=true
-POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S \uE868  %d.%m.%y}"
-# 506 https://github.com/oskarkrawczyk/honukai-iterm-zsh.git
-#ZSH_THEME="honukai-iterm-zsh/honukai"
-# https://github.com/mashaal/wild-cherry.git(Waiting for support oh-my-zsh)
-#ZSH_THEME="wild-cherry/zsh/wild-cherry"
-
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -124,15 +88,9 @@ POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S \uE868  %d.%m.%y}"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(vi-mode git apache2-macports autopep8 branch command-not-found common-aliases compleat django docker docker-compose fabric git-extras gitfast git-flow git-flow-avh github git-hubflow gitignore git-prompt git-remote-branch history history-substring-search man mysql-macports npm node nvm pep8 pip postgres pyenv pylint python repo screen spring ssh-agent sudo systemd systemadmin terminitor themes tmux tmux-cssh tmuxinator ubuntu vagrant vim-interaction virtualenv vundle yum zsh-navigation-tools zsh_reload ant)
-
-#####################
+###############################################################################
 # User configuration
-#####################
+###############################################################################
 
 # For vim use <C-s>.
 alias vim="stty stop '' -ixoff ; vim"
@@ -162,7 +120,8 @@ fi
 # ssh
 #export SSH_KEY_PATH="~/.ssh/id_rsa.pub"
 
-#> Your own Aliases
+###############################################################################
+# Your own Aliases
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -171,11 +130,85 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Set the term
+###############################################################################
 # Use cman to check the chinese manual
 alias cman='man -M /usr/share/man/zh_CN'
 
-# Source oh-my-zsh
-source $ZSH/oh-my-zsh.sh
+alias -s gz='tar -xzvf'
+alias -s tgz='tar -xzvf'
+alias -s bz2='tar -xjvf'
+alias -s zip='unzip'
+alias -s c=vim
+alias -s py=vim
+alias -s java=vim
+alias -s sh=vim
+alias -s vim=vim
+alias -s md=vim
+alias -s rst=vim
+
+###############################################################################
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+###############################################################################
+#ZSH_THEME="random"
+#ZSH_THEME="robbyrussell"
+#ZSH_THEME="ys"
+
+###############################################################################
+# Extern themes for oh-my-zsh
+# git clone <theme-url> ~/.zsh.d/oh-my-zsh/themes/<theme-name>
+###############################################################################
+# 801 https://github.com/caiogondim/bullet-train-oh-my-zsh-theme.git
+#ZSH_THEME="bullet-train-oh-my-zsh-theme/bullet-train"
+# 645 https://github.com/bhilburn/powerlevel9k
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_MODE='awesome-fontconfig'
+POWERLEVEL9K_OS_ICON_BACKGROUND="white"
+POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs status)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
+local user_symbol="$"
+if [[ $(print -P "%#") =~ "#" ]]; then
+    user_symbol = "#"
+fi
+POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%{%B%F{yellow}%K{blue}%} $user_symbol%{%b%f%k%F{blue}%} %{%f%}"
+POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
+POWERLEVEL9K_SHOW_CHANGESET=true
+POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S \uE868  %d.%m.%y}"
+# 506 https://github.com/oskarkrawczyk/honukai-iterm-zsh.git
+#ZSH_THEME="honukai-iterm-zsh/honukai"
+# https://github.com/mashaal/wild-cherry.git(Waiting for support oh-my-zsh)
+#ZSH_THEME="wild-cherry/zsh/wild-cherry"
+
+###############################################################################
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+###############################################################################
+# Productivity
+plugins+=(autoenv colemak colored-man-pages colorize commnad-not-found compleat copydir copyfile cp dircycle dirpersist encode64 extract fbterm gpg-agent history last-working-dir mosh pass per-directory-history profiles rsync safe-paste sprunge supervisor taskwarrior tmux tmuxinator torrent tugboat urltools vi-mode vundle wakeonlan web-search)
+
+# FS Jumping
+plugins+=(autojump fasd jump pj wd z)
+
+# Build tools
+plugins+=(ant bower docker gas git github gitignore gnu-utils gradle mvn nanoc postgres redis-cli repo sfffe vagrant)
+
+# Python
+plugins+=(celery django fabric pip python pyenv virtualenv virtualenvwrapper)
+
+# Distro-related
+plugins+=(debian suse yum systemd)
+
+# nodejs
+plugins+=(jake-node node npm nvm)
 
 ###############################################################################
 # Extern plugins for oh-my-zsh
@@ -191,6 +224,16 @@ plugins+=(zsh-autosuggestions)
 # https://github.com/zsh-users/zsh-syntax-highlighting
 plugins+=(zsh-syntax-highlighting)
 
+# http://taskwarrior.org/
+# https://github.com/Supervisor/supervisor
+# https://github.com/achiu/consular
+# https://github.com/mbrubeck/compleat
+# https://github.com/mobile-shell/mosh
+# https://github.com/bower/bower
+# https://github.com/jakejs/jake
+
 ###############################################################################
 # END
+# Source oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 ###############################################################################
