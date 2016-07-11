@@ -15,6 +15,11 @@
 " :call Vimscript_command_line
 " See symbols
 " :help keycodes
+" See functions
+" :help functions
+" :help function-list
+" Comment
+" " used for comment
 
 " :qa close all windows without save.
 " :xa close all windows and save.
