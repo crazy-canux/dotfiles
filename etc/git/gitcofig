@@ -1,0 +1,86 @@
+###############################################################################
+# Canux's git
+# canuxcheng@gmail.com
+# https://github.com/crazy-canux/xDevOps
+###############################################################################
+
+[user]
+	name = Canux CHENG
+	email = canux.cheng@faurecia.com
+
+[core]
+	editor = vim
+    excludesfile = /usr/share/faurecia/git/gitignore
+    gitProxy = ''
+
+[http]
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    ui = auto
+
+[merge]
+    log = true
+    tool = meld
+    renamelimit = 10000
+
+[push]
+    default = upstream
+
+[instaweb]
+    httpd = webrick
+
+[url "https://"]
+	insteadOf = git://
+
+[alias]
+    # Fetch
+    fp = fetch -p
+
+    # Commits
+    co = commit
+    coa = commit -a
+    cp = cherry-pick
+
+    # Merging
+    noff = merge --no-ff
+    ff = merge --ff-only
+    ri = rebase -i
+    plr = pull --rebase
+    pl = pull
+    pomt = push origin master --tags
+
+    # Diff
+    df = diff --color-words='\\w+|[^[:space:]]'
+    dc = diff --cached
+
+    # Status
+    st = status -sb
+    last-release = describe --tags --abbrev=0
+
+    # Stash
+    sl = stash list
+    sp = stash pop
+    sa = stash apply
+    ss = stash save
+
+    # Branching
+    ck = checkout
+    tp = checkout -b
+    ba = branch -a
+    br = branch
+    brr = branch -r
+    bla = branch -a --list
+    bl = branch --list
+    bru = branch -r --list '*/u/*'
+
+    # Reset
+    rh = reset --hard
+
+    # Logging
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%Creset%C(blue bold)%an%Creset, %Cgreen%cr)%Creset' --abbrev-commit --date=relative
+    lgt = !git lg origin/master..HEAD
+    lgs = !git lg --name-status
+

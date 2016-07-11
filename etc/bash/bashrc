@@ -3,6 +3,7 @@
 # canuxcheng@gmail.com
 # https://github.com/crazy-canux/xDevOps
 ###############################################################################
+
 # Original configration when you install the OS.
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
@@ -146,14 +147,14 @@ fi
 
 # For vim to use ctrl+s
 # No ttyctl, so we need to save and then restore terminal settings
-vim()
-{
+#vim()
+#{
     # osx users, use stty -g
-    local STTYOPTS="$(stty --save)"
-    stty stop '' -ixoff
-    command vim "$@"
-    stty "$STTYOPTS"
-}
+#    local STTYOPTS="$(stty --save)"
+#    stty stop '' -ixoff
+#    command vim "$@"
+#    stty "$STTYOPTS"
+#}
 
 ###############################################################################
 # Bash-it
@@ -199,8 +200,8 @@ export SCM_CHECK=true
 # https://github.com/djl/vcprompt
 #export VCPROMPT_EXECUTABLE=~/.vcprompt/bin/vcprompt
 
-# Load Bash It
-source "$BASH_IT/bash_it.sh"
 ###############################################################################
 # END
+# Load Bash It
+source "$BASH_IT/bash_it.sh"
 ###############################################################################

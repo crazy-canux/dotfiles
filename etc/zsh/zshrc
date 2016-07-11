@@ -1,8 +1,9 @@
 ###############################################################################
-# Canux's bash
+# Canux's zsh
 # canuxcheng@gmail.com
 # https://github.com/crazy-canux/xDevOps
 ###############################################################################
+
 # Original configuration for zsh.
 
 # Set up the prompt
@@ -93,9 +94,9 @@ export ZSH=$HOME/.zsh.d/oh-my-zsh
 ###############################################################################
 
 # For vim use <C-s>.
-alias vim="stty stop '' -ixoff ; vim"
+#alias vim="stty stop '' -ixoff ; vim"
 # `Frozing' tty, so after any command terminal settings will be restored
-ttyctl -f
+#ttyctl -f
 
 # PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 export PATH="$HOME/myCode/xshell:$PATH"
@@ -120,8 +121,6 @@ fi
 # ssh
 #export SSH_KEY_PATH="~/.ssh/id_rsa.pub"
 
-###############################################################################
-# Your own Aliases
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -130,21 +129,35 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # Set the term
-###############################################################################
 # Use cman to check the chinese manual
 alias cman='man -M /usr/share/man/zh_CN'
 
-alias -s gz='tar -xzvf'
+# tar
+alias -s tar='tar xvf'
+
+# gzip gunzip
+alias -s gz='gunzip'
 alias -s tgz='tar -xzvf'
-alias -s bz2='tar -xjvf'
+alias -s tar.gz='tar -xzvf'
+
+# compress uncompress
+alias -s z='uncompress'
+alias -s tar.z='tar -xZvf'
+
+# bzip2 bunzip2
+alias -s bz2='bunzip2'
+alias -s tar.bz2='tar -xjvf'
+
+# xz unxz
+alias -s xz='unxz'
+alias -s tar.xz='tar -xJvf'
+
+# zip unzip
 alias -s zip='unzip'
-alias -s c=vim
-alias -s py=vim
-alias -s java=vim
-alias -s sh=vim
-alias -s vim=vim
+
 alias -s md=vim
 alias -s rst=vim
+alias -s cfg=vim
 
 ###############################################################################
 # Set name of the theme to load.
@@ -155,6 +168,36 @@ alias -s rst=vim
 #ZSH_THEME="random"
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="ys"
+
+###############################################################################
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+###############################################################################
+# Productivity
+plugins+=(colored-man-pages colorize commnad-not-found copydir copyfile cp common-aliases dircycle dirpersist dirhistory encode64 extract history last-working-dir rsync safe-paste supervisor bower urltools web-search sudo docker gnu-utils vagrant boot2docker docker-compose man apache2-macports terminalapp)
+# https://github.com/Supervisor/supervisor
+# https://github.com/bower/bower
+
+# Tools
+plugins+=(last-working-dir autojump z fasd git-extras gitfast git-flow git-flow-avh github git-hubflow repo girignore git-prompt git-remote-branch vi-mode zsh_reload zsh-navigation-tools)
+
+# Database
+plugins+=(mysql-macports postgres)
+
+# Java
+plugins+=(ant mvn spring gradle)
+# https://github.com/gradle/gradle
+# https://github.com/spring-projects/spring-boot
+
+# Python
+plugins+=(httpie celery django fabric pip python pyenv pep8 virtualenv virtualenvwrapper autopep8 pylint)
+# https://github.com/celery/celery
+# https://github.com/jkbrzt/httpie
+
+# Distro-related
+plugins+=(debian fedora suse osx yum systemd systemadmin)
 
 ###############################################################################
 # Extern themes for oh-my-zsh
@@ -187,30 +230,6 @@ POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S \uE868  %d.%m.%y}"
 #ZSH_THEME="wild-cherry/zsh/wild-cherry"
 
 ###############################################################################
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-###############################################################################
-# Productivity
-plugins+=(autoenv colemak colored-man-pages colorize commnad-not-found compleat copydir copyfile cp dircycle dirpersist encode64 extract fbterm gpg-agent history last-working-dir mosh pass per-directory-history profiles rsync safe-paste sprunge supervisor taskwarrior tmux tmuxinator torrent tugboat urltools vi-mode vundle wakeonlan web-search)
-
-# FS Jumping
-plugins+=(autojump fasd jump pj wd z)
-
-# Build tools
-plugins+=(ant bower docker gas git github gitignore gnu-utils gradle mvn nanoc postgres redis-cli repo sfffe vagrant)
-
-# Python
-plugins+=(celery django fabric pip python pyenv virtualenv virtualenvwrapper)
-
-# Distro-related
-plugins+=(debian suse yum systemd)
-
-# nodejs
-plugins+=(jake-node node npm nvm)
-
-###############################################################################
 # Extern plugins for oh-my-zsh
 # git clone <plugin-url> ~/.zsh.d/oh-my-zsh/custom/plugins/<plugin-name>
 ###############################################################################
@@ -223,14 +242,6 @@ plugins+=(zsh-autosuggestions)
 
 # https://github.com/zsh-users/zsh-syntax-highlighting
 plugins+=(zsh-syntax-highlighting)
-
-# http://taskwarrior.org/
-# https://github.com/Supervisor/supervisor
-# https://github.com/achiu/consular
-# https://github.com/mbrubeck/compleat
-# https://github.com/mobile-shell/mosh
-# https://github.com/bower/bower
-# https://github.com/jakejs/jake
 
 ###############################################################################
 # END

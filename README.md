@@ -98,4 +98,6 @@ See xDevOps/etc/XXX/README.md.
 1. powershell, dpkg, rmp configuration file.
 2. devops/XXX.py automatic install and configuration.
 3. docs/XXX.rst for how to install and use.
+4. How to use ~/.gitconfig to call this gitconfig.
+5. Fix 'source ~/.zshrc' error.
 

@@ -1,4 +1,10 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Canux's vim
+" canuxcheng@gmail.com
+" https://github.com/crazy-canux/xDevOps
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Config all plugins.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """>>> Colors & theme
@@ -485,7 +491,7 @@ let g:loaded_nerd_comments = 1
 nnoremap <F2> <ESC> :WMToggle<CR>
 let g:winManagerWindowLayout = 'FileExplorer|TagList|BufExplorer'
 " Default 25.
-let g:winManagerWidth = 15
+let g:winManagerWidth = 20
 " If just winmanager opend, close winmanager.
 let g:persistentBehaviour = 0 "If just
 
@@ -495,10 +501,10 @@ let g:persistentBehaviour = 0 "If just
 "nnoremap <silent> <F3> :TlistToggle<CR>
 " Make TlistToggle open and jump to it.
 let Tlist_GainFocus_On_ToggleOpen = 0
-" On the right windows
-"let Tlist_Use_Right_Window = 0
 " Default is 30, the same with winmanager
 "let Tlist_WinWidth = 30
+" Default on the left.
+"let Tlist_Use_Right_Window = 0
 let Tlist_Auto_Open = 0 "set the taglist open when open vim.
 let Tlist_Close_On_Select = 0 "when file or tag selected close taglist.
 let Tlist_Exit_OnlyWindow = 1 "when just taglist close the vim.
@@ -528,12 +534,12 @@ set title titlestring+=%<%f\ %([%{Tlist_Get_Tagname_By_Line()}]%) "show the tag 
 let g:bufExplorerDefaultHelp = 0
 " Split vertically
 "let g:bufExplorerSplitVertical = 1
-" On the left
-"let g:bufExplorerSplitRight = 0
-" Width, the same with winmanager
-"let g:bufExplorerSplitVertSize = 30
 " Default is 25, Height is 10
 let g:bufExplorerMaxHeight = 10
+" Default is 30, the same with winmanager
+"let g:bufExplorerSplitVertSize = 30
+" Default on the left.
+"let g:bufExplorerSplitRight = 0
 
 """"""""""config NERDTree""""""""""
 " More good than winnamager-fileexplorer

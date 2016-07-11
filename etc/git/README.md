@@ -11,4 +11,12 @@ Install git
     sudo apt-get install git
     sudo yum install git
 
+Configuration:
+
+/etc/gitconfig 系统级的配置文件，通过git config --system设置
+
+~/.gitconfig 用户级的配置文件，通过git config --global设置
+
+.git/config 仓库级的配置文件，通过git config --local设置
+
 # How to use
