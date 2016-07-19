@@ -66,6 +66,7 @@
 [help]
 
 [http]
+    proxy = http://euedcmon0010.edc.eu.corp:8080
 
 [i18n]
 
@@ -128,6 +129,7 @@
 
 [url "https://"]
 	insteadOf = git://
+    pushInsteadOf = git://
 
 [web]
 
