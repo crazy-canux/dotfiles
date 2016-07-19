@@ -25,3 +25,12 @@ Write this in ~/.gitconfig and delete everything else.
 
     [include]
         path = ~/myCode/xDevOps/etc/git/gitcofig
+
+# How to set proxy
+
+github have 4 proxy:
+1. local proxy file://
+2. http:// or https://
+3. ssh://git@ or git@
+4. git://
+
