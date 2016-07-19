@@ -8,32 +8,128 @@
 	name = Canux CHENG
 	email = canux.cheng@faurecia.com
 
+[advice]
+
+[add]
+
+[am]
+
+[apply]
+
+[branch]
+
+[browser]
+
+[clean]
+
+[color]
+    branch = auto
+    diff = auto
+    status = auto
+    ui = auto
+
+[column]
+
+[commit]
+
 [core]
 	editor = vim
     excludesfile = /usr/share/faurecia/git/gitignore
     gitProxy = ''
 
+[credential]
+
+[diff]
+
+[difftool]
+
+[fetch]
+
+[format]
+
+[filter]
+
+[gc]
+
+[gitcvs]
+
+[gitweb]
+
+[grep]
+
+[gpg]
+
+[gui]
+
+[guitool]
+
+[help]
+
 [http]
 
-[color]
-    diff = auto
-    status = auto
-    branch = auto
-    ui = auto
+[i18n]
+
+[imap]
+
+[init]
+
+[instweb]
+    httpd = webrick
+
+[log]
+
+[mailmap]
+
+[man]
 
 [merge]
     log = true
     tool = meld
     renamelimit = 10000
 
+[mergetool]
+
+[notes]
+
+[pack]
+
+[pager]
+
+[pretty]
+
+[pull]
+
 [push]
     default = upstream
 
-[instaweb]
-    httpd = webrick
+[rebase]
+
+[receive]
+
+[remote]
+
+[repack]
+
+[rerere]
+
+[sendmail]
+
+[showbranch]
+
+[status]
+
+[submodule]
+
+[tar]
+
+[transfer]
+
+[uploadpack]
 
 [url "https://"]
 	insteadOf = git://
+
+[web]
 
 [alias]
     # Fetch

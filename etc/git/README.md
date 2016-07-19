@@ -20,3 +20,8 @@ Configuration:
 .git/config 仓库级的配置文件，通过git config --local设置
 
 # How to use
+
+Write this in ~/.gitconfig and delete everything else.
+
+    [include]
+        path = ~/myCode/xDevOps/etc/git/gitcofig
