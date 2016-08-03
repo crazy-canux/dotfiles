@@ -41,8 +41,8 @@ function! MySetTitle()
     if &filetype == 'python'
         call setline(1, "\#!/usr/bin/env python")
         call append(line("."),    "\# -*- coding: utf-8 -*-")
-        call append(line(".")+1,  "")
-        call append(line(".")+2,  "\"\"\"Copyright (C) 2015 Faurecia (China) Holding Co.,Ltd.")
+        call append(line(".")+1,  "\"\"\"Copyright (C) 2015 Faurecia (China) Holding Co.,Ltd.")
+        call append(line(".")+2,  "")
         call append(line(".")+3,  "\All rights reserved.")
         call append(line(".")+4,  "\Name: ".expand("%"))
         call append(line(".")+5,  "\Author: Canux CHENG canuxcheng@gmail.com")
@@ -51,8 +51,7 @@ function! MySetTitle()
         call append(line(".")+8,  "")
         call append(line(".")+9,  "\Description:")
         call append(line(".")+10, "\"\"\"")
-        call append(line(".")+11, "")
-        call append(line(".")+12, "import")
+        call append(line(".")+11, "import")
     endif
     if &filetype == 'h'
         call setline(1, "/*********************************************************************")
@@ -94,17 +93,16 @@ function! MySetTitle()
         call append(line(".")+9, "")
     endif
     if &filetype == 'java'
-        call setline(1, "/*")
+        call setline(1, "/**")
         call append(line("."),   " * Copyright (C) 2015 Faurecia (China) Holding Co.,Ltd.")"
         call append(line(".")+1, " * All right reserved.")
         call append(line(".")+2, " * Name: ".expand("%"))
         call append(line(".")+3, " * Author: Canux CHENG canuxcheng@gmail.com")
         call append(line(".")+4, " * Version: V1.0.0.0")
         call append(line(".")+5, " * Time: ".strftime("%c"))
-        call append(line(".")+6, "")
-        call append(line(".")+7, " * Description:")
-        call append(line(".")+8, " */")
-        call append(line(".")+9, "")
+        call append(line(".")+6, " * Description:")
+        call append(line(".")+7, " */")
+        call append(line(".")+8, "")
     endif
     if &filetype == 'go'
         call setline(1, "// Copyright (C) 2015 Faurecia (China) Holding Co.,Ltd.")

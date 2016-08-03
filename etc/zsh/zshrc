@@ -1,5 +1,4 @@
-###############################################################################
-# Canux's zsh
+############################################################################### Canux's zsh
 # canuxcheng@gmail.com
 # https://github.com/crazy-canux/xDevOps
 ###############################################################################
@@ -93,14 +92,11 @@ export ZSH=$HOME/.zsh.d/oh-my-zsh
 # User configuration
 ###############################################################################
 
-# For vim use <C-s>.
-#alias vim="stty stop '' -ixoff ; vim"
-# `Frozing' tty, so after any command terminal settings will be restored
-#ttyctl -f
-
 # PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-export PATH="$HOME/myCode/xshell:$PATH"
-export MANPATH="/usr/share/man:/usr/local/man:$MANPATH"
+export PATH=$HOME/myCode/xshell:/opt/oracle/instantclient_12_1:$PATH
+export MANPATH=/usr/share/man:/usr/local/man:$MANPATH
+export ORACLE_HOME=/opt/oracle/instantclient_12_1:$ORACLE_HOME
+export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_1:$LD_LIBRARY_PATH
 
 # Set the term
 export TERM="xterm-256color"

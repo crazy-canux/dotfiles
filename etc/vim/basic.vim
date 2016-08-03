@@ -21,9 +21,6 @@
 " Comment
 " " used for comment
 
-" :qa close all windows without save.
-" :xa close all windows and save.
-" :only close all other windows except current one.
 " <leader> default is \
 let mapleader = '\'
 
@@ -42,6 +39,7 @@ set mousemodel=popup
 set selection=inclusive "or exclusive
 set selectmode=mouse,key
 set number "show line number
+set relativenumber
 set cc=+1 "show right margin
 set autochdir "go inside working directory of current opend file
 set modifiable
@@ -124,22 +122,20 @@ set fileformats=unix,mac,dos
 " Check the map already used:
 " :verbose map <yourmap>
 
-" How to handle the windows.
+" How to move the windows.
 " Default use <C-w>hjkl to switch current window to other windows.
+
+" How to close the windows
+" :qa close all windows without save.
+" :xa close all windows and save.
+" :only close all other windows except current one.
 
 " autoload file after modify.
 autocmd! bufwritepost ~/.vimrc source %
 
-""" Use Ctrl+s to save file.
-" didn't work
-command -nargs=0 -bar Update if &modified
-                           \|    if empty(bufname('%'))
-                           \|        browse confirm write
-                           \|    else
-                           \|        confirm write
-                           \|    endif
-                           \|endif
-nnoremap <silent> <C-S> :<C-u>Update<CR>
+""" Use zz to save file.
+nnoremap zz :update<CR>
+inoremap zz <ESC>:update<CR>gi
 
 """ Use stardict
 " sudo apt-get install sdcv stardict

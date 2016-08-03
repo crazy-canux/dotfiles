@@ -29,8 +29,8 @@ Write this in ~/.gitconfig and delete everything else.
 # How to set proxy
 
 github have 4 proxy:
-1. local proxy file://
-2. http:// or https://
-3. ssh://git@ or git@
+1. local proxy file:///path/to/project.git
+2. remote https:// https://github.com/<username>/<project>.git or https://<username>:<password>@github.com/<username>/<project>.git
+3. ssh://git@github.com/<username>/<project>.git or git@github.com:<username>/<project>.git
 4. git://
 
