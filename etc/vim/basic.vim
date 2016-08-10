@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Canux's vim
 " canuxcheng@gmail.com
-" https://github.com/crazy-canux/xDevOps
+" https://github.com/crazy-canux/xdevops
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -135,7 +135,7 @@ autocmd! bufwritepost ~/.vimrc source %
 
 """ Use zz to save file.
 nnoremap zz :update<CR>
-inoremap zz <ESC>:update<CR>gi
+"inoremap zz <ESC>:update<CR>gi
 
 """ Use stardict
 " sudo apt-get install sdcv stardict

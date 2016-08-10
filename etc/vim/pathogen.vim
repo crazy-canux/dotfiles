@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Canux's vim
 " canuxcheng@gmail.com
-" https://github.com/crazy-canux/xDevOps
+" https://github.com/crazy-canux/xdevops
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -28,8 +28,3 @@ call pathogen#helptags()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Pathogen end
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Call other configuration files.
-source ~/myCode/xVim/etc/basic.vim
-source ~/myCode/xVim/etc/header.vim
-source ~/myCode/xVim/etc/scripts.vim

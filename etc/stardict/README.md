@@ -1,4 +1,4 @@
-# xDevOps/etc/stardict
+# xdevops/etc/stardict
 
 Include:
 
@@ -15,7 +15,7 @@ Install stardict
 
 Configuration:
 
-Unzip xDevOps/data/dict/* to /usr/share/stardict/dic
+Unzip xdevops/data/dict/* to /usr/share/stardict/dic
 
 # How to use
 

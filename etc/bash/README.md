@@ -1,4 +1,4 @@
-# xDevOps/etc/bash
+# xdevops/etc/bash
 
 Include:
 
@@ -17,7 +17,7 @@ Install bash-it:
 
 Configuration:
 
-    echo "source ~/myCode/xDevOps/etc/bash/bashrc" > ~/.bashrc
+    echo "source ~/myCode/xdevops/etc/bash/bashrc" > ~/.bashrc
 
 # How to use
 

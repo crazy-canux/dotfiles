@@ -1,4 +1,4 @@
-# xDevOps/etc/tmux
+# xdevops/etc/tmux
 
 tmux configuration file.
 
@@ -31,7 +31,7 @@ Install plugin by hand:
 
 Configuration:
 
-        echo "source ~/myCode/xDevOps/etc/tmux/tmux.conf" > ~/.tmux.conf
+        echo "source ~/myCode/xdevops/etc/tmux/tmux.conf" > ~/.tmux.conf
         tmux source-file ~/.tmux.conf # run this in shell
 
 # How to use

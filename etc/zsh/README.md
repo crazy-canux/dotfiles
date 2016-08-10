@@ -1,4 +1,4 @@
-# xDevOps/etc/zsh
+# xdevops/etc/zsh
 
 Include:
 
@@ -34,7 +34,7 @@ Install oh-my-zsh manual:
 
 Configuration:
 
-    echo "source ~/myCode/xDevOps/etc/zsh/zshrc" > ~/.zshrc
+    echo "source ~/myCode/xdevops/etc/zsh/zshrc" > ~/.zshrc
 
 # How to use
 

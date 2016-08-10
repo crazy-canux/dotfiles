@@ -1,4 +1,4 @@
-# xDevOps/etc/git
+# xdevops/etc/git
 
 Include:
 
@@ -24,7 +24,7 @@ Configuration:
 Write this in ~/.gitconfig and delete everything else.
 
     [include]
-        path = ~/myCode/xDevOps/etc/git/gitcofig
+        path = ~/myCode/xdevops/etc/git/gitcofig
 
 # How to set proxy
 

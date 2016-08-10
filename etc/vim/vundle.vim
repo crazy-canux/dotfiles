@@ -1,7 +1,7 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Canux's vim
 " canuxcheng@gmail.com
-" https://github.com/crazy-canux/xDevOps
+" https://github.com/crazy-canux/xdevops
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -188,8 +188,3 @@ call vundle#end()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Vundle end
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Call other configuration files
-source ~/myCode/xDevOps/etc/vim/basic.vim
-source ~/myCode/xDevOps/etc/vim/header.vim
-source ~/myCode/xDevOps/etc/vim/scripts.vim

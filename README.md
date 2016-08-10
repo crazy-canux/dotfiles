@@ -18,7 +18,7 @@ Include:
 
 7. dpkg
 
-8. rmp
+8. rpm
 
 9. stardict
 

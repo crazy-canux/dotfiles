@@ -1,4 +1,4 @@
-# xDevOps/etc/vim
+# xdevops/etc/vim
 
 vim configuration file.
 
@@ -21,7 +21,7 @@ Install vim
 
 Use vundle to manage plugins(recommend):
 
-        echo "source ~/myCode/xDevOps/etc/vim/vundle.vim" > ~/.vimrc
+        echo "source ~/myCode/xdevops/etc/vim/vundle.vim" > ~/.vimrc
         rm -rf ~/.vim
         mkdir -p ~/.vim/plugins
         vim +PluginInstall +qall # run this on shell command line
@@ -30,7 +30,7 @@ Use vundle to manage plugins(recommend):
 
 Use pathogen to manage plugins:
 
-        echo "source ~/myCode/xDevOps/etc/vim/pathogen.vim" > ~/.vimrc
+        echo "source ~/myCode/xdevops/etc/vim/pathogen.vim" > ~/.vimrc
         rm -rf ~/.vim/bundle
         mkdir -p ~/.vim/bundle
         git clone <plugin-url> ~/.vim/bundle/<plugin-name>
