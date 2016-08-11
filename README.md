@@ -36,20 +36,20 @@ Include:
 
 * Automatic install
 
-    Under testing, will coming soon...
+        pip install xdevops
 
 * Manual install
 
         cd $HOME
-        git clone https://github.com/crazy-canux/xDevOps.git
+        git clone https://github.com/crazy-canux/xdevops.git
 
-    How to use vim, Just modify $HOME/.vimrc, see [here](/etc/vim/README.md)
+    How to use vim, Just modify \$HOME/.vimrc, see [here](/etc/vim/README.md)
 
-    How to use git, Just modify $HOME/.gitconfig, see [here](/etc/git/README.md)
+    How to use git, Just modify \$HOME/.gitconfig, see [here](/etc/git/README.md)
 
-    How to use tmux, Just modify $HOME/.tmux.conf, see [here](/etc/tmux/README.md)
+    How to use tmux, Just modify \$HOME/.tmux.conf, see [here](/etc/tmux/README.md)
 
-    Choose to use bash or zsh for linux, Just modify $HOME/.zshrc see [here](/etc/zsh/README.md), or $HOME/.bashrc see [here](/etc/bash/README.md)
+    Choose to use bash or zsh for linux, Just modify \$HOME/.zshrc see [here](/etc/zsh/README.md), or \$HOME/.bashrc see [here](/etc/bash/README.md)
 
     How to use stardict, see [here](/etc/stardict/README.md)
 
@@ -57,7 +57,7 @@ Include:
 
     How to use dpkg, under developing...
 
-    How to use rmp, under developing...
+    How to use rpm, under developing...
 
 * Install the dependency
 
@@ -89,12 +89,27 @@ Include:
 
     [fontpatcher](https://github.com/powerline/fontpatcher)
 
-# How to use
+# How to make your own xdevops
 
-See xDevOps/etc/XXX/README.md.
+All configuration files are inside xdevops/etc/.
+
+See xdevops/etc/XXX/README.md.
 
 # TODO
 
 1. powershell, dpkg, rmp configuration file.
-2. devops/XXX.py automatic install and configuration.
-3. docs/XXX.rst for how to install and use.
+2. Document build with sphinx in xdevops/docs
+3. Test script in xdevops/devops/test
+4. Put it to pypi
+
+# Contribution
+
+[Contribution](CONTRIBUTING.md)
+
+# Authors
+
+[Authors](AUTHORS.md)
+
+# License
+
+[License](LICENSE)

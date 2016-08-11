@@ -1,5 +1,3 @@
-=======
-Authors
-=======
+# Authors
 
-* `Canux CHENG <https://github.com/crazy-canux>`_
+* Canux CHENG <https://github.com/crazy-canux>

@@ -1,23 +1,15 @@
-============================
-How to contribute to xdevops
-============================
+# How to contribute to xdevops
 
 Thanks for considering contributing to xDevOps.
 
-------
-Issues
-------
+# Issues
 
 Use github issue tracker.
 
-----------
-Submitting
-----------
+# Submitting
 
 Create pull request on github directely.
 
-----
-Wiki
-----
+# Wiki
 
 Welcome to write the wiki.

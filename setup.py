@@ -10,30 +10,43 @@ Time: Fri 05 Aug 2016 09:59:29 AM CST
 
 Description:
 """
-import codecs
+import os
 
 from setuptools import setup, find_packages
 
 import devops
 
+
+def read(readme):
+    """Give reST format README for pypi."""
+    extend = os.path.splitext(readme)[1]
+    if (extend == '.rst'):
+        import codecs
+        return codecs.open(readme, 'r', 'utf-8').read()
+    elif (extend == '.md'):
+        import pypandoc
+        import codecs
+        return codecs.open(pypandoc.convert(readme, 'rst'), 'r', 'utf-8').read()
+
 INSTALL_REQUIRES = [
-    'pymysql',
-    'pymssql',
-    'pysnmp',
-    'paramiko',
-    'wmi',
-    'pyvmomi'
+    'pylint',
+    'jedi',
+    'pep8',
+    'pyflakes',
+    'mccabe',
+    'pep257',
+    'autopep8'
 ]
 
 setup(
     name='xdevops',
-    version=plugin.__VERSION__,
+    version=devops.__VERSION__,
     author='Canux CHENG',
     author_email='canuxcheng@gmail.com',
     maintainer='Canux CHENG',
     maintainer_email='canuxcheng@gmail.com',
     description='Deploy awesome DevOps environment with zsh/bash/git/tmux/vim/stardict/rpm/dpkg...',
-    long_description=codecs.open('README.rst', 'r', 'utf-8').read(),
+    long_description=read('README.md'),
     license='GPL',
     platforms='any',
     keywords='DevOps vim git bash zsh stardict tmux rpm dpkg',
