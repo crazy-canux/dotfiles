@@ -2,25 +2,38 @@
 
 Make awesome environment for Linux/Windows developers.
 
-Include:
+Structure:
 
-1. vim
-
-2. git
-
-3. tmux
-
-4. bash
-
-5. zsh
-
-6. powershell
-
-7. dpkg
-
-8. rpm
-
-9. stardict
+~
+|--.gitconfig
+|
+|--.vimrc
+|--.vim
+|   |--plugins
+|      |--YouCompleteMe
+|      |--...
+|
+|--.tmux.conf
+|--.tmux
+|   |--plugins
+|      |--tpm
+|      |--...
+|
+|--.bashrc
+|--.bash_aliases
+|--.bash_completion
+|--.bash.d
+|   |--bash-it
+|
+|--.zshrc
+|--.bash_aliases
+|--.bash_completion
+|--.zsh.d
+|   |--oh-my-zsh
+|
+|--.stardict
+|   |--*.cfg
+|--/usr/share/stardict
 
 ![pic](/data/all.png)
 

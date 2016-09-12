@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Copyright (C) 2015 Faurecia (China) Holding Co.,Ltd.
+"""
+Automatic install and configuration for zsh/bash/powershell/tmux/vim/stardict/git for DevOps.
 
+Copyright (C) 2016 Faurecia (China) Holding Co.,Ltd.
 All rights reserved.
 Name: __init__.py
 Author: Canux CHENG canuxcheng@gmail.com
@@ -11,4 +13,5 @@ Time: Wed 10 Aug 2016 10:35:07 PM CST
 Description:
 """
 
-__VERSION__ = "1.0.0.0"
+__version__ = "1.0.0.0"
+__author__ = "Canux CHENG"

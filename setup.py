@@ -1,14 +1,17 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Copyright (C) 2015 Faurecia (China) Holding Co.,Ltd.
+"""
+Automatic install and configuration for DevOps tools.
 
+Copyright (C) 2015 Faurecia (China) Holding Co.,Ltd.
 All rights reserved.
 Name: setup.py
 Author: Canux CHENG canuxcheng@gmail.com
 Version: V1.0.0.0
 Time: Fri 05 Aug 2016 09:59:29 AM CST
 
-Description:
+Exapmle:
+    python setup.py -h
 """
 import os
 
@@ -25,8 +28,7 @@ def read(readme):
         return codecs.open(readme, 'r', 'utf-8').read()
     elif (extend == '.md'):
         import pypandoc
-        import codecs
-        return codecs.open(pypandoc.convert(readme, 'rst'), 'r', 'utf-8').read()
+        return pypandoc.convert(readme, 'rst')
 
 INSTALL_REQUIRES = [
     'pylint',
@@ -40,7 +42,7 @@ INSTALL_REQUIRES = [
 
 setup(
     name='xdevops',
-    version=devops.__VERSION__,
+    version=devops.__version__,
     author='Canux CHENG',
     author_email='canuxcheng@gmail.com',
     maintainer='Canux CHENG',
