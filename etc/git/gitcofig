@@ -68,7 +68,7 @@
 
 [http]
     # for http:// and https://
-    proxy = http://euedcmon0010.edc.eu.corp:8080
+    #proxy = http://euedcmon0010.edc.eu.corp:8080
 
 [i18n]
 

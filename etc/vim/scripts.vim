@@ -345,7 +345,7 @@ let g:pymode_lint_options_pylint =
 " sudo apt-get install python-rope
 
 " Turn on rope script
-let g:pymode_rope = 1
+let g:pymode_rope = 0
 
 " Enable searching for .ropeproject in parent directories
 let g:pymode_rope_lookup_project = 0

@@ -1,23 +1,19 @@
+=======
 xDevOps
 =======
 
-Make awesome environment for Linux/Windows developers.
+Make awesome environment for Linux/Windows developers and operators.
 
-.. figure:: /data/all.png
-   :alt: pic
-
-.. figure:: /data/vim.png
+.. figure:: /data/all.PNG
    :alt: pic1
 
-.. figure:: /data/tmux.png
+.. figure:: /data/shell.PNG
    :alt: pic2
 
-.. figure:: /data/stardict.png
+.. figure:: /data/stardict.PNG
    :alt: pic3
 
-.. figure:: /data/sdcv.png
-   :alt: pic4
-
+==============
 How to install
 ==============
 
@@ -82,13 +78,15 @@ How to install
 
    `fontpatcher <https://github.com/powerline/fontpatcher>`__
 
-How to make your own xdevops
-============================
+==============
+How to extends
+==============
 
 All configuration files are inside xdevops/etc/.
 
 See xdevops/etc/XXX/README.md.
 
+====
 TODO
 ====
 
@@ -97,16 +95,19 @@ TODO
 3. Test script in xdevops/devops/test
 4. Put it to pypi
 
+============
 Contribution
 ============
 
 `Contribution <CONTRIBUTING.md>`__
 
+=======
 Authors
 =======
 
 `Authors <AUTHORS.md>`__
 
+=======
 License
 =======
 
