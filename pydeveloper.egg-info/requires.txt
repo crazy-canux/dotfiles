@@ -1,0 +1,7 @@
+pylint
+jedi
+pep8
+pyflakes
+mccabe
+pep257
+autopep8

@@ -17,7 +17,13 @@ import os
 
 from setuptools import setup, find_packages
 
-import devops
+import pydeveloper
+
+NAME = 'pydeveloper'
+VERSION = pydeveloper.__version__
+URL = 'https://github.com/crazy-canux/pydeveloper'
+DESCRIPTION = 'Deploy awesome development environment about zsh/bash/git/vim/tmux/rpm/dpkg...'
+KEYWORDS = 'git vim tmux bash zsh stardict rpm dpkg'
 
 
 def read(readme):
@@ -41,18 +47,18 @@ INSTALL_REQUIRES = [
 ]
 
 setup(
-    name='xdevops',
-    version=devops.__version__,
+    name=NAME,
+    version=VERSION,
     author='Canux CHENG',
     author_email='canuxcheng@gmail.com',
     maintainer='Canux CHENG',
     maintainer_email='canuxcheng@gmail.com',
-    description='Deploy awesome DevOps environment with zsh/bash/git/tmux/vim/stardict/rpm/dpkg...',
-    long_description=read('README.md'),
+    description=DESCRIPTION,
+    long_description=read('README.rst'),
     license='GPL',
     platforms='any',
-    keywords='DevOps vim git bash zsh stardict tmux rpm dpkg',
-    url='https://github.com/crazy-canux/xdevops',
+    keywords=KEYWORDS,
+    url=URL,
     install_requires=INSTALL_REQUIRES,
     packages=find_packages(),
     zip_safe=False,
@@ -61,6 +67,7 @@ setup(
         "Development Status :: 5 - Production/Stable",
         "Environment :: X11 Applications",
         "Intended Audience :: Developers",
+        "Natural Language :: English",
         "License :: OSI Approved :: GNU General Public License (GPL)",
         "Operating System :: POSIX",
         "Programming Language :: Python",

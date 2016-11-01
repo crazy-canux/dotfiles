@@ -1,16 +1,22 @@
-=======
-xDevOps
-=======
+.. image:: https://img.shields.io/pypi/v/pydeveloper.svg
+   :target: https://pypi.python.org/pypi/pydeveloper/
+
+.. image:: https://img.shields.io/pypi/dm/pydeveloper.svg
+   :target: https://pypi.python.org/pypi/pydeveloper/
+
+===========
+pydeveloper
+===========
 
 Make awesome environment for Linux/Windows developers and operators.
 
-.. figure:: /data/all.PNG
+.. figure:: https://github.com/crazy-canux/pydeveloper/blob/master/data/images/all.PNG
    :alt: pic1
 
-.. figure:: /data/shell.PNG
+.. figure:: https://github.com/crazy-canux/pydeveloper/blob/master/data/images/shell.PNG
    :alt: pic2
 
-.. figure:: /data/stardict.PNG
+.. figure:: https://github.com/crazy-canux/pydeveloper/blob/master/data/images/stardict.PNG
    :alt: pic3
 
 ==============
@@ -21,32 +27,14 @@ How to install
 
    ::
 
-       pip install xdevops
+       pip install pydeveloper
 
 -  Manual install
 
    ::
 
        cd $HOME
-       git clone https://github.com/crazy-canux/xdevops.git
-
-   How to use vim, Just modify $HOME/.vimrc, see `here </etc/vim/README.md>`__
-
-   How to use git, Just modify $HOME/.gitconfig, see `here </etc/git/README.md>`__
-
-   How to use tmux, Just modify $HOME/.tmux.conf, see `here </etc/tmux/README.md>`__
-
-   How to use zsh, Just modify $HOME/.zshrc see `here </etc/zsh/README.md>`__
-
-   How to use bash, Just modify $HOME/.bashrc see `here </etc/bash/README.md>`__
-
-   How to use stardict, see `here </etc/stardict/README.md>`__
-
-   How to use powershell for windows, under developing...
-
-   How to use dpkg, under developing...
-
-   How to use rpm, under developing...
+       git clone https://github.com/crazy-canux/pydeveloper.git
 
 -  Install the dependency
 
@@ -82,33 +70,32 @@ How to install
 How to extends
 ==============
 
-All configuration files are inside xdevops/etc/.
+All configuration files are inside pydeveloper/etc/.
 
-See xdevops/etc/XXX/README.md.
+You can merge other tools.
 
 ====
 TODO
 ====
 
-1. powershell, dpkg, rmp configuration file.
-2. Document build with sphinx in xdevops/docs
-3. Test script in xdevops/devops/test
-4. Put it to pypi
+1. dpkg, rmp configuration file.
+2. Document build with sphinx in pydeveloper/docs
+3. Test script in pydeveloper/pydeveloper/tests
 
 ============
 Contribution
 ============
 
-`Contribution <CONTRIBUTING.md>`__
+`[Contribution] <https://github.com/crazy-canux/pydeveloper/blob/master/CONTRIBUTING.rst>`_
 
 =======
 Authors
 =======
 
-`Authors <AUTHORS.md>`__
+`[Authors] <https://github.com/crazy-canux/pydeveloper/blob/master/AUTHORS.rst>`_
 
 =======
 License
 =======
 
-`License <LICENSE>`__
+`[License] <https://github.com/crazy-canux/pydeveloper/blob/master/LICENSE>`_
