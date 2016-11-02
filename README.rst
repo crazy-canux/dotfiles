@@ -8,7 +8,7 @@
 pydeveloper
 ===========
 
-Make awesome environment for Linux/Windows developers and operators.
+Make awesome environment for developers and operators.
 
 .. figure:: https://github.com/crazy-canux/pydeveloper/blob/master/data/images/all.PNG
    :alt: pic1
@@ -78,9 +78,7 @@ You can merge other tools.
 TODO
 ====
 
-1. dpkg, rmp configuration file.
-2. Document build with sphinx in pydeveloper/docs
-3. Test script in pydeveloper/pydeveloper/tests
+1. dpkg, rpm configuration file.
 
 ============
 Contribution
