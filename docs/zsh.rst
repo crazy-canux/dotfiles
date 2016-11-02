@@ -1,4 +1,6 @@
-zsh
+.. _zsh:
+
+ZSH
 ===
 
 Include:

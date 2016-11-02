@@ -57,7 +57,7 @@ fi
 # Completions definitions.
 # Put some bash script file in ~/.bash.d
 if [[ -d ~/.bash.d ]]; then
-    for i in ~/.bash.d/*.bash; do
+    for i in ~/.bash.d/; do
         if [[ -r $i ]]; then
             . "$i"
         fi

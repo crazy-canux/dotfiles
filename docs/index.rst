@@ -14,26 +14,26 @@ Automatic install
 
 Use pip to automatic install::
 
-      pip install pydeveloper
+    pip install pydeveloper
 
 Manual install
 --------------
 
 Clone this repository to your laptop::
 
-      cd $HOME
-      git clone https://github.com/crazy-canux/pydeveloper.git
+    cd $HOME
+    git clone https://github.com/crazy-canux/pydeveloper.git
 
 Install all tools and config them follow the docs.
 
 .. toctree::
    :maxdepth: 2
 
-    bash
-    zsh
-    git
-    tmux
-    vim
-    stardict
-    dpkg
-    rpm
+   bash
+   zsh
+   git
+   tmux
+   vim
+   stardict
+   dpkg
+   rpm

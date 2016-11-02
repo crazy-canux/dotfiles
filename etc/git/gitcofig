@@ -32,7 +32,7 @@
 	editor = vim
     excludesfile = /usr/share/faurecia/git/gitignore
     # for git://
-    gitProxy = ''
+    gitproxy = ''
 
 [credential]
 
