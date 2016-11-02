@@ -1,4 +1,7 @@
-# xdevops/etc/bash
+.. _bash:
+
+BASH
+====
 
 Include:
 
@@ -6,43 +9,67 @@ Include:
 
 2. bash-it
 
-# How to install
+Install Bash-it
+---------------
 
-Install bash-it:
+Install::
 
     mkdir ~/.bash.d
     git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash.d/bash-it
     . ~/.bash.d/bash-it/install.sh
+
+Configuration::
+
     chsh -s /bin/bash
+    echo "source ~/pydeveloper/etc/bash/bashrc" > ~/.bashrc
 
-Configuration:
+Customize your BASH-IT
+======================
 
-    echo "source ~/myCode/xdevops/etc/bash/bashrc" > ~/.bashrc
+Include:
 
-# How to use
+1. themes
 
-## Create your own bash-it
+2. aliases
+
+3. completion
+
+4. plugins
+
+Customize your themes
+---------------------
+
+Modify in ~/pydeveloper/etc/bash/bashrc::
+
+    export BASH_IT_THEME='<your-theme>'
+
+Create your aliases/completions/plugins
+---------------------------------------
+
+Create your aliases/completions/plugins for bash-it on github or just on local folders.
+
+Customize your BASH
+===================
 
 Include:
 
 1. aliases
 
-2. completion
+2. completions
 
-3. plugins
+3. shell command
 
-4. themes
+Create your aliases
+-------------------
 
-Modify bashrc for bash-it part.
+Put your aliases in ~/.bash_aliases.
 
-## Create your own aliases
+Create your completion
+----------------------
 
-Put your aliases in ~/.bash_aliases
+Put your completion bash script in ~/.bash.d.
 
-## Create your own bash script
+Create your shell command
+-------------------------
 
-Put your bash script in ~/.bash.d and named *.bash
-
-## Create your own shell command
-
-Put your command in "$PATH" which you write in bashrc
+Put your shell command in ~/bin

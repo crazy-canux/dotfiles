@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>&lt;no title&gt; &mdash; pydeveloper 1.0.0.0 documentation</title>
+    <title>zsh &mdash; pydeveloper 1.0.0.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,51 +36,121 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <p># xdevops/etc/zsh</p>
+  <div class="section" id="zsh">
+<span id="id1"></span><h1>zsh<a class="headerlink" href="#zsh" title="Permalink to this headline">¶</a></h1>
 <p>Include:</p>
 <ol class="arabic simple">
 <li>zsh</li>
 <li>oh-my-zsh</li>
-<li>Other plugins/themes</li>
 </ol>
-<p># How to install</p>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
 <p>Install zsh:</p>
-<blockquote>
-<div>sudo apt-get install zsh
-sudo yum install zsh</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install zsh
+sudo yum install zsh
+</pre></div>
+</div>
 <p>Install oh-my-zsh Use curl or wget(recommend):</p>
-<blockquote>
-<div>export ZSH=&#8221;$HOME/.zsh.d/oh-my-zsh&#8221;; sh -c &#8220;$(curl -fsSL
-<a class="reference external" href="https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh">https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh</a>)&#8221;</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre>export ZSH=&quot;$HOME/.zsh.d/oh-my-zsh&quot;; sh -c &quot;$(curl -fsSL
+https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
+</pre></div>
+</div>
 <p>or:</p>
-<blockquote>
-<div>export ZSH=&#8221;$HOME/.zsh.d/oh-my-zsh&#8221;; sh -c &#8220;$(wget
-<a class="reference external" href="https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh">https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh</a>
--O -)&#8221;</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre>export ZSH=&quot;$HOME/.zsh.d/oh-my-zsh&quot;; sh -c &quot;$(wget
+https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot;
+</pre></div>
+</div>
 <p>Install oh-my-zsh manual:</p>
-<blockquote>
-<div>git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.zsh.d/oh-my-zsh
+<div class="highlight-python"><div class="highlight"><pre>git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.zsh.d/oh-my-zsh
 cp ~/.zshrc ~/.zshrc.orig
-chsh -s /bin/zsh</div></blockquote>
+</pre></div>
+</div>
 <p>Configuration:</p>
-<blockquote>
-<div>echo &#8220;source ~/myCode/xdevops/etc/zsh/zshrc&#8221; &gt; ~/.zshrc</div></blockquote>
-<p># How to use</p>
-<p>## How to add your own plugins</p>
-<p>You can manage other plugins with oh-my-zsh</p>
-<p>Put it in ~/.zsh.d/oh-my-zsh/custom/plugins and add it in zshrc.</p>
-<blockquote>
-<div>git clone &lt;pluing-url&gt; ~/.zsh.d/oh-my-zsh/custom/plugins/&lt;plugin-name&gt;</div></blockquote>
-<p>## How to add your own themes</p>
-<p>You can manage other themes with oh-my-zsh</p>
-<p>Put it in ~/.zsh.d/oh-my-zsh/themes and modify theme in zshrc.</p>
+<div class="highlight-python"><div class="highlight"><pre>chsh -s /bin/zsh
+echo &quot;source ~/myCode/xdevops/etc/zsh/zshrc&quot; &gt; ~/.zshrc
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="customize-your-oh-my-zsh">
+<h1>Customize your oh-my-ZSH<a class="headerlink" href="#customize-your-oh-my-zsh" title="Permalink to this headline">¶</a></h1>
+<p>Include:</p>
+<ol class="arabic simple">
+<li>themes</li>
+<li>plugins</li>
+</ol>
+<div class="section" id="customize-your-themes">
+<h2>Customize your themes<a class="headerlink" href="#customize-your-themes" title="Permalink to this headline">¶</a></h2>
+<p>Pick one theme in ~/.zsh.d/oh-my-zsh/themes:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">ZSH_THEME</span><span class="o">=</span><span class="s">&quot;random&quot;</span>
+</pre></div>
+</div>
+<p>You can manage other zsh themes with oh-my-zsh, just modify ~/pydeveloper/etc/zsh/zshrc:</p>
+<div class="highlight-python"><div class="highlight"><pre>git clone &lt;theme-url&gt; ~/.zsh.d/oh-my-zsh/themes/&lt;theme-name&gt;
+ZSH_THEME=&quot;&lt;theme-name&gt;/&lt;theme-name&gt;&quot;
+</pre></div>
+</div>
+</div>
+<div class="section" id="customize-your-plugins">
+<h2>Customize your plugins<a class="headerlink" href="#customize-your-plugins" title="Permalink to this headline">¶</a></h2>
+<p>Pick themes in ~/.zsh.d/oh-my-zsh/plugins:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">plugins</span><span class="o">+=</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>You can manage other zsh plugins with oh-my-zsh, just modify ~/pydeveloper/etc/zsh/zshrc:</p>
+<div class="highlight-python"><div class="highlight"><pre>git clone &lt;plugin-url&gt; ~/.zsh.d/oh-my-zsh/custom/plugins/&lt;plugin-name&gt;
+plugins+=(&lt;plugin-name&gt;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="customize-your-zsh">
+<h1>Customize your ZSH<a class="headerlink" href="#customize-your-zsh" title="Permalink to this headline">¶</a></h1>
+<p>Include:</p>
+<ol class="arabic simple">
+<li>aliases</li>
+<li>completions</li>
+<li>shell command</li>
+</ol>
+<div class="section" id="create-your-aliases">
+<h2>Create your aliases<a class="headerlink" href="#create-your-aliases" title="Permalink to this headline">¶</a></h2>
+<p>Put your aliases in ~/.bash_aliases.</p>
+</div>
+<div class="section" id="create-your-completions">
+<h2>Create your completions<a class="headerlink" href="#create-your-completions" title="Permalink to this headline">¶</a></h2>
+<p>Put your completions shell script in ~/.bash.d.</p>
+</div>
+<div class="section" id="create-your-shell-command">
+<h2>Create your shell command<a class="headerlink" href="#create-your-shell-command" title="Permalink to this headline">¶</a></h2>
+<p>Put your shell command in ~/bin.</p>
+</div>
+</div>
 
 
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">zsh</a><ul>
+<li><a class="reference internal" href="#install">Install</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#customize-your-oh-my-zsh">Customize your oh-my-ZSH</a><ul>
+<li><a class="reference internal" href="#customize-your-themes">Customize your themes</a></li>
+<li><a class="reference internal" href="#customize-your-plugins">Customize your plugins</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#customize-your-zsh">Customize your ZSH</a><ul>
+<li><a class="reference internal" href="#create-your-aliases">Create your aliases</a></li>
+<li><a class="reference internal" href="#create-your-completions">Create your completions</a></li>
+<li><a class="reference internal" href="#create-your-shell-command">Create your shell command</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>

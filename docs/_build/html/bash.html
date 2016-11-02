@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>&lt;no title&gt; &mdash; pydeveloper 1.0.0.0 documentation</title>
+    <title>BASH &mdash; pydeveloper 1.0.0.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,45 +36,96 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <p># xdevops/etc/bash</p>
+  <div class="section" id="bash">
+<span id="id1"></span><h1>BASH<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h1>
 <p>Include:</p>
 <ol class="arabic simple">
 <li>bash</li>
 <li>bash-it</li>
 </ol>
-<p># How to install</p>
-<p>Install bash-it:</p>
-<blockquote>
-<div>mkdir ~/.bash.d
-git clone &#8211;depth=1 <a class="reference external" href="https://github.com/Bash-it/bash-it.git">https://github.com/Bash-it/bash-it.git</a> ~/.bash.d/bash-it
+<div class="section" id="install-bash-it">
+<h2>Install Bash-it<a class="headerlink" href="#install-bash-it" title="Permalink to this headline">¶</a></h2>
+<p>Install:</p>
+<div class="highlight-python"><div class="highlight"><pre>mkdir ~/.bash.d
+git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash.d/bash-it
 . ~/.bash.d/bash-it/install.sh
-chsh -s /bin/bash</div></blockquote>
+</pre></div>
+</div>
 <p>Configuration:</p>
-<blockquote>
-<div>echo &#8220;source ~/myCode/xdevops/etc/bash/bashrc&#8221; &gt; ~/.bashrc</div></blockquote>
-<p># How to use</p>
-<p>## Create your own bash-it</p>
+<div class="highlight-python"><div class="highlight"><pre>chsh -s /bin/bash
+echo &quot;source ~/pydeveloper/etc/bash/bashrc&quot; &gt; ~/.bashrc
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="customize-your-bash-it">
+<h1>Customize your BASH-IT<a class="headerlink" href="#customize-your-bash-it" title="Permalink to this headline">¶</a></h1>
 <p>Include:</p>
 <ol class="arabic simple">
+<li>themes</li>
 <li>aliases</li>
 <li>completion</li>
 <li>plugins</li>
-<li>themes</li>
 </ol>
-<p>Modify bashrc for bash-it part.</p>
-<p>## Create your own aliases</p>
-<p>Put your aliases in ~/.bash_aliases</p>
-<p>## Create your own bash script</p>
-<p>Put your bash script in ~/.bash.d and named <a href="#id1"><span class="problematic" id="id2">*</span></a>.bash</p>
-<p>## Create your own shell command</p>
-<p>Put your command in &#8220;$PATH&#8221; which you write in bashrc</p>
+<div class="section" id="customize-your-themes">
+<h2>Customize your themes<a class="headerlink" href="#customize-your-themes" title="Permalink to this headline">¶</a></h2>
+<p>Modify in ~/pydeveloper/etc/bash/bashrc:</p>
+<div class="highlight-python"><div class="highlight"><pre>export BASH_IT_THEME=&#39;&lt;your-theme&gt;&#39;
+</pre></div>
+</div>
+</div>
+<div class="section" id="create-your-aliases-completions-plugins">
+<h2>Create your aliases/completions/plugins<a class="headerlink" href="#create-your-aliases-completions-plugins" title="Permalink to this headline">¶</a></h2>
+<p>Create your aliases/completions/plugins for bash-it on github or just on local folders.</p>
+</div>
+</div>
+<div class="section" id="customize-your-bash">
+<h1>Customize your BASH<a class="headerlink" href="#customize-your-bash" title="Permalink to this headline">¶</a></h1>
+<p>Include:</p>
+<ol class="arabic simple">
+<li>aliases</li>
+<li>completions</li>
+<li>shell command</li>
+</ol>
+<div class="section" id="create-your-aliases">
+<h2>Create your aliases<a class="headerlink" href="#create-your-aliases" title="Permalink to this headline">¶</a></h2>
+<p>Put your aliases in ~/.bash_aliases.</p>
+</div>
+<div class="section" id="create-your-completion">
+<h2>Create your completion<a class="headerlink" href="#create-your-completion" title="Permalink to this headline">¶</a></h2>
+<p>Put your completion bash script in ~/.bash.d.</p>
+</div>
+<div class="section" id="create-your-shell-command">
+<h2>Create your shell command<a class="headerlink" href="#create-your-shell-command" title="Permalink to this headline">¶</a></h2>
+<p>Put your shell command in ~/bin</p>
+</div>
+</div>
 
 
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">BASH</a><ul>
+<li><a class="reference internal" href="#install-bash-it">Install Bash-it</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#customize-your-bash-it">Customize your BASH-IT</a><ul>
+<li><a class="reference internal" href="#customize-your-themes">Customize your themes</a></li>
+<li><a class="reference internal" href="#create-your-aliases-completions-plugins">Create your aliases/completions/plugins</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#customize-your-bash">Customize your BASH</a><ul>
+<li><a class="reference internal" href="#create-your-aliases">Create your aliases</a></li>
+<li><a class="reference internal" href="#create-your-completion">Create your completion</a></li>
+<li><a class="reference internal" href="#create-your-shell-command">Create your shell command</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>

@@ -30,17 +30,13 @@ Show more details about what the tool is, and how to customize yours.
 
     bash
     zsh
-    git
-    vim
-    tmux
-    stardict
-    dpkg
-    rpm
 
-Indices and tables
-==================
+API Reference
+=============
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+This is autodoc API.
 
+.. toctree::
+   :maxdepth: 2
+
+   api
