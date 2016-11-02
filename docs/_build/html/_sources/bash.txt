@@ -1,5 +1,3 @@
-.. _bash:
-
 BASH
 ====
 
@@ -9,10 +7,13 @@ Include:
 
 2. bash-it
 
-Install Bash-it
----------------
 
-Install::
+Install
+-------
+
+Most Linux system already have bash installed.
+
+Install bash-it::
 
     mkdir ~/.bash.d
     git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash.d/bash-it
@@ -24,7 +25,7 @@ Configuration::
     echo "source ~/pydeveloper/etc/bash/bashrc" > ~/.bashrc
 
 Customize your BASH-IT
-======================
+----------------------
 
 Include:
 
@@ -37,19 +38,19 @@ Include:
 4. plugins
 
 Customize your themes
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Modify in ~/pydeveloper/etc/bash/bashrc::
 
     export BASH_IT_THEME='<your-theme>'
 
 Create your aliases/completions/plugins
----------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Create your aliases/completions/plugins for bash-it on github or just on local folders.
 
 Customize your BASH
-===================
+-------------------
 
 Include:
 
@@ -60,16 +61,16 @@ Include:
 3. shell command
 
 Create your aliases
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 Put your aliases in ~/.bash_aliases.
 
 Create your completion
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 Put your completion bash script in ~/.bash.d.
 
 Create your shell command
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Put your shell command in ~/bin

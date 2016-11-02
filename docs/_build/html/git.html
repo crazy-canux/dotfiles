@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>&lt;no title&gt; &mdash; pydeveloper 1.0.0.0 documentation</title>
+    <title>GIT &mdash; pydeveloper 1.0.0.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,41 +36,67 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <p># xdevops/etc/git</p>
+  <div class="section" id="git">
+<h1>GIT<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
 <p>Include:</p>
 <ol class="arabic simple">
 <li>git</li>
 </ol>
-<p># How to install</p>
-<p>Install git</p>
-<blockquote>
-<div>sudo apt-get install git
-sudo yum install git</div></blockquote>
-<p>Configuration:</p>
-<p>/etc/gitconfig 系统级的配置文件，通过git config &#8211;system设置</p>
-<p>~/.gitconfig 用户级的配置文件，通过git config &#8211;global设置</p>
-<p>.git/config 仓库级的配置文件，通过git config &#8211;local设置</p>
-<p># How to use</p>
-<p>Write this in ~/.gitconfig and delete everything else.</p>
-<blockquote>
-<div><dl class="docutils">
-<dt>[include]</dt>
-<dd>path = ~/myCode/xdevops/etc/git/gitcofig</dd>
-</dl>
-</div></blockquote>
-<p># How to set proxy</p>
-<p>github have 4 proxy:
-1. local proxy <a class="reference external" href="file:///path/to/project.git">file:///path/to/project.git</a>
-2. remote <a class="reference external" href="https://">https://</a> <a class="reference external" href="https://github.com">https://github.com</a>/&lt;username&gt;/&lt;project&gt;.git or <a class="reference external" href="https:/">https:/</a>/&lt;username&gt;:&lt;password&gt;&#64;github.com/&lt;username&gt;/&lt;project&gt;.git
-3. <a class="reference external" href="ssh://git&#64;github.com">ssh://git&#64;github.com</a>/&lt;username&gt;/&lt;project&gt;.git or <a class="reference external" href="mailto:git&#37;&#52;&#48;github&#46;com">git<span>&#64;</span>github<span>&#46;</span>com</a>:&lt;username&gt;/&lt;project&gt;.git
-4. git://</p>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<p>Install git:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install git
+sudo yum install git
+</pre></div>
+</div>
+<p>Configuration ~/.gitconfig:</p>
+<div class="highlight-python"><div class="highlight"><pre>[include]
+    path = ~/pydeveloper/etc/git/gitcofig
+</pre></div>
+</div>
+<div class="section" id="git-configuration">
+<h3>Git configuration<a class="headerlink" href="#git-configuration" title="Permalink to this headline">¶</a></h3>
+<p>/etc/gitconfig,use &#8220;git config &#8211;system&#8221;.</p>
+<p>~/.gitconfig,use &#8220;git config &#8211;global&#8221;.</p>
+<p>.git/config,use &#8220;git config &#8211;local&#8221;.</p>
+<p>Add your global configuration:</p>
+<div class="highlight-python"><div class="highlight"><pre>git config --global user.name &quot;yourname&quot;
+git config --global user.email &quot;youremail&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="set-proxy">
+<h2>Set proxy<a class="headerlink" href="#set-proxy" title="Permalink to this headline">¶</a></h2>
+<p>Set your proxy for http/https protocol:</p>
+<div class="highlight-python"><div class="highlight"><pre>git config --global http.proxy &quot;yourproxy_for_http/https&quot;
+</pre></div>
+</div>
+<p>Set your proxy for git protocol:</p>
+<div class="highlight-python"><div class="highlight"><pre>git config --global core.gitproxy &quot;yourproxy_for_git&quot;
+</pre></div>
+</div>
+</div>
+</div>
 
 
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">GIT</a><ul>
+<li><a class="reference internal" href="#install">Install</a><ul>
+<li><a class="reference internal" href="#git-configuration">Git configuration</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#set-proxy">Set proxy</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>

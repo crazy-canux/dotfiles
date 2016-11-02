@@ -1,5 +1,3 @@
-.. _zsh:
-
 zsh
 ===
 
@@ -17,7 +15,7 @@ Install zsh::
     sudo apt-get install zsh
     sudo yum install zsh
 
-Install oh-my-zsh Use curl or wget(recommend)::
+Install oh-my-zsh::
 
     export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(curl -fsSL
     https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -27,10 +25,10 @@ or::
     export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(wget
     https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
-Install oh-my-zsh manual::
+or::
 
     git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.zsh.d/oh-my-zsh
-    cp ~/.zshrc ~/.zshrc.orig
+    cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 Configuration::
 
@@ -38,7 +36,7 @@ Configuration::
     echo "source ~/myCode/xdevops/etc/zsh/zshrc" > ~/.zshrc
 
 Customize your oh-my-ZSH
-========================
+------------------------
 
 Include:
 
@@ -47,7 +45,7 @@ Include:
 2. plugins
 
 Customize your themes
----------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 Pick one theme in ~/.zsh.d/oh-my-zsh/themes::
 
@@ -59,7 +57,7 @@ You can manage other zsh themes with oh-my-zsh, just modify ~/pydeveloper/etc/zs
     ZSH_THEME="<theme-name>/<theme-name>"
 
 Customize your plugins
-----------------------
+^^^^^^^^^^^^^^^^^^^^^^
 
 Pick themes in ~/.zsh.d/oh-my-zsh/plugins::
 
@@ -71,7 +69,9 @@ You can manage other zsh plugins with oh-my-zsh, just modify ~/pydeveloper/etc/z
     plugins+=(<plugin-name>)
 
 Customize your ZSH
-==================
+------------------
+
+The same with bash.
 
 Include:
 
@@ -82,16 +82,16 @@ Include:
 3. shell command
 
 Create your aliases
--------------------
+^^^^^^^^^^^^^^^^^^^
 
 Put your aliases in ~/.bash_aliases.
 
 Create your completions
------------------------
+^^^^^^^^^^^^^^^^^^^^^^^
 
 Put your completions shell script in ~/.bash.d.
 
 Create your shell command
--------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Put your shell command in ~/bin.

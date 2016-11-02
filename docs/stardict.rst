@@ -1,4 +1,5 @@
-# xdevops/etc/stardict
+StarDict
+========
 
 Include:
 
@@ -6,27 +7,29 @@ Include:
 
 2. sdcv
 
-# How to install
+Install
+-------
 
-Install stardict
+Install stardict and sdcv::
 
     sudo apt-get install stardict sdcv
     sudo yum install stardict sdcv
 
-Configuration:
+Configuration::
 
-Unzip xdevops/data/dict/* to /usr/share/stardict/dic
+    tar -jxvf ~/pydeveloper/data/dict/*.tar.bz2 -C /usr/share/stardict/dic/
 
-# How to use
+How to use
+----------
 
-Use it in vim:
+Use it in vim::
 
     Ctrl + d
 
-Use sdcv:
+Use sdcv in command line::
 
     sdcv hello
 
-Use stardict with GUI:
+Use stardict with GUI::
 
     stardict hello

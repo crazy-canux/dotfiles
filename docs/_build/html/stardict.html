@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>&lt;no title&gt; &mdash; pydeveloper 1.0.0.0 documentation</title>
+    <title>StarDict &mdash; pydeveloper 1.0.0.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,36 +36,57 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <p># xdevops/etc/stardict</p>
+  <div class="section" id="stardict">
+<h1>StarDict<a class="headerlink" href="#stardict" title="Permalink to this headline">¶</a></h1>
 <p>Include:</p>
 <ol class="arabic simple">
 <li>stardict</li>
 <li>sdcv</li>
 </ol>
-<p># How to install</p>
-<p>Install stardict</p>
-<blockquote>
-<div>sudo apt-get install stardict sdcv
-sudo yum install stardict sdcv</div></blockquote>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<p>Install stardict and sdcv:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install stardict sdcv
+sudo yum install stardict sdcv
+</pre></div>
+</div>
 <p>Configuration:</p>
-<p>Unzip xdevops/data/dict/* to /usr/share/stardict/dic</p>
-<p># How to use</p>
+<div class="highlight-python"><div class="highlight"><pre>tar -jxvf ~/pydeveloper/data/dict/*.tar.bz2 -C /usr/share/stardict/dic/
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-use">
+<h2>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline">¶</a></h2>
 <p>Use it in vim:</p>
-<blockquote>
-<div>Ctrl + d</div></blockquote>
-<p>Use sdcv:</p>
-<blockquote>
-<div>sdcv hello</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">Ctrl</span> <span class="o">+</span> <span class="n">d</span>
+</pre></div>
+</div>
+<p>Use sdcv in command line:</p>
+<div class="highlight-python"><div class="highlight"><pre>sdcv hello
+</pre></div>
+</div>
 <p>Use stardict with GUI:</p>
-<blockquote>
-<div>stardict hello</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre>stardict hello
+</pre></div>
+</div>
+</div>
+</div>
 
 
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">StarDict</a><ul>
+<li><a class="reference internal" href="#install">Install</a></li>
+<li><a class="reference internal" href="#how-to-use">How to use</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>

@@ -1,37 +1,42 @@
-# xdevops/etc/tmux
-
-tmux configuration file.
+TMUX
+====
 
 Include:
 
-1. vundle.vim/pathogen.vim
+1. tmux
 
-2. basic.vim
+2. tpm
 
-3. header.vim
 
-4. script.vim
+Install
+-------
 
-# How to install
+Install Tmux::
 
-Install plugin by TPM(recommend):
+    sudo apt-get install tmux
+    sudo yum install tmux
 
-        rm -rf ~/.tmux
-        mkdir -p ~/.tmux/plugins
-        git clone https://github.com/tmux-plugins/tpm ~/.tmux/tmp
-        Ctrl+b + I    # In tmux run this.
-        source-file ~/.tmux.conf # In tmux run this.
+Configuration::
 
-Install plugin by hand:
+    echo "source ~/pydeveloper/etc/tmux/tmux.conf" > ~/.tmux.conf
 
-        rm -rf ~/.tmux
-        mkdir -p ~/.tmux/bundle
-        git clone <plugin-url>
-        source-file ~/.tmux.conf # In tmux run this
+Install TPM and tmux plugins(recommend)::
 
-Configuration:
+    rm -rf ~/.tmux
+    mkdir -p ~/.tmux/plugins
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    tmux # Start tmux
+    Ctrl+b + I # In tmux run this.
+    source-file ~/.tmux.conf # In tmux run this.
 
-        echo "source ~/myCode/xdevops/etc/tmux/tmux.conf" > ~/.tmux.conf
-        tmux source-file ~/.tmux.conf # run this in shell
+Install plugin by hand::
 
-# How to use
+    rm -rf ~/.tmux
+    mkdir -p ~/.tmux/bundle
+    git clone <plugin-url>
+    source-file ~/.tmux.conf # In tmux run this
+
+How to use
+----------
+
+Check the tmux documents.

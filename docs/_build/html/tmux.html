@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>&lt;no title&gt; &mdash; pydeveloper 1.0.0.0 documentation</title>
+    <title>TMUX &mdash; pydeveloper 1.0.0.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,41 +36,62 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <p># xdevops/etc/tmux</p>
-<p>tmux configuration file.</p>
+  <div class="section" id="tmux">
+<h1>TMUX<a class="headerlink" href="#tmux" title="Permalink to this headline">¶</a></h1>
 <p>Include:</p>
 <ol class="arabic simple">
-<li>vundle.vim/pathogen.vim</li>
-<li>basic.vim</li>
-<li>header.vim</li>
-<li>script.vim</li>
+<li>tmux</li>
+<li>tpm</li>
 </ol>
-<p># How to install</p>
-<p>Install plugin by TPM(recommend):</p>
-<blockquote>
-<div>rm -rf ~/.tmux
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<p>Install Tmux:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install tmux
+sudo yum install tmux
+</pre></div>
+</div>
+<p>Configuration:</p>
+<div class="highlight-python"><div class="highlight"><pre>echo &quot;source ~/pydeveloper/etc/tmux/tmux.conf&quot; &gt; ~/.tmux.conf
+</pre></div>
+</div>
+<p>Install TPM and tmux plugins(recommend):</p>
+<div class="highlight-python"><div class="highlight"><pre>rm -rf ~/.tmux
 mkdir -p ~/.tmux/plugins
-git clone <a class="reference external" href="https://github.com/tmux-plugins/tpm">https://github.com/tmux-plugins/tpm</a> ~/.tmux/tmp
-Ctrl+b + I    # In tmux run this.
-source-file ~/.tmux.conf # In tmux run this.</div></blockquote>
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+tmux # Start tmux
+Ctrl+b + I # In tmux run this.
+source-file ~/.tmux.conf # In tmux run this.
+</pre></div>
+</div>
 <p>Install plugin by hand:</p>
-<blockquote>
-<div>rm -rf ~/.tmux
+<div class="highlight-python"><div class="highlight"><pre>rm -rf ~/.tmux
 mkdir -p ~/.tmux/bundle
 git clone &lt;plugin-url&gt;
-source-file ~/.tmux.conf # In tmux run this</div></blockquote>
-<p>Configuration:</p>
-<blockquote>
-<div>echo &#8220;source ~/myCode/xdevops/etc/tmux/tmux.conf&#8221; &gt; ~/.tmux.conf
-tmux source-file ~/.tmux.conf # run this in shell</div></blockquote>
-<p># How to use</p>
+source-file ~/.tmux.conf # In tmux run this
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-use">
+<h2>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline">¶</a></h2>
+<p>Check the tmux documents.</p>
+</div>
+</div>
 
 
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">TMUX</a><ul>
+<li><a class="reference internal" href="#install">Install</a></li>
+<li><a class="reference internal" href="#how-to-use">How to use</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>

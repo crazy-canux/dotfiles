@@ -3,40 +3,37 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+===========
 pydeveloper
 ===========
 
 pydeveloper is a tool, used to deploy an awesome develop and operation environment.
 
-How to install
---------------
+Automatic install
+-----------------
 
-- Automatic install::
+Use pip to automatic install::
 
       pip install pydeveloper
 
-- Manual install::
+Manual install
+--------------
+
+Clone this repository to your laptop::
 
       cd $HOME
       git clone https://github.com/crazy-canux/pydeveloper.git
 
-How to use
-----------
-
-Show more details about what the tool is, and how to customize yours.
+Install all tools and config them follow the docs.
 
 .. toctree::
    :maxdepth: 2
 
     bash
     zsh
-
-API Reference
-=============
-
-This is autodoc API.
-
-.. toctree::
-   :maxdepth: 2
-
-   api
+    git
+    tmux
+    vim
+    stardict
+    dpkg
+    rpm

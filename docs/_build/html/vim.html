@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>&lt;no title&gt; &mdash; pydeveloper 1.0.0.0 documentation</title>
+    <title>VIM &mdash; pydeveloper 1.0.0.0 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -36,8 +36,8 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <p># xdevops/etc/vim</p>
-<p>vim configuration file.</p>
+  <div class="section" id="vim">
+<h1>VIM<a class="headerlink" href="#vim" title="Permalink to this headline">¶</a></h1>
 <p>Include:</p>
 <ol class="arabic simple">
 <li>vundle.vim/pathogen.vim</li>
@@ -45,51 +45,71 @@
 <li>header.vim</li>
 <li>script.vim</li>
 </ol>
-<p># How to install</p>
-<p>Install vim</p>
-<blockquote>
-<div>sudo apt-get install vim
-sudo yum install vim</div></blockquote>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<p>Install vim:</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install vim
+sudo yum install vim
+</pre></div>
+</div>
 <p>Use vundle to manage plugins(recommend):</p>
-<blockquote>
-<div>echo &#8220;source ~/myCode/xdevops/etc/vim/vundle.vim&#8221; &gt; ~/.vimrc
+<div class="highlight-python"><div class="highlight"><pre>echo &quot;source ~/pydeveloper/etc/vim/vundle.vim&quot; &gt; ~/.vimrc
 rm -rf ~/.vim
 mkdir -p ~/.vim/plugins
 vim +PluginInstall +qall # run this on shell command line
 :PluginInstall # or run this in vim command line
-source ~/.vimrc</div></blockquote>
+source ~/.vimrc
+</pre></div>
+</div>
 <p>Use pathogen to manage plugins:</p>
-<blockquote>
-<div>echo &#8220;source ~/myCode/xdevops/etc/vim/pathogen.vim&#8221; &gt; ~/.vimrc
+<div class="highlight-python"><div class="highlight"><pre>echo &quot;source ~/pydeveloper/etc/vim/pathogen.vim&quot; &gt; ~/.vimrc
 rm -rf ~/.vim/bundle
 mkdir -p ~/.vim/bundle
 git clone &lt;plugin-url&gt; ~/.vim/bundle/&lt;plugin-name&gt;
-source ~/.vimrc</div></blockquote>
-<p># How to use</p>
-<p>Ctrl+s - Save file</p>
-<p>Ctrl+d - Open stardict</p>
-<p>F1 - VIM help, default</p>
-<p>F2 - Open/Close Winmanager</p>
-<p>F3 - Open/Close NERDTree</p>
-<p>F4 - Open/Close Tagbar</p>
-<p>F5 - Open/Close Minibufexplorer</p>
-<p>F6 - Open/Close gundo</p>
-<p>F7 - For C/C++ run make clean</p>
-<p>F8 - For C/C++ close quickfix windows.</p>
-<p>F8 - For python open PymodeLintAuto</p>
-<p>F9 - For C/C++ run make</p>
-<p>F9 - For java run javac and java</p>
-<p>F9 - For python run PymodeLint</p>
-<p>F10 - Use calendar</p>
-<p>F11 - Full screen the terminal, default</p>
-<p>F12 - Open Browser for markdown file</p>
+source ~/.vimrc
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-use">
+<h2>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline">¶</a></h2>
+<p>Hotkey in vim:</p>
+<div class="highlight-python"><div class="highlight"><pre>Ctrl+s - Save file
+Ctrl+d - Open stardict
+F1 - VIM help, default
+F2 - Open/Close Winmanager
+F3 - Open/Close NERDTree
+F4 - Open/Close Tagbar
+F5 - Open/Close Minibufexplorer
+F6 - Open/Close gundo
+F7 - For C/C++ run make clean
+F8 - For C/C++ close quickfix windows.
+F8 - For python open PymodeLintAuto
+F9 - For C/C++ run make
+F9 - For java run javac and java
+F9 - For python run PymodeLint
+F10 - Use calendar
+F11 - Full screen the terminal, default
+F12 - Open Browser for markdown file
+</pre></div>
+</div>
+</div>
+</div>
 
 
           </div>
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
-        <div class="sphinxsidebarwrapper"><div class="relations">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">VIM</a><ul>
+<li><a class="reference internal" href="#install">Install</a></li>
+<li><a class="reference internal" href="#how-to-use">How to use</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
 <h3>Related Topics</h3>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>

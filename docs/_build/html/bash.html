@@ -37,15 +37,16 @@
           <div class="body" role="main">
             
   <div class="section" id="bash">
-<span id="id1"></span><h1>BASH<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h1>
+<h1>BASH<a class="headerlink" href="#bash" title="Permalink to this headline">¶</a></h1>
 <p>Include:</p>
 <ol class="arabic simple">
 <li>bash</li>
 <li>bash-it</li>
 </ol>
-<div class="section" id="install-bash-it">
-<h2>Install Bash-it<a class="headerlink" href="#install-bash-it" title="Permalink to this headline">¶</a></h2>
-<p>Install:</p>
+<div class="section" id="install">
+<h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
+<p>Most Linux system already have bash installed.</p>
+<p>Install bash-it:</p>
 <div class="highlight-python"><div class="highlight"><pre>mkdir ~/.bash.d
 git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash.d/bash-it
 . ~/.bash.d/bash-it/install.sh
@@ -57,9 +58,8 @@ echo &quot;source ~/pydeveloper/etc/bash/bashrc&quot; &gt; ~/.bashrc
 </pre></div>
 </div>
 </div>
-</div>
 <div class="section" id="customize-your-bash-it">
-<h1>Customize your BASH-IT<a class="headerlink" href="#customize-your-bash-it" title="Permalink to this headline">¶</a></h1>
+<h2>Customize your BASH-IT<a class="headerlink" href="#customize-your-bash-it" title="Permalink to this headline">¶</a></h2>
 <p>Include:</p>
 <ol class="arabic simple">
 <li>themes</li>
@@ -68,19 +68,19 @@ echo &quot;source ~/pydeveloper/etc/bash/bashrc&quot; &gt; ~/.bashrc
 <li>plugins</li>
 </ol>
 <div class="section" id="customize-your-themes">
-<h2>Customize your themes<a class="headerlink" href="#customize-your-themes" title="Permalink to this headline">¶</a></h2>
+<h3>Customize your themes<a class="headerlink" href="#customize-your-themes" title="Permalink to this headline">¶</a></h3>
 <p>Modify in ~/pydeveloper/etc/bash/bashrc:</p>
 <div class="highlight-python"><div class="highlight"><pre>export BASH_IT_THEME=&#39;&lt;your-theme&gt;&#39;
 </pre></div>
 </div>
 </div>
 <div class="section" id="create-your-aliases-completions-plugins">
-<h2>Create your aliases/completions/plugins<a class="headerlink" href="#create-your-aliases-completions-plugins" title="Permalink to this headline">¶</a></h2>
+<h3>Create your aliases/completions/plugins<a class="headerlink" href="#create-your-aliases-completions-plugins" title="Permalink to this headline">¶</a></h3>
 <p>Create your aliases/completions/plugins for bash-it on github or just on local folders.</p>
 </div>
 </div>
 <div class="section" id="customize-your-bash">
-<h1>Customize your BASH<a class="headerlink" href="#customize-your-bash" title="Permalink to this headline">¶</a></h1>
+<h2>Customize your BASH<a class="headerlink" href="#customize-your-bash" title="Permalink to this headline">¶</a></h2>
 <p>Include:</p>
 <ol class="arabic simple">
 <li>aliases</li>
@@ -88,16 +88,17 @@ echo &quot;source ~/pydeveloper/etc/bash/bashrc&quot; &gt; ~/.bashrc
 <li>shell command</li>
 </ol>
 <div class="section" id="create-your-aliases">
-<h2>Create your aliases<a class="headerlink" href="#create-your-aliases" title="Permalink to this headline">¶</a></h2>
+<h3>Create your aliases<a class="headerlink" href="#create-your-aliases" title="Permalink to this headline">¶</a></h3>
 <p>Put your aliases in ~/.bash_aliases.</p>
 </div>
 <div class="section" id="create-your-completion">
-<h2>Create your completion<a class="headerlink" href="#create-your-completion" title="Permalink to this headline">¶</a></h2>
+<h3>Create your completion<a class="headerlink" href="#create-your-completion" title="Permalink to this headline">¶</a></h3>
 <p>Put your completion bash script in ~/.bash.d.</p>
 </div>
 <div class="section" id="create-your-shell-command">
-<h2>Create your shell command<a class="headerlink" href="#create-your-shell-command" title="Permalink to this headline">¶</a></h2>
+<h3>Create your shell command<a class="headerlink" href="#create-your-shell-command" title="Permalink to this headline">¶</a></h3>
 <p>Put your shell command in ~/bin</p>
+</div>
 </div>
 </div>
 
@@ -110,9 +111,7 @@ echo &quot;source ~/pydeveloper/etc/bash/bashrc&quot; &gt; ~/.bashrc
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
 <li><a class="reference internal" href="#">BASH</a><ul>
-<li><a class="reference internal" href="#install-bash-it">Install Bash-it</a></li>
-</ul>
-</li>
+<li><a class="reference internal" href="#install">Install</a></li>
 <li><a class="reference internal" href="#customize-your-bash-it">Customize your BASH-IT</a><ul>
 <li><a class="reference internal" href="#customize-your-themes">Customize your themes</a></li>
 <li><a class="reference internal" href="#create-your-aliases-completions-plugins">Create your aliases/completions/plugins</a></li>
@@ -122,6 +121,8 @@ echo &quot;source ~/pydeveloper/etc/bash/bashrc&quot; &gt; ~/.bashrc
 <li><a class="reference internal" href="#create-your-aliases">Create your aliases</a></li>
 <li><a class="reference internal" href="#create-your-completion">Create your completion</a></li>
 <li><a class="reference internal" href="#create-your-shell-command">Create your shell command</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

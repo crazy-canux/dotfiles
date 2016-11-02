@@ -37,7 +37,7 @@
           <div class="body" role="main">
             
   <div class="section" id="zsh">
-<span id="id1"></span><h1>zsh<a class="headerlink" href="#zsh" title="Permalink to this headline">¶</a></h1>
+<h1>zsh<a class="headerlink" href="#zsh" title="Permalink to this headline">¶</a></h1>
 <p>Include:</p>
 <ol class="arabic simple">
 <li>zsh</li>
@@ -50,7 +50,7 @@
 sudo yum install zsh
 </pre></div>
 </div>
-<p>Install oh-my-zsh Use curl or wget(recommend):</p>
+<p>Install oh-my-zsh:</p>
 <div class="highlight-python"><div class="highlight"><pre>export ZSH=&quot;$HOME/.zsh.d/oh-my-zsh&quot;; sh -c &quot;$(curl -fsSL
 https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)&quot;
 </pre></div>
@@ -60,9 +60,9 @@ https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot;
 </pre></div>
 </div>
-<p>Install oh-my-zsh manual:</p>
+<p>or:</p>
 <div class="highlight-python"><div class="highlight"><pre>git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.zsh.d/oh-my-zsh
-cp ~/.zshrc ~/.zshrc.orig
+cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 </pre></div>
 </div>
 <p>Configuration:</p>
@@ -71,16 +71,15 @@ echo &quot;source ~/myCode/xdevops/etc/zsh/zshrc&quot; &gt; ~/.zshrc
 </pre></div>
 </div>
 </div>
-</div>
 <div class="section" id="customize-your-oh-my-zsh">
-<h1>Customize your oh-my-ZSH<a class="headerlink" href="#customize-your-oh-my-zsh" title="Permalink to this headline">¶</a></h1>
+<h2>Customize your oh-my-ZSH<a class="headerlink" href="#customize-your-oh-my-zsh" title="Permalink to this headline">¶</a></h2>
 <p>Include:</p>
 <ol class="arabic simple">
 <li>themes</li>
 <li>plugins</li>
 </ol>
 <div class="section" id="customize-your-themes">
-<h2>Customize your themes<a class="headerlink" href="#customize-your-themes" title="Permalink to this headline">¶</a></h2>
+<h3>Customize your themes<a class="headerlink" href="#customize-your-themes" title="Permalink to this headline">¶</a></h3>
 <p>Pick one theme in ~/.zsh.d/oh-my-zsh/themes:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">ZSH_THEME</span><span class="o">=</span><span class="s">&quot;random&quot;</span>
 </pre></div>
@@ -92,7 +91,7 @@ ZSH_THEME=&quot;&lt;theme-name&gt;/&lt;theme-name&gt;&quot;
 </div>
 </div>
 <div class="section" id="customize-your-plugins">
-<h2>Customize your plugins<a class="headerlink" href="#customize-your-plugins" title="Permalink to this headline">¶</a></h2>
+<h3>Customize your plugins<a class="headerlink" href="#customize-your-plugins" title="Permalink to this headline">¶</a></h3>
 <p>Pick themes in ~/.zsh.d/oh-my-zsh/plugins:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">plugins</span><span class="o">+=</span><span class="p">()</span>
 </pre></div>
@@ -105,7 +104,8 @@ plugins+=(&lt;plugin-name&gt;)
 </div>
 </div>
 <div class="section" id="customize-your-zsh">
-<h1>Customize your ZSH<a class="headerlink" href="#customize-your-zsh" title="Permalink to this headline">¶</a></h1>
+<h2>Customize your ZSH<a class="headerlink" href="#customize-your-zsh" title="Permalink to this headline">¶</a></h2>
+<p>The same with bash.</p>
 <p>Include:</p>
 <ol class="arabic simple">
 <li>aliases</li>
@@ -113,16 +113,17 @@ plugins+=(&lt;plugin-name&gt;)
 <li>shell command</li>
 </ol>
 <div class="section" id="create-your-aliases">
-<h2>Create your aliases<a class="headerlink" href="#create-your-aliases" title="Permalink to this headline">¶</a></h2>
+<h3>Create your aliases<a class="headerlink" href="#create-your-aliases" title="Permalink to this headline">¶</a></h3>
 <p>Put your aliases in ~/.bash_aliases.</p>
 </div>
 <div class="section" id="create-your-completions">
-<h2>Create your completions<a class="headerlink" href="#create-your-completions" title="Permalink to this headline">¶</a></h2>
+<h3>Create your completions<a class="headerlink" href="#create-your-completions" title="Permalink to this headline">¶</a></h3>
 <p>Put your completions shell script in ~/.bash.d.</p>
 </div>
 <div class="section" id="create-your-shell-command">
-<h2>Create your shell command<a class="headerlink" href="#create-your-shell-command" title="Permalink to this headline">¶</a></h2>
+<h3>Create your shell command<a class="headerlink" href="#create-your-shell-command" title="Permalink to this headline">¶</a></h3>
 <p>Put your shell command in ~/bin.</p>
+</div>
 </div>
 </div>
 
@@ -136,8 +137,6 @@ plugins+=(&lt;plugin-name&gt;)
   <ul>
 <li><a class="reference internal" href="#">zsh</a><ul>
 <li><a class="reference internal" href="#install">Install</a></li>
-</ul>
-</li>
 <li><a class="reference internal" href="#customize-your-oh-my-zsh">Customize your oh-my-ZSH</a><ul>
 <li><a class="reference internal" href="#customize-your-themes">Customize your themes</a></li>
 <li><a class="reference internal" href="#customize-your-plugins">Customize your plugins</a></li>
@@ -147,6 +146,8 @@ plugins+=(&lt;plugin-name&gt;)
 <li><a class="reference internal" href="#create-your-aliases">Create your aliases</a></li>
 <li><a class="reference internal" href="#create-your-completions">Create your completions</a></li>
 <li><a class="reference internal" href="#create-your-shell-command">Create your shell command</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>

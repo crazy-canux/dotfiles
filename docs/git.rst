@@ -1,36 +1,44 @@
-# xdevops/etc/git
+GIT
+===
 
 Include:
 
 1. git
 
-# How to install
+Install
+-------
 
-Install git
+Install git::
 
     sudo apt-get install git
     sudo yum install git
 
-Configuration:
-
-/etc/gitconfig 系统级的配置文件，通过git config --system设置
-
-~/.gitconfig 用户级的配置文件，通过git config --global设置
-
-.git/config 仓库级的配置文件，通过git config --local设置
-
-# How to use
-
-Write this in ~/.gitconfig and delete everything else.
+Configuration ~/.gitconfig::
 
     [include]
-        path = ~/myCode/xdevops/etc/git/gitcofig
+        path = ~/pydeveloper/etc/git/gitcofig
 
-# How to set proxy
+Git configuration
+^^^^^^^^^^^^^^^^^
 
-github have 4 proxy:
-1. local proxy file:///path/to/project.git
-2. remote https:// https://github.com/<username>/<project>.git or https://<username>:<password>@github.com/<username>/<project>.git
-3. ssh://git@github.com/<username>/<project>.git or git@github.com:<username>/<project>.git
-4. git://
+/etc/gitconfig,use "git config --system".
 
+~/.gitconfig,use "git config --global".
+
+.git/config,use "git config --local".
+
+Add your global configuration::
+
+    git config --global user.name "yourname"
+    git config --global user.email "youremail"
+
+Set proxy
+---------
+
+Set your proxy for http/https protocol::
+
+    git config --global http.proxy "yourproxy_for_http/https"
+
+Set your proxy for git protocol::
+
+    git config --global core.gitproxy "yourproxy_for_git"
