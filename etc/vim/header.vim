@@ -51,7 +51,7 @@ function! MySetTitle()
         call append(line(".")+8,  "\Version: V1.0.0.0")
         call append(line(".")+9,  "\Time: ".strftime("%c"))
         call append(line(".")+10,  "")
-        call append(line(".")+11,  "\DETAILS:")
+        call append(line(".")+11,  "\DESCRIPTION:")
         call append(line(".")+12, "\"\"\"")
         call append(line(".")+13, "import sys")
     endif

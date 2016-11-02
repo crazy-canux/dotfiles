@@ -124,7 +124,7 @@ fi
 ###############################################################################
 # You own configuration
 ###############################################################################
-# Put some bash script file in ~/.bash.d
+# Put some completions bash script file in ~/.bash.d
 if [[ -d ~/.bash.d ]]; then
     for i in ~/.bash.d/*.bash; do
         if [[ -r $i ]]; then
@@ -134,13 +134,17 @@ if [[ -d ~/.bash.d ]]; then
     unset i
 fi
 
-# Put your own aliases here
+# Define some common alias here.
 # Use cman to check the chinese manual.
 alias cman='man -M /usr/share/man/zh_CN'
 
-# Add your shell script to $PATH
-# https://github.com/crazy-canux/xshell
-CHENG=~/myCode/xshell
+# PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/
+# Put your shell command in ~/bin
+if [[ -d ~/bin ]]; then
+    PATH=~/BIN:$PATH
+fi
+
+CHENG=~/myCode/shell
 if [[ -d $CHENG ]]; then
     PATH=$CHENG:$PATH
 fi

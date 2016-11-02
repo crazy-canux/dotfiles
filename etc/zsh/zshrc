@@ -50,9 +50,19 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
+fi
+
+# Completions definitions.
+# Put some bash script file in ~/.bash.d
+if [[ -d ~/.bash.d ]]; then
+    for i in ~/.bash.d/*.bash; do
+        if [[ -r $i ]]; then
+            . "$i"
+        fi
+    done
+    unset i
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -115,7 +125,17 @@ export ZSH=$HOME/.zsh.d/oh-my-zsh
 ###############################################################################
 
 # PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-export PATH=$HOME/myCode/xshell:/opt/oracle/instantclient_12_1:$PATH
+# Put your shell command in ~/bin
+if [[ -d ~/bin ]]; then
+    PATH=~/bin:$PATH
+fi
+
+CHENG=~/myCode/shell
+if [[ -d $CHENG ]]; then
+    PATH=$CHENG:$PATH
+fi
+
+export PATH=/opt/oracle/instantclient_12_1:$PATH
 export MANPATH=/usr/share/man:/usr/local/man:$MANPATH
 export ORACLE_HOME=/opt/oracle/instantclient_12_1:$ORACLE_HOME
 export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_1:$LD_LIBRARY_PATH
@@ -145,7 +165,7 @@ fi
 # For a full list of active aliases, run `alias`.
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias ohmyzsh="mate ~/.zsh.d/.oh-my-zsh"
 # Set the term
 
 # Use cman to check the chinese manual
@@ -180,7 +200,7 @@ alias -s cfg=vim
 
 ###############################################################################
 # Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
+# Look in ~/.zsh.d/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
 ###############################################################################
@@ -189,8 +209,8 @@ alias -s cfg=vim
 #ZSH_THEME="ys"
 
 ###############################################################################
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Which plugins would you like to load?
+# Plugins can be found in ~/.zsh.d/.oh-my-zsh/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 ###############################################################################
