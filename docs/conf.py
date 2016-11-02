@@ -117,7 +117,12 @@ html_theme = 'alabaster'
 html_theme_options = {
     'github_user': 'crazy-canux',
     'github_repo': 'pydeveloper',
+    'github_button': True,
+    'github_type': 'star',
+    'github_count': True,
     'github_banner': True,
+    'show_powered_by': False,
+    'show_related': True,
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
