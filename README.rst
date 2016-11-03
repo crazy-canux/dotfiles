@@ -80,6 +80,12 @@ TODO
 
 1. dpkg, rpm configuration file.
 
+=============
+Documentation
+=============
+
+`[Documentation] <http://pydeveloper.readthedocs.io/en/latest/>`_
+
 ============
 Contribution
 ============
