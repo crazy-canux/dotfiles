@@ -23,7 +23,7 @@ Install bash-it::
 
 Configuration::
 
-    chsh -s /bin/bash
+    chsh -s $(which bash)
     echo "source ~/pydeveloper/etc/bash/bashrc" > ~/.bashrc
 
 Customize your BASH-IT

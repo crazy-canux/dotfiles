@@ -3,7 +3,7 @@
 """
 Automatic install and configuration for zsh/bash/tmux/vim/stardict/git for DevOps.
 
-Copyright (C) 2016 Faurecia (China) Holding Co.,Ltd.
+Copyright (C) 2016 Canux CHENG.
 All rights reserved.
 Name: __init__.py
 Author: Canux CHENG canuxcheng@gmail.com

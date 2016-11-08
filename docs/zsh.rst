@@ -34,7 +34,7 @@ or::
 
 Configuration::
 
-    chsh -s /bin/zsh
+    chsh -s $(which zsh)
     echo "source ~/myCode/xdevops/etc/zsh/zshrc" > ~/.zshrc
 
 Customize your oh-my-ZSH
