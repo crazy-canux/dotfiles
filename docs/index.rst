@@ -9,6 +9,11 @@ pydeveloper
 
 pydeveloper is a tool, used to deploy an awesome develop and operation environment.
 
+How to Install
+==============
+
+You can install it with two ways.
+
 Automatic install
 -----------------
 
@@ -25,6 +30,9 @@ Clone this repository to your laptop::
     git clone https://github.com/crazy-canux/pydeveloper.git
 
 Install all tools and config them follow the docs.
+
+The User Guide
+==============
 
 .. toctree::
    :maxdepth: 2
