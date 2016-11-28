@@ -9,27 +9,22 @@ pydeveloper
 
 pydeveloper is a tool, used to deploy an awesome develop and operation environment.
 
+==============
 How to Install
 ==============
 
 You can install it with two ways.
 
-Automatic install
------------------
-
 Use pip to automatic install::
 
     pip install pydeveloper
-
-Manual install
---------------
 
 Clone this repository to your laptop::
 
     cd $HOME
     git clone https://github.com/crazy-canux/pydeveloper.git
 
-Install all tools and config them follow the docs.
+Install all tools and config them follow the user guide.
 
 The User Guide
 ==============
@@ -45,3 +40,12 @@ The User Guide
    stardict
    dpkg
    rpm
+
+
+
+Indices and tables
+==================
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
