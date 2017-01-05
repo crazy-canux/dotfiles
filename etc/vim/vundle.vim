@@ -54,6 +54,8 @@ Plugin 'Rykka/riv.vim'
 Plugin 'mattn/gist-vim'
 " Wiki
 Plugin 'vimwiki/vimwiki'
+" json
+Plugin 'elzr/vim-json'
 
 " Config tools
 Plugin 'crazy-canux/nagios.vim'
@@ -76,7 +78,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 " Languages
 " C
-Plugin 'vim-scripts/c.vim'
+"https://github.com/vim-scripts/c.vim
 Plugin 'vim-scripts/a.vim'
 " Java
 Plugin 'artur-shaik/vim-javacomplete2'
@@ -144,7 +146,7 @@ Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'Valloric/YouCompleteMe'
 " Need more action:
 " cd YouCompleteMe
-" git submodule upate --init --recursive
+" git submodule update --init --recursive
 " ./install.py --clang-completer --tern-completer
 "https://github.com/ervandew/supertab
 "https://github.com/rip-rip/clang_complete

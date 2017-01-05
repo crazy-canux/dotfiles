@@ -108,6 +108,8 @@ let g:instant_markdown_slow = 0
 
 """""""""""config wiki"""""""""""
 
+"""""""""""config vim-json""""""""
+
 """>>> Configuration tools
 
 """""""""config nagios"""""""""
@@ -141,11 +143,12 @@ let g:instant_markdown_slow = 0
 " For html/css
 " omnifunc=emmet#completeTag
 
+" Just enable for html/css
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 " Enable all function for all mode.
 let g:user_emmet_mode = 'a'
-" Default use <C-y>, to trigger, you can change <C-y>
+" Default use <C-y>, to trigger, you can change <C-y>,
 let g:user_emmet_leader_key = '<C-y>'
 " Enable emmet for xml.
 let g:user_emmet_settings = {
@@ -157,10 +160,12 @@ let g:user_emmet_settings = {
             \ },}
 
 """"""""""config sparkup""""""""""
+" For html
 " If you use pathogen you need to install
 " cd sparkup; make vim-pathogen
+" Use <C-e> to expand tags to html format.
 
-""">>> C
+""">>> C/C++
 
 """"""""""config c.vim""""""""""
 " Not use <F9>, use shift+ctrl+F9.
@@ -199,19 +204,19 @@ let g:jedi#completions_command = "<C-Space>"
 
 " Use jedi for goto
 " Go to definition (or assignment), default <leader>d.
-let g:jedi#goto_command = '<leader>jd'
+let g:jedi#goto_command = '<leader>d'
 " Go to assignment, default <leader>g.
-let g:jedi#goto_assignments_command = '<leader>jg'
+let g:jedi#goto_assignments_command = '<leader>g'
 
 " Use jedi for documentation
 " Show pydoc documentation, default <k>.
-let g:jedi#documentation_command = '<leader>jk'
+let g:jedi#documentation_command = '<leader>k'
 
 " Other functions
 " Rename, default <leader>r
-let g:jedi#rename_command = '<leader>jr'
+let g:jedi#rename_command = '<leader>r'
 " Show usages of a name, default <leader>n.
-let g:jedi#usages_command = '<leader>jn'
+let g:jedi#usages_command = '<leader>n'
 
 """"""""""config python-mode""""""""""
 " Include pylint, pyflakes, pep8, pep257, pydoc, mccabe, rope, autopep8.
@@ -256,19 +261,21 @@ let g:pymode_motion = 1
 
 " Turn on the run code script
 let g:pymode_run = 1
-" Bind key to run python code
-let g:pymode_run_bind = '<leader>r'
+" F9 to run python code
+autocmd FileType python map <buffer> <F9> :PymodeRun<CR>
+" Bind key to run python code, default <leader>r
+let g:pymode_run_bind = ''
 
 " Enable functionality
 let g:pymode_breakpoint = 1
-" Bind keys
+" Bind keys, Add/Remove breakpoint, default <leader>b
 let g:pymode_breakpoint_bind = '<leader>b'
 "let g:pymode_breakpoint_cmd = ''
 
 " Turn on pydoc
 let g:pymode_doc = 1
-" Show pydoc documentation for current word, default <k>.
-let g:pymode_doc_bind = '<leader>d'
+" Show pydoc for current word, default <k>.
+let g:pymode_doc_bind = ''
 
 "--------checkers-------
 " Use Syntastic instead.
@@ -290,9 +297,9 @@ let g:pymode_doc_bind = '<leader>d'
 let g:pymode_lint = 1
 
 " Use F8 to run autopep8.
-autocmd FileType python map <buffer> <F8> :PymodeLintAuto<CR>
+autocmd FileType python map <buffer> <F7> :PymodeLintAuto<CR>
 " Use F9 to Open/Close checkers windows.
-autocmd FileType python map <buffer> <F9> :PymodeLint<CR>
+autocmd FileType python map <buffer> <F8> :PymodeLint<CR>
 
 " Check code on every save, if file has been modified.
 let g:pymode_lint_on_write = 1
@@ -358,14 +365,14 @@ let g:pymode_rope_regenerate_on_write = 1
 
 " Functions we use jedi replace rope
 
-" Show documentation for object under cursor, default <C-c>d
+" Show pydoc for object under cursor, default <C-c>d
 let g:pymode_rope_show_doc_bind = ''
 
 " Enable completion for rope
 let g:pymode_rope_completion = 0
 " Turn on autocomplation when typing a period
 let g:pymode_rope_complete_on_dot = 1
-" Keymap for autocomplate, default <C-Space>, YCM use this map.
+" Keymap for autocomplate, default <C-Space>, Use YCM
 let g:pymode_rope_completion_bind = ''
 " Extended autocompletion from project
 let g:pymode_rope_autoimport = 0
@@ -374,8 +381,8 @@ let g:pymode_rope_autoimport_modules = ['sys']
 " Offer to unresolved import object after completion
 let g:pymode_rope_autoimport_after_complete = 1
 
-" Jump to definition
-let g:pymode_rope_goto_definition_bind = '<C-c>g'
+" Jump to definition, default <C-c>g
+let g:pymode_rope_goto_definition_bind = ''
 " Command for open window when definition has been found
 let g:pymode_rope_goto_definition_cmd = 'new'
 
@@ -384,25 +391,25 @@ let g:pymode_rope_goto_definition_cmd = 'new'
 " Keymap for rename method/function/class/variables
 let g:pymode_rope_rename_bind = '<C-c>rr'
 " Keymap for rename current module
-let g:pymode_rope_rename_module_bind = '<C-c>rlr'
+let g:pymode_rope_rename_module_bind = '<C-c>rm'
 
 " Bind the key
 let g:pymode_rope_autoimport_bind = '<C-c>ra'
 " Keymap for import
-let g:pymode_rope_organize_imports_bind = '<C-c>ro'
+let g:pymode_rope_organize_imports_bind = '<C-c>ri'
 
 " keymap for convert module to package
-let g:pymode_rope_module_to_package_bind = '<C-c>rlp'
+let g:pymode_rope_module_to_package_bind = '<C-c>rp'
 
 " Keymap for extract method/variable
-let g:pymode_rope_extract_method_bind = '<C-c>rm'
+let g:pymode_rope_extract_method_bind = '<C-c>rv'
 let g:pymode_rope_extract_variable_bind = '<C-c>rl'
 
 " Keymap for use function
 let g:pymode_rope_use_function_bind = '<C-c>ru'
 
 " Keymap for move method/fields
-let g:pymode_rope_move_bind = '<C-c>rv'
+let g:pymode_rope_move_bind = '<C-c>rf'
 
 " Keymap for change function signature
 let g:pymode_rope_change_signature_bind = '<C-c>rs'
@@ -689,8 +696,8 @@ autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 "let g:ycm_server_log_level = 'debug'
 
 " For c/cpp/oc/ocpp use this file to work.
-if !empty(glob('~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'))
-    let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+if !empty(glob('~/.vim/plugins/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'))
+    let g:ycm_global_ycm_extra_conf = '~/.vim/plugins/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 endif
 
 " YCM can trigged completion menu automatically after typing ./->/:: ...

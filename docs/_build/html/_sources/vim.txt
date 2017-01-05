@@ -43,20 +43,65 @@ How to use
 
 Hotkey in vim::
 
-    Ctrl+s - Save file
-    Ctrl+d - Open stardict
+    <leader> - \ default is \ in vim.
+
+    Ctrl+z - Save file
+    Shift+z - Open stardict
+
     F1 - VIM help, default
     F2 - Open/Close Winmanager
     F3 - Open/Close NERDTree
     F4 - Open/Close Tagbar
     F5 - Open/Close Minibufexplorer
     F6 - Open/Close gundo
-    F7 - For C/C++ run make clean
-    F8 - For C/C++ close quickfix windows.
-    F8 - For python open PymodeLintAuto
-    F9 - For C/C++ run make
-    F9 - For java run javac and java
-    F9 - For python run PymodeLint
     F10 - Use calendar
     F11 - Full screen the terminal, default
     F12 - Open Browser for markdown file
+
+CtrlP::
+
+    <leader>p -
+    <leader>m -
+    <leader>c -
+
+YCM::
+
+    <leader>ya - force compile And diagnostics
+    <leader>yb - goto definition
+    <leader>yc - goto declaration
+    <leader>yd - goto definition else declaration
+    <leader>ye -
+
+Ultisnips::
+
+    <leader><tab> -
+    <leader><c-tab> -
+    <leader><s-tab> -
+
+For C/C++::
+
+    F7 - For C/C++ run make clean
+    F8 - For C/C++ close quickfix windows.
+    F9 - For C/C++ run make
+
+For Java::
+
+    F9 - For java run javac and java
+
+For Python::
+
+    F7 - run autopep8 by pymode
+    F8 - run 'pyflakes', 'pep8', 'mccabe', 'pep257' by pymode
+    F9 - run script by pymode
+    <leader>b - create breakpoint by pymode
+
+    <leader>k - show pydoc by jedi
+    <leader>d - goto definition by jedi
+    <leader>g - goto assignment by jedi
+    <leader>r - rename by jedi
+    <leader>n - show usage of a name by jedi
+
+For javascript/html/css::
+
+    <C-y> - trigger emmet for html/css
+    <C-e> - trigger sparkup for html

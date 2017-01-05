@@ -9,15 +9,19 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vimscript doc
 " :help vim-script-intro
+"
 " Execute Vimscript
 " :source /path/to/scriptname.vim
 " Or
 " :call Vimscript_command_line
+"
 " See symbols
 " :help keycodes
+"
 " See functions
 " :help functions
 " :help function-list
+"
 " Comment
 " " used for comment
 
@@ -134,7 +138,7 @@ set fileformats=unix,mac,dos
 autocmd! bufwritepost ~/.vimrc source %
 
 """ Use zz to save file.
-nnoremap zz :update<CR>
+nnoremap <C-z> :update<CR>
 "inoremap zz <ESC>:update<CR>gi
 
 """ Use stardict
@@ -150,12 +154,12 @@ function! MyDict()
     1s/^/\=expl/
     1
 endfunction
-" Use shift+s to use stardict.
-nmap <C-d> :call MyDict()<CR>
+" Use Ctrl+d to use stardict.
+nnoremap <S-z> :call MyDict()<CR>
 
 """ Use quickfix
 " :help quickfix.txt - see the help doc.
-" For c,cpp,h
+" For c,cpp
 " Make clean
 autocmd FileType c,cpp,h nmap <F7> :make clean<CR><CR><CR>
 autocmd FileType c,cpp,h imap <F7> :make clean<CR><CR><CR>
