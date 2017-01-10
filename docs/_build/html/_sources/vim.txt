@@ -60,9 +60,9 @@ Hotkey in vim::
 
 CtrlP::
 
-    <leader>p -
-    <leader>m -
-    <leader>c -
+    <leader>p - find file in current and sub folder.
+    <leader>f - find file in MRU.
+    <leader>c - clear MRU cache.
 
 YCM::
 
@@ -70,13 +70,13 @@ YCM::
     <leader>yb - goto definition
     <leader>yc - goto declaration
     <leader>yd - goto definition else declaration
-    <leader>ye -
+    <leader>ye - detailed djagnostics
 
-Ultisnips::
+Ultisnips+vim-snippets::
 
-    <leader><tab> -
-    <leader><c-tab> -
-    <leader><s-tab> -
+    <leader><tab> - expand trigger
+    <leader><c-tab> - jump forward trigger
+    <leader><s-tab> - jump backward trigger
 
 For C/C++::
 

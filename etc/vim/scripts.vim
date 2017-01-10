@@ -442,10 +442,13 @@ let g:pymode_rope_change_signature_bind = '<C-c>rs'
 
 """"""""""config ctrlp""""""""""
 " Something like find.
+" <leader>p search file in current folder and sub folder.
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
-noremap <leader>m :CtrlPMRU<CR>
-noremap <leader>c :CtrlPClearCache<CR>
+" <leader>f search file in MRU.
+map <leader>f :CtrlPMRU<CR>
+" <leader>c clear the MRU cache.
+map <leader>c :CtrlPClearCache<CR>
 let g:ctrlp_custom_ignore = {
             \ 'dir':  '\v[\/]\.(git|hg|svn|rvm)$',
             \ 'file': '\v\.(exe|dll|zip|so|tar|tar.gz|tgz|pyc|swp)$',
@@ -736,17 +739,20 @@ let g:ycm_use_ultisnips_completer = 1
 " Auto complete snippets.
 " The same plugin is vim-snipmate.
 
-" The folder of the snippets in ~/.vim/bundle/
+" Define the directory private snippet definition files are stored in.
+let g:UltiSnipsSnippetsDir='~/.vim/plugins'
+" Defines the directories for looking for snippets.
 let g:UltiSnipsSnippetDirectories=["UltiSnips"]
+" Split the windows
+let g:UltiSnipsEditSplit = "vertical"
 " Fix the <tab> confix with YCM
 let g:UltiSnipsExpandTrigger = '<leader><tab>'
 let g:UltisnipsJumpForwardTrigger = '<leader><c-tab>'
 let g:UltisnipsJumpBackwardTrigger = '<leader><s-tab>'
-" Split the windows
-let g:UltiSnipsEditSplit = "vertical"
 
 """"""""""config snippets"""""""""""""
 " Snippets files.
+" Need ultisnips or vim-snipmate to call this files.
 
 """>>> Other tools
 
