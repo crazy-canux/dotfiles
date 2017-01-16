@@ -128,11 +128,11 @@ let g:instant_markdown_slow = 0
 """>>> Web
 
 """""""""config vim-javascript""""""""""
-" Syntax and indent
+" For javascript Syntax and indent.
 
 """"""""""config tern-for-vim""""""""""
-" Use YCM/tern instead.
 " For javascript, autocomplate and so on.
+" Use YCM/tern instead.
 " omnifunc=tern#Complete
 
 " Need install node.js and npm first

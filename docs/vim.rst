@@ -101,7 +101,7 @@ For Python::
     <leader>r - rename by jedi
     <leader>n - show usage of a name by jedi
 
-For javascript/html/css::
+For html/css::
 
-    <C-y> - trigger emmet for html/css
-    <C-e> - trigger sparkup for html
+    <C-y>, - insert html:5 to trigger emmet for html/css
+    <C-e> - tag or tag#name to trigger sparkup for html
