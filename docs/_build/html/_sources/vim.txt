@@ -80,20 +80,22 @@ Ultisnips+vim-snippets::
 
 For C/C++::
 
-    F7 - For C/C++ run make clean
+    F7 - For C/C++ run make clean.
     F8 - For C/C++ close quickfix windows.
-    F9 - For C/C++ run make
+    F9 - For C/C++ run make.
 
 For Java::
 
-    F9 - For java run javac and java
+    F7 - To add all missing imports.
+    F8 - To remove all missing imports.
+    F9 - For java run javac and java.
 
 For Python::
 
-    F7 - run autopep8 by pymode
-    F8 - run 'pyflakes', 'pep8', 'mccabe', 'pep257' by pymode
-    F9 - run script by pymode
-    <leader>b - create breakpoint by pymode
+    F7 - run autopep8 by pymode.
+    F8 - run 'pyflakes', 'pep8', 'mccabe', 'pep257' by pymode.
+    F9 - run script by pymode.
+    <leader>b - create breakpoint by pymode.
 
     <leader>k - show pydoc by jedi
     <leader>d - goto definition by jedi
@@ -104,4 +106,5 @@ For Python::
 For html/css::
 
     <C-y>, - insert html:5 to trigger emmet for html/css
+
     <C-e> - tag or tag#name to trigger sparkup for html

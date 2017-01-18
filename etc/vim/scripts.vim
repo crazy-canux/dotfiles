@@ -182,6 +182,14 @@ autocmd BufNewFile,BufReadPre *.java nmap <F9> :!javac %<CR>:!java %:r<CR>
 
 autocmd FileType java,jsp setlocal omnifunc=javacomplete#Complete
 
+" To add all missing imports with F7
+nmap <F7> <Plug>(JavaComplete-Imports-AddMissing)
+imap <F7> <Plug>(JavaComplete-Imports-AddMissing)
+
+" To remove all missing imports with F8
+nmap <F8> <Plug>(JavaComplete-Imports-RemoveUnused)
+imap <F8> <Plug>(JavaComplete-Imports-RemoveUnused)
+
 """>>> Python
 
 """""""""""config virtualenv"""""""""
