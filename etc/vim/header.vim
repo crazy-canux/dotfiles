@@ -14,7 +14,7 @@ function! MySetTitle()
     if &filetype == 'sh'
         call setline(1, "\#!/usr/bin/env bash")
         call append(line("."),    "\######################################################################")
-        call append(line(".")+1,  "\# Copyright (C) 2016 Canux CHENG.                                    #")
+        call append(line(".")+1,  "\# Copyright (C) 2017 Canux CHENG.                                    #")
         call append(line(".")+2,  "\# All rights reserved                                                #")
         call append(line(".")+3,  "\# File: ".expand("%"))
         call append(line(".")+4,  "\# Author: Canux CHENG canuxcheng@gmail.com                           #")
@@ -31,7 +31,7 @@ function! MySetTitle()
         call append(line(".")+1,  "\"\"\"")
         call append(line(".")+2,  "SUMMARY ".expand("%"))
         call append(line(".")+3,  "")
-        call append(line(".")+4,  "\Copyright (C) 2016 Canux CHENG.")
+        call append(line(".")+4,  "\Copyright (C) 2017 Canux CHENG.")
         call append(line(".")+5,  "\All rights reserved.")
         call append(line(".")+6,  "")
         call append(line(".")+7,  "\LICENSE GNU General Public License v3.0.")
@@ -46,7 +46,7 @@ function! MySetTitle()
     endif
     if &filetype == 'java'
         call setline(1,          "/*")
-        call append(line("."),   " * Copyright (C) 2016 Canux CHENG.")"
+        call append(line("."),   " * Copyright (C) 2017 Canux CHENG.")"
         call append(line(".")+1, " * All right reserved.")
         call append(line(".")+2, " * File: ".expand("%"))
         call append(line(".")+3, " */")
@@ -65,7 +65,7 @@ function! MySetTitle()
     endif
     if &filetype == 'c'
         call setline(1, "/*")
-        call append(line("."),   " * Copyright (C) 2016 Canux CHENG.")
+        call append(line("."),   " * Copyright (C) 2017 Canux CHENG.")
         call append(line(".")+1, " * All right reserved.")
         call append(line(".")+2, " * File: ".expand("%"))
         call append(line(".")+3, " * Author: Canux CHENG canuxcheng@gmail.com")
@@ -78,7 +78,7 @@ function! MySetTitle()
     endif
     if &filetype == 'h'
         call setline(1, "/*")
-        call append(line("."),   " * Copyright (C) 2016 Canux CHENG.")
+        call append(line("."),   " * Copyright (C) 2017 Canux CHENG.")
         call append(line(".")+1, " * All right reserved.")
         call append(line(".")+2, " * File: ".expand("%"))
         call append(line(".")+3, " * Author: Canux CHENG canuxcheng@gmail.com")

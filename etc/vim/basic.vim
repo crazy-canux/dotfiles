@@ -36,6 +36,7 @@ let mapleader = '\'
 set nocompatible
 set noswapfile
 set nobackup
+
 set shortmess=atI "quick startup mode
 set t_Co=256
 set mouse=v "n v i c h a r
@@ -43,7 +44,7 @@ set mousemodel=popup
 set selection=inclusive "or exclusive
 set selectmode=mouse,key
 set number "show line number
-set relativenumber
+set relativenumber "show relative line number
 set cc=+1 "show right margin
 set autochdir "go inside working directory of current opend file
 set modifiable
@@ -71,6 +72,7 @@ set modeline "modeline support
 set magic "for regular expressions
 set scrolloff=7
 set completeopt+=menuone,longest "default is menu,preview"
+set spell "enable spell, default just for english.
 
 " Coding
 set encoding=utf-8
