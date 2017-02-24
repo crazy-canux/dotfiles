@@ -108,8 +108,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 "https://github.com/Shougo/unite.vim
 "https://github.com/vim-scripts/FuzzyFinder
 " Grep tools
-Plugin 'rking/ag.vim'
-"https://github.com/mileszs/ack.vim
+Plugin 'mileszs/ack.vim'
 " Git tools
 Plugin 'tpope/vim-fugitive'
 Plugin 'airblade/vim-gitgutter'

@@ -4,6 +4,9 @@
 .. image:: https://img.shields.io/pypi/dm/pydeveloper.svg
    :target: https://pypi.python.org/pypi/pydeveloper/
 
+.. image:: https://travis-ci.org/crazy-canux/pydeveloper.svg?branch=master
+   :target: https://travis-ci.org/crazy-canux/pydeveloper
+
 ===========
 pydeveloper
 ===========

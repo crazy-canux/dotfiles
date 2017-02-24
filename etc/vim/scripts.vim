@@ -440,7 +440,7 @@ let g:pymode_rope_change_signature_bind = '<C-c>rs'
 
 """"""""""config vim-fireplace""""""""""
 
-""">>> Develop tools
+""">>> DevOps tools
 
 """"""""""config vimux""""""""""
 
@@ -468,14 +468,12 @@ let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_mruf_max = 500
 let g:ctrlp_follow_symlinks = 1
 
-""""""""""config unite""""""""""
-
-""""""""""config fuzzyfinder""""""""""
-
-""""""""""""config ag.vim"""""""""""
-" ack/ack-grep replace for grep
-
 """"""""""""config ack.vim"""""""""""
+" ack is better than grep.
+" ack2 replaced ack.
+" ag is faster than ack/ack2.
+
+let g:ackprg = 'ag --vimgrep'
 
 """"""""""""config fugitive"""""""""""
 " Show in status line
@@ -495,10 +493,6 @@ let g:gitgutter_map_keys = 0
 """""""""config nerdcommenter"""""""
 " Action for commenting.
 let g:loaded_nerd_comments = 1
-
-"""""""""config tcomment"""""""
-
-"""""""""config commentary"""""""
 
 """>>> IDE tools
 
