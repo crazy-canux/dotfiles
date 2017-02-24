@@ -7,6 +7,10 @@
 .. image:: https://travis-ci.org/crazy-canux/pydeveloper.svg?branch=master
    :target: https://travis-ci.org/crazy-canux/pydeveloper
 
+.. image:: https://coveralls.io/repos/github/crazy-canux/pydeveloper/badge.svg?branch=master
+   :target: https://coveralls.io/github/crazy-canux/pydeveloper?branch=master
+
+
 ===========
 pydeveloper
 ===========
