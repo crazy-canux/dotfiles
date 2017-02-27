@@ -17,12 +17,12 @@ import os
 
 from setuptools import setup, find_packages
 
-import pydeveloper
+import pydevops
 
-NAME = 'pydeveloper'
-VERSION = pydeveloper.__version__
-URL = 'https://github.com/crazy-canux/pydeveloper'
-DESCRIPTION = 'Deploy awesome development environment about zsh/bash/git/vim/tmux/rpm/dpkg...'
+NAME = 'pydevops'
+VERSION = pydevops.__version__
+URL = 'https://github.com/crazy-canux/pydevops'
+DESCRIPTION = 'Deploy awesome development environment about zsh/bash/git/vim/tmux/stardict/rpm/dpkg...'
 KEYWORDS = 'git vim tmux bash zsh stardict rpm dpkg'
 
 

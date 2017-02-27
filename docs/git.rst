@@ -18,7 +18,7 @@ Install git::
 Configuration ~/.gitconfig::
 
     [include]
-        path = ~/pydeveloper/etc/git/gitcofig
+        path = ~/pydevops/etc/git/gitcofig
 
 Git configuration
 ^^^^^^^^^^^^^^^^^

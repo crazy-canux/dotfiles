@@ -20,7 +20,7 @@ Install Tmux::
 
 Configuration::
 
-    echo "source ~/pydeveloper/etc/tmux/tmux.conf" > ~/.tmux.conf
+    echo "source ~/pydevops/etc/tmux/tmux.conf" > ~/.tmux.conf
 
 Install TPM and tmux plugins(recommend)::
 

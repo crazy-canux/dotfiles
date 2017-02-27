@@ -1,29 +1,29 @@
-.. image:: https://img.shields.io/pypi/v/pydeveloper.svg
-   :target: https://pypi.python.org/pypi/pydeveloper/
+.. image:: https://img.shields.io/pypi/v/pydevops.svg
+   :target: https://pypi.python.org/pypi/pydevops/
 
-.. image:: https://img.shields.io/pypi/dm/pydeveloper.svg
-   :target: https://pypi.python.org/pypi/pydeveloper/
+.. image:: https://img.shields.io/pypi/dm/pydevops.svg
+   :target: https://pypi.python.org/pypi/pydevops/
 
-.. image:: https://travis-ci.org/crazy-canux/pydeveloper.svg?branch=master
-   :target: https://travis-ci.org/crazy-canux/pydeveloper
+.. image:: https://travis-ci.org/crazy-canux/pydevops.svg?branch=master
+   :target: https://travis-ci.org/crazy-canux/pydevops
 
-.. image:: https://coveralls.io/repos/github/crazy-canux/pydeveloper/badge.svg?branch=master
-   :target: https://coveralls.io/github/crazy-canux/pydeveloper?branch=master
+.. image:: https://coveralls.io/repos/github/crazy-canux/pydevops/badge.svg?branch=master
+   :target: https://coveralls.io/github/crazy-canux/pydevops?branch=master
 
 
 ===========
-pydeveloper
+pydevops
 ===========
 
 Make awesome environment for developers and operators.
 
-.. figure:: https://github.com/crazy-canux/pydeveloper/blob/master/data/images/all.PNG
+.. figure:: https://github.com/crazy-canux/pydevops/blob/master/data/images/all.PNG
    :alt: pic1
 
-.. figure:: https://github.com/crazy-canux/pydeveloper/blob/master/data/images/shell.PNG
+.. figure:: https://github.com/crazy-canux/pydevops/blob/master/data/images/shell.PNG
    :alt: pic2
 
-.. figure:: https://github.com/crazy-canux/pydeveloper/blob/master/data/images/stardict.PNG
+.. figure:: https://github.com/crazy-canux/pydevops/blob/master/data/images/stardict.PNG
    :alt: pic3
 
 ==============
@@ -34,14 +34,14 @@ How to install
 
    ::
 
-       pip install pydeveloper
+       pip install pydevops
 
 -  Manual install
 
    ::
 
        cd $HOME
-       git clone https://github.com/crazy-canux/pydeveloper.git
+       git clone https://github.com/crazy-canux/pydevops.git
 
 -  Install the dependency
 
@@ -77,7 +77,7 @@ How to install
 How to extends
 ==============
 
-All configuration files are inside pydeveloper/etc/.
+All configuration files are inside pydevops/etc/.
 
 You can merge other tools.
 
@@ -91,22 +91,22 @@ TODO
 Documentation
 =============
 
-`[Documentation] <http://pydeveloper.readthedocs.io/en/latest/>`_
+`[Documentation] <http://pydevops.readthedocs.io/en/latest/>`_
 
 ============
 Contribution
 ============
 
-`[Contribution] <https://github.com/crazy-canux/pydeveloper/blob/master/CONTRIBUTING.rst>`_
+`[Contribution] <https://github.com/crazy-canux/pydevops/blob/master/CONTRIBUTING.rst>`_
 
 =======
 Authors
 =======
 
-`[Authors] <https://github.com/crazy-canux/pydeveloper/blob/master/AUTHORS.rst>`_
+`[Authors] <https://github.com/crazy-canux/pydevops/blob/master/AUTHORS.rst>`_
 
 =======
 License
 =======
 
-`[License] <https://github.com/crazy-canux/pydeveloper/blob/master/LICENSE>`_
+`[License] <https://github.com/crazy-canux/pydevops/blob/master/LICENSE>`_

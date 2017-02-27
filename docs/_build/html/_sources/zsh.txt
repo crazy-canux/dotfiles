@@ -53,7 +53,7 @@ Pick one theme in ~/.zsh.d/oh-my-zsh/themes::
 
     ZSH_THEME="random"
 
-You can manage other zsh themes with oh-my-zsh, just modify ~/pydeveloper/etc/zsh/zshrc::
+You can manage other zsh themes with oh-my-zsh, just modify ~/pydevops/etc/zsh/zshrc::
 
     git clone <theme-url> ~/.zsh.d/oh-my-zsh/themes/<theme-name>
     ZSH_THEME="<theme-name>/<theme-name>"
@@ -65,7 +65,7 @@ Pick themes in ~/.zsh.d/oh-my-zsh/plugins::
 
     plugins+=()
 
-You can manage other zsh plugins with oh-my-zsh, just modify ~/pydeveloper/etc/zsh/zshrc::
+You can manage other zsh plugins with oh-my-zsh, just modify ~/pydevops/etc/zsh/zshrc::
 
     git clone <plugin-url> ~/.zsh.d/oh-my-zsh/custom/plugins/<plugin-name>
     plugins+=(<plugin-name>)

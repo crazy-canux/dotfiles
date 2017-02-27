@@ -19,7 +19,7 @@ Install stardict and sdcv::
 
 Configuration::
 
-    tar -jxvf ~/pydeveloper/data/dict/*.tar.bz2 -C /usr/share/stardict/dic/
+    tar -jxvf ~/pydevops/data/dict/*.tar.bz2 -C /usr/share/stardict/dic/
 
 How to use
 ----------

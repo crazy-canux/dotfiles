@@ -24,7 +24,7 @@ Install bash-it::
 Configuration::
 
     chsh -s $(which bash)
-    echo "source ~/pydeveloper/etc/bash/bashrc" > ~/.bashrc
+    echo "source ~/pydevops/etc/bash/bashrc" > ~/.bashrc
 
 Customize your BASH-IT
 ----------------------
@@ -42,7 +42,7 @@ Include:
 Customize your themes
 ^^^^^^^^^^^^^^^^^^^^^
 
-Modify in ~/pydeveloper/etc/bash/bashrc::
+Modify in ~/pydevops/etc/bash/bashrc::
 
     export BASH_IT_THEME='<your-theme>'
 

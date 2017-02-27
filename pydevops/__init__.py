@@ -11,7 +11,7 @@ Version: V1.0.0.0
 Time: Wed 10 Aug 2016 10:35:07 PM CST
 
 DESCRIPTION:
-    pip install pydeveloper
+    pip install pydevops
 """
 
 __version__ = "1.0.0.0"
