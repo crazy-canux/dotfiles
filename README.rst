@@ -1,15 +1,8 @@
-.. image:: https://img.shields.io/pypi/v/pydevops.svg
-   :target: https://pypi.python.org/pypi/pydevops/
-
-.. image:: https://img.shields.io/pypi/dm/pydevops.svg
-   :target: https://pypi.python.org/pypi/pydevops/
-
 .. image:: https://travis-ci.org/crazy-canux/pydevops.svg?branch=master
    :target: https://travis-ci.org/crazy-canux/pydevops
 
 .. image:: https://coveralls.io/repos/github/crazy-canux/pydevops/badge.svg?branch=master
    :target: https://coveralls.io/github/crazy-canux/pydevops?branch=master
-
 
 ===========
 pydevops
