@@ -74,7 +74,7 @@ set scrolloff=7
 set completeopt+=menuone,longest "default is menu,preview"
 set spell "enable spell, default just for english.
 
-" Coding
+" encoding
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
@@ -100,15 +100,22 @@ set shiftwidth=4 "set auto retraction = 4 space
 set softtabstop=4 "indent 4 space
 
 " Config fold
-" :za open/close current fold
-" :zM close all fold
-" :zR open all fold
+" zc create current fold
+" zo open current fold
+" za open/create current fold
+" zM create all fold
+" zR open all fold
+" zi open/create all fold
 set foldenable
 "set nofoldenable
-set foldmethod=syntax
+" manual means default disable.
+" indent means use indent to fold.
 "set foldmethod=indent
-set foldlevel=100 "0 - close fold
-set foldcolumn=5 "set width of the fold
+" syntax means use syntax to fold.
+set foldmethod=syntax
+" expr
+" diff
+" marker
 
 " Config syntax
 " /usr/share/vim/vim74/syntax/*.vim to config different languages.
@@ -139,7 +146,7 @@ set fileformats=unix,mac,dos
 " autoload file after modify.
 autocmd! bufwritepost ~/.vimrc source %
 
-""" Use zz to save file.
+""" Use Ctrl+z to save file.
 nnoremap <C-z> :update<CR>
 "inoremap zz <ESC>:update<CR>gi
 
@@ -156,7 +163,7 @@ function! MyDict()
     1s/^/\=expl/
     1
 endfunction
-" Use Ctrl+d to use stardict.
+" Use Shift+z to use stardict.
 nnoremap <S-z> :call MyDict()<CR>
 
 """ Use quickfix

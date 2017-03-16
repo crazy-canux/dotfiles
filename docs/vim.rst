@@ -41,6 +41,11 @@ Use pathogen to manage plugins::
 How to use
 ----------
 
+Vim inner hotkey::
+
+    za - opne/create current fold
+    zi - open/create all fold
+
 Hotkey in vim::
 
     <leader> - \ default is \ in vim.
