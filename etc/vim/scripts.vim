@@ -298,7 +298,7 @@ let g:pymode_doc_bind = ''
 " pip install pyflakes
 " pip install mccabe
 " pip install pep257
-" sudo apt-get install pylint
+" pip install pylint
 
 " Turn on code checking
 let g:pymode_lint = 1
@@ -357,7 +357,7 @@ let g:pymode_lint_options_pylint =
 " Use YCM/jedi and jedi instead of autocomplete goto and pydoc.
 " Use rope for refactoring.
 " omnifunc=pymode#rope#completions
-" sudo apt-get install python-rope
+" pip install rope
 
 " Turn on rope script
 let g:pymode_rope = 0
