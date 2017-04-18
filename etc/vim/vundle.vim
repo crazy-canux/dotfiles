@@ -7,6 +7,9 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Use vundle manage vim-scripts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Put vundle in your location.
+" git clone https://github.com/VundleVim/Vundle.vim ~/.vim/plugins/
+
 " How to use vundle.
 " Command line: vim +PluginInstall +qall
 " In vim run
@@ -20,9 +23,8 @@
 set nocompatible
 " Enable vundle.
 filetype off
-" Put vundle in ~/.vim/bundle/ by default.
-" git clone https://github.com/VundleVim/Vundle.vim
 " Path of vundle
+" Put vundle in ~/.vim/bundle/ by default.
 "set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.vim/plugins/Vundle.vim
 

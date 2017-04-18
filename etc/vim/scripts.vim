@@ -289,16 +289,15 @@ let g:pymode_doc_bind = ''
 " Use Syntastic instead.
 " Pylama = pyflakes + pep8 + mccabe + pylint + pep257.
 " Flake8 = pyflakes + pep8 + mccabe.
-" Use pyflakes and pep8 for code syntastic check.
+" Use pyflakes/pylint and pep8 for code syntastic check.
 " Use mccabe for complexity check.
 " Use pep257 for doc syntastic check.
 " Use autopep8 for auto formats python code.
+" pip install autopep8
 " pip install pep8
 " pip install pyflakes
 " pip install mccabe
 " pip install pep257
-" pip install autopep8
-" Don't use pylint to check syntastic.
 " sudo apt-get install pylint
 
 " Turn on code checking
@@ -318,9 +317,10 @@ let g:pymode_lint_on_fly = 1
 " Show error message if cursor placed at the error line
 let g:pymode_message = 1
 " Default code checkers
-let g:pymode_lint_checkers = ['pyflakes', 'pep8', 'mccabe', 'pep257']
+let g:pymode_lint_checkers = ['pyflakes', 'pylint', 'pep8', 'mccabe', 'pep257']
 " Skip errors and warnings that you don't want to see.
-let g:pymode_lint_ignore = "E501, D101, D102, D103"
+" C0111 - pylint for class/function/method docstring.
+let g:pymode_lint_ignore = "C0111, D101, D102, D103"
 " Select some error and warning that you want to see but ignored.
 let g:pymode_lint_select = ""
 " Sort errors by relevance

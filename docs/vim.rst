@@ -26,6 +26,7 @@ Use vundle to manage plugins(recommend)::
     echo "source ~/pydevops/etc/vim/vundle.vim" > ~/.vimrc
     rm -rf ~/.vim
     mkdir -p ~/.vim/plugins
+    git clone https://github.com/VundleVim/Vundle.vim ~/.vim/plugins/
     vim +PluginInstall +qall # run this on shell command line
     :PluginInstall # or run this in vim command line
     source ~/.vimrc

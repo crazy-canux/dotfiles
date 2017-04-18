@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>VIM &mdash; pydevops 1.0.0.0 documentation</title>
+    <title>VIM &mdash; pydevops 0.0.1 documentation</title>
     
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '1.0.0.0',
+        VERSION:     '0.0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pydevops 1.0.0.0 documentation" href="index.html" />
+    <link rel="top" title="pydevops 0.0.1 documentation" href="index.html" />
     <link rel="next" title="StarDict" href="stardict.html" />
     <link rel="prev" title="TMUX" href="tmux.html" />
    
@@ -58,6 +58,7 @@ sudo yum install vim
 <div class="highlight-python"><div class="highlight"><pre>echo &quot;source ~/pydevops/etc/vim/vundle.vim&quot; &gt; ~/.vimrc
 rm -rf ~/.vim
 mkdir -p ~/.vim/plugins
+git clone https://github.com/VundleVim/Vundle.vim ~/.vim/plugins/
 vim +PluginInstall +qall # run this on shell command line
 :PluginInstall # or run this in vim command line
 source ~/.vimrc

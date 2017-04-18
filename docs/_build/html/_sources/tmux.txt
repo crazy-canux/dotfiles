@@ -26,7 +26,7 @@ Install TPM and tmux plugins(recommend)::
 
     rm -rf ~/.tmux
     mkdir -p ~/.tmux/plugins
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    git clone https://github.com/tmux-plugins/tpm.git ~/.tmux/plugins/tpm
     tmux # Start tmux
     Ctrl+b + I # In tmux run this.
     source-file ~/.tmux.conf # In tmux run this.
