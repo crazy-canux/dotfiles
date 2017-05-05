@@ -42,6 +42,8 @@ Use pathogen to manage plugins::
 How to use
 ----------
 
+Vim font and color theme, need to set the terminator work with the same theme.
+
 Vim inner hotkey::
 
     za - opne/create current fold

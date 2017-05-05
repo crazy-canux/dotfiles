@@ -26,6 +26,7 @@
 "greenvision
 
 """"""""""config colors-solarized""""""""""
+" Need set the terminator work with this.
 set background=dark
 colorscheme solarized
 let g:solarized_termcolors = 256

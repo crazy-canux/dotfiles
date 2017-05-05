@@ -44,12 +44,6 @@ How to install
 
    `awesome-terminal-fonts <https://github.com/gabrielelana/awesome-terminal-fonts>`__
 
-   Themes:
-
-   `solarized <https://github.com/altercation/solarized>`__
-
-   `tomorrow-theme <https://github.com/chriskempson/tomorrow-theme>`__
-
    Icon:
 
    `powerline <https://github.com/powerline/powerline>`__
