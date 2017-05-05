@@ -318,7 +318,7 @@ let g:pymode_lint_on_fly = 1
 " Show error message if cursor placed at the error line
 let g:pymode_message = 1
 " Default code checkers
-let g:pymode_lint_checkers = ['pyflakes', 'pylint', 'pep8', 'mccabe', 'pep257']
+let g:pymode_lint_checkers = ['pylint', 'mccabe']
 " Skip errors and warnings that you don't want to see.
 " C0111 - pylint for class/function/method docstring.
 let g:pymode_lint_ignore = "C0111, D101, D102, D103"
