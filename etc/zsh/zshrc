@@ -170,6 +170,7 @@ fi
 
 # Use cman to check the chinese manual
 alias cman='man -M /usr/share/man/zh_CN'
+alias fuck='thefuck'
 
 # tar
 alias -s tar='tar xvf'

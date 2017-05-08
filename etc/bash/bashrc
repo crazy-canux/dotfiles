@@ -137,6 +137,7 @@ fi
 # Define some common alias here.
 # Use cman to check the chinese manual.
 alias cman='man -M /usr/share/man/zh_CN'
+alias fuck='thefuck'
 
 # PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/
 # Put your shell command in ~/bin
