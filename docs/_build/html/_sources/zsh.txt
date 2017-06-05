@@ -19,13 +19,11 @@ Install zsh::
 
 Install oh-my-zsh::
 
-    export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(curl -fsSL
-    https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 or::
 
-    export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(wget
-    https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+    export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 
 or::
 
@@ -35,7 +33,7 @@ or::
 Configuration::
 
     chsh -s $(which zsh)
-    echo "source ~/myCode/xdevops/etc/zsh/zshrc" > ~/.zshrc
+    echo "source ~/myCode/pydevops/etc/zsh/zshrc" > ~/.zshrc
 
 Customize your oh-my-ZSH
 ------------------------
