@@ -1,4 +1,4 @@
-############################################################################### Canux's zsh
+###############################################################################
 # canuxcheng@gmail.com
 # https://github.com/crazy-canux/pydevops
 ###############################################################################
@@ -124,6 +124,12 @@ export ZSH=$HOME/.zsh.d/oh-my-zsh
 # User configuration
 ###############################################################################
 
+# For virtuanenv and virtualenvwrapper
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
+#export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+#export WORKON_HOME=~/.virtualenvs
+#source /usr/local/bin/virtualenvwrapper.sh
+
 # PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 # Put your shell command in ~/bin
 if [[ -d ~/bin ]]; then
@@ -135,10 +141,7 @@ if [[ -d $CHENG ]]; then
     PATH=$CHENG:$PATH
 fi
 
-export PATH=/opt/oracle/instantclient_12_1:$PATH
 export MANPATH=/usr/share/man:/usr/local/man:$MANPATH
-export ORACLE_HOME=/opt/oracle/instantclient_12_1:$ORACLE_HOME
-export LD_LIBRARY_PATH=/opt/oracle/instantclient_12_1:$LD_LIBRARY_PATH
 
 # Set the term
 export TERM="xterm-256color"
@@ -171,6 +174,9 @@ fi
 # Use cman to check the chinese manual
 alias cman='man -M /usr/share/man/zh_CN'
 eval $(thefuck --alias)
+
+# EDITOR default use vi ad editor
+alias vi=vim
 
 # tar
 alias -s tar='tar xvf'

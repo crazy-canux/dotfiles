@@ -124,6 +124,13 @@ fi
 ###############################################################################
 # You own configuration
 ###############################################################################
+
+# For virtuanenv and virtualenvwrapper
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
+#export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+#export WORKON_HOME=~/.virtualenvs
+#source /usr/local/bin/virtualenvwrapper.sh
+
 # Put some completions bash script file in ~/.bash.d
 if [[ -d ~/.bash.d ]]; then
     for i in ~/.bash.d/*.bash; do
@@ -138,6 +145,9 @@ fi
 # Use cman to check the chinese manual.
 alias cman='man -M /usr/share/man/zh_CN'
 eval $(thefuck --alias)
+
+# DEITOR use vi as default editor
+alias vi=vim
 
 # PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/
 # Put your shell command in ~/bin
