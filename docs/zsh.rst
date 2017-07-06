@@ -28,7 +28,7 @@ or::
 or::
 
     git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.zsh.d/oh-my-zsh
-    cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
+    cp ~/.zsh.d/oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 
 Configuration::
 

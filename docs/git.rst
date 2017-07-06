@@ -12,8 +12,8 @@ Install
 
 Install git::
 
-    sudo apt-get install git
-    sudo yum install git
+    sudo apt-get install git meld
+    sudo yum install git meld
 
 Configuration ~/.gitconfig::
 
