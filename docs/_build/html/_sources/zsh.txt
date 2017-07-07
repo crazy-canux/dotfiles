@@ -59,7 +59,7 @@ You can manage other zsh themes with oh-my-zsh, just modify ~/pydevops/etc/zsh/z
 Customize your plugins
 ^^^^^^^^^^^^^^^^^^^^^^
 
-Pick themes in ~/.zsh.d/oh-my-zsh/plugins::
+Pick plugins in ~/.zsh.d/oh-my-zsh/plugins::
 
     plugins+=()
 

@@ -51,6 +51,21 @@ Create your aliases/completions/plugins
 
 Create your aliases/completions/plugins for bash-it on github or just on local folders.
 
+Enable aliases in bash-it::
+
+    $ bash-it show alises
+    $ bash-it enable/disable alise name/all
+
+Enable completions in bash-it::
+
+    $ bash-it show completions
+    $ bash-it enable/disable completion name/all
+
+Enable plugins in bash-it::
+
+    $ bash-it show plugins
+    $ bash-it enable/disable plugin name/all
+
 Customize your BASH
 -------------------
 

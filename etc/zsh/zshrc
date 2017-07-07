@@ -175,7 +175,7 @@ fi
 alias cman='man -M /usr/share/man/zh_CN'
 
 # pip install thefuck
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # EDITOR default use vi ad editor
 alias vi=vim

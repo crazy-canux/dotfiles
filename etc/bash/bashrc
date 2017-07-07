@@ -146,7 +146,7 @@ fi
 alias cman='man -M /usr/share/man/zh_CN'
 
 # pip install thefuck
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # DEITOR use vi as default editor
 alias vi=vim
@@ -177,11 +177,11 @@ export BASH_IT="$HOME/.bash.d/bash-it"
 
 #export BASH_IT_THEME='bobby'
 #export BASH_IT_THEME='brunton'
-#export BASH_IT_THEME='powerline'
+export BASH_IT_THEME='powerline'
 #export BASH_IT_THEME='powerline-multiline'
 #export BASH_IT_THEME='powerline-naked'
 #export BASH_IT_THEME='powerline-plain'
-export BASH_IT_THEME='sexy'
+#export BASH_IT_THEME='sexy'
 
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
