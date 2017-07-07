@@ -175,9 +175,10 @@ export BASH_IT="$HOME/.bash.d/bash-it"
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
 
+export BASH_IT_THEME='bobby-python'
 #export BASH_IT_THEME='bobby'
 #export BASH_IT_THEME='brunton'
-export BASH_IT_THEME='powerline'
+#export BASH_IT_THEME='powerline'
 #export BASH_IT_THEME='powerline-multiline'
 #export BASH_IT_THEME='powerline-naked'
 #export BASH_IT_THEME='powerline-plain'
