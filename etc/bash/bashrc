@@ -144,6 +144,8 @@ fi
 # Define some common alias here.
 # Use cman to check the chinese manual.
 alias cman='man -M /usr/share/man/zh_CN'
+
+# pip install thefuck
 eval $(thefuck --alias)
 
 # DEITOR use vi as default editor

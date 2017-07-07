@@ -38,27 +38,27 @@ How to install
 
 -  Install the dependency
 
-   Fonts:
+   Powerline:
 
    `fonts <https://github.com/powerline/fonts>`__
 
-   `awesome-terminal-fonts <https://github.com/gabrielelana/awesome-terminal-fonts>`__
-
-   Icon:
-
    `powerline <https://github.com/powerline/powerline>`__
 
+   `fontpatcher <https://github.com/powerline/fontpatcher>`__
+
+   `awesome-terminal-fonts <https://github.com/gabrielelana/awesome-terminal-fonts>`__
+
+   `nerd-fonts <https://github.com/ryanoasis/nerd-fonts>`__
+
+   Fonts:
+
    `Font-Awesome <https://github.com/FortAwesome/Font-Awesome>`__
+
+   Icons:
 
    `devicons <https://github.com/vorillaz/devicons>`__
 
    `octicons <https://github.com/primer/octicons>`__
-
-   Fontpacher:
-
-   `nerd-fonts <https://github.com/ryanoasis/nerd-fonts>`__
-
-   `fontpatcher <https://github.com/powerline/fontpatcher>`__
 
 ==============
 How to extends
