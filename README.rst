@@ -1,40 +1,29 @@
-.. image:: https://travis-ci.org/crazy-canux/pydevops.svg?branch=master
-   :target: https://travis-ci.org/crazy-canux/pydevops
-
-.. image:: https://coveralls.io/repos/github/crazy-canux/pydevops/badge.svg?branch=master
-   :target: https://coveralls.io/github/crazy-canux/pydevops?branch=master
-
-===========
+========
 pydevops
-===========
+========
 
 Make awesome environment for developers and operators.
 
-.. figure:: https://github.com/crazy-canux/pydevops/blob/master/data/images/all.PNG
+.. figure:: https://github.com/crazy-canux/dotfiles/blob/master/data/images/all.PNG
    :alt: pic1
 
-.. figure:: https://github.com/crazy-canux/pydevops/blob/master/data/images/shell.PNG
+.. figure:: https://github.com/crazy-canux/dotfiles/blob/master/data/images/shell.PNG
    :alt: pic2
 
-.. figure:: https://github.com/crazy-canux/pydevops/blob/master/data/images/stardict.PNG
+.. figure:: https://github.com/crazy-canux/dotfiles/blob/master/data/images/stardict.PNG
    :alt: pic3
 
 ==============
 How to install
 ==============
 
--  Automatic install
-
-   ::
-
-       pip install pydevops
-
 -  Manual install
 
    ::
 
-       cd $HOME
-       git clone https://github.com/crazy-canux/pydevops.git
+       $ git clone https://github.com/crazy-canux/dotfiles.git
+       $ cd dotfiles
+       $ pip install -r requirements.txt
 
 -  Install the dependency
 
@@ -64,7 +53,7 @@ How to install
 How to extends
 ==============
 
-All configuration files are inside pydevops/etc/.
+All configuration files are inside dotfiles/etc/.
 
 You can merge other tools.
 
@@ -74,26 +63,20 @@ TODO
 
 1. dpkg, rpm configuration file.
 
-=============
-Documentation
-=============
-
-`[Documentation] <http://pydevops.readthedocs.io/en/latest/>`_
-
 ============
 Contribution
 ============
 
-`[Contribution] <https://github.com/crazy-canux/pydevops/blob/master/CONTRIBUTING.rst>`_
+`[Contribution] <https://github.com/crazy-canux/dotfiles/blob/master/CONTRIBUTING.rst>`_
 
 =======
 Authors
 =======
 
-`[Authors] <https://github.com/crazy-canux/pydevops/blob/master/AUTHORS.rst>`_
+`[Authors] <https://github.com/crazy-canux/dotfiles/blob/master/AUTHORS.rst>`_
 
 =======
 License
 =======
 
-`[License] <https://github.com/crazy-canux/pydevops/blob/master/LICENSE>`_
+`[License] <https://github.com/crazy-canux/dotfiles/blob/master/LICENSE>`_
