@@ -125,8 +125,8 @@ export ZSH=$HOME/.zsh.d/oh-my-zsh
 ###############################################################################
 
 # For virtuanenv and virtualenvwrapper
-#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
-#export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+#export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 #export WORKON_HOME=~/.virtualenvs
 #source /usr/local/bin/virtualenvwrapper.sh
 

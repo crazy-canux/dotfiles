@@ -1,0 +1,4 @@
+# Proxy for apt
+# /etc/apt/apt.conf.d
+
+Acquire::http::Proxy "http://ip:port";
