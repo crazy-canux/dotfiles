@@ -1,37 +1,39 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>VIM &mdash; pydevops 0.0.1 documentation</title>
-    
+    <title>VIM &#8212; dotfiles 1.0.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.0.1',
+        VERSION:     '1.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pydevops 0.0.1 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="StarDict" href="stardict.html" />
     <link rel="prev" title="TMUX" href="tmux.html" />
    
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">  
+  <body>
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -50,26 +52,26 @@
 <div class="section" id="install">
 <h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
 <p>Install vim:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install vim
-sudo yum install vim
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">vim</span>
+<span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">vim</span>
 </pre></div>
 </div>
 <p>Use vundle to manage plugins(recommend):</p>
-<div class="highlight-python"><div class="highlight"><pre>echo &quot;source ~/pydevops/etc/vim/vundle.vim&quot; &gt; ~/.vimrc
-rm -rf ~/.vim
-mkdir -p ~/.vim/plugins
-git clone https://github.com/VundleVim/Vundle.vim ~/.vim/plugins/
-vim +PluginInstall +qall # run this on shell command line
-:PluginInstall # or run this in vim command line
-source ~/.vimrc
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;source ~/dotfiles/etc/vim/vundle.vim&quot;</span> <span class="o">&gt;</span> <span class="o">~/.</span><span class="n">vimrc</span>
+<span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">~/.</span><span class="n">vim</span>
+<span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/.</span><span class="n">vim</span><span class="o">/</span><span class="n">plugins</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">VundleVim</span><span class="o">/</span><span class="n">Vundle</span><span class="o">.</span><span class="n">vim</span> <span class="o">~/.</span><span class="n">vim</span><span class="o">/</span><span class="n">plugins</span><span class="o">/</span>
+<span class="n">vim</span> <span class="o">+</span><span class="n">PluginInstall</span> <span class="o">+</span><span class="n">qall</span> <span class="c1"># run this on shell command line</span>
+<span class="p">:</span><span class="n">PluginInstall</span> <span class="c1"># or run this in vim command line</span>
+<span class="n">source</span> <span class="o">~/.</span><span class="n">vimrc</span>
 </pre></div>
 </div>
 <p>Use pathogen to manage plugins:</p>
-<div class="highlight-python"><div class="highlight"><pre>echo &quot;source ~/pydevops/etc/vim/pathogen.vim&quot; &gt; ~/.vimrc
-rm -rf ~/.vim/bundle
-mkdir -p ~/.vim/bundle
-git clone &lt;plugin-url&gt; ~/.vim/bundle/&lt;plugin-name&gt;
-source ~/.vimrc
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">echo</span> <span class="s2">&quot;source ~/dotfiles/etc/vim/pathogen.vim&quot;</span> <span class="o">&gt;</span> <span class="o">~/.</span><span class="n">vimrc</span>
+<span class="n">rm</span> <span class="o">-</span><span class="n">rf</span> <span class="o">~/.</span><span class="n">vim</span><span class="o">/</span><span class="n">bundle</span>
+<span class="n">mkdir</span> <span class="o">-</span><span class="n">p</span> <span class="o">~/.</span><span class="n">vim</span><span class="o">/</span><span class="n">bundle</span>
+<span class="n">git</span> <span class="n">clone</span> <span class="o">&lt;</span><span class="n">plugin</span><span class="o">-</span><span class="n">url</span><span class="o">&gt;</span> <span class="o">~/.</span><span class="n">vim</span><span class="o">/</span><span class="n">bundle</span><span class="o">/&lt;</span><span class="n">plugin</span><span class="o">-</span><span class="n">name</span><span class="o">&gt;</span>
+<span class="n">source</span> <span class="o">~/.</span><span class="n">vimrc</span>
 </pre></div>
 </div>
 </div>
@@ -77,76 +79,76 @@ source ~/.vimrc
 <h2>How to use<a class="headerlink" href="#how-to-use" title="Permalink to this headline">¶</a></h2>
 <p>Vim font and color theme, need to set the terminator work with the same theme.</p>
 <p>Vim inner hotkey:</p>
-<div class="highlight-python"><div class="highlight"><pre>za - opne/create current fold
-zi - open/create all fold
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">za</span> <span class="o">-</span> <span class="n">opne</span><span class="o">/</span><span class="n">create</span> <span class="n">current</span> <span class="n">fold</span>
+<span class="n">zi</span> <span class="o">-</span> <span class="nb">open</span><span class="o">/</span><span class="n">create</span> <span class="nb">all</span> <span class="n">fold</span>
 </pre></div>
 </div>
 <p>Hotkey in vim:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;leader&gt; - \ default is \ in vim.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span> <span class="o">-</span> \ <span class="n">default</span> <span class="ow">is</span> \ <span class="ow">in</span> <span class="n">vim</span><span class="o">.</span>
 
-Ctrl+z - Save file
-Shift+z - Open stardict
+<span class="n">Ctrl</span><span class="o">+</span><span class="n">z</span> <span class="o">-</span> <span class="n">Save</span> <span class="n">file</span>
+<span class="n">Shift</span><span class="o">+</span><span class="n">z</span> <span class="o">-</span> <span class="n">Open</span> <span class="n">stardict</span>
 
-F1 - VIM help, default
-F2 - Open/Close Winmanager
-F3 - Open/Close NERDTree
-F4 - Open/Close Tagbar
-F5 - Open/Close Minibufexplorer
-F6 - Open/Close gundo
-F10 - Use calendar
-F11 - Full screen the terminal, default
-F12 - Open Browser for markdown file
+<span class="n">F1</span> <span class="o">-</span> <span class="n">VIM</span> <span class="n">help</span><span class="p">,</span> <span class="n">default</span>
+<span class="n">F2</span> <span class="o">-</span> <span class="n">Open</span><span class="o">/</span><span class="n">Close</span> <span class="n">Winmanager</span>
+<span class="n">F3</span> <span class="o">-</span> <span class="n">Open</span><span class="o">/</span><span class="n">Close</span> <span class="n">NERDTree</span>
+<span class="n">F4</span> <span class="o">-</span> <span class="n">Open</span><span class="o">/</span><span class="n">Close</span> <span class="n">Tagbar</span>
+<span class="n">F5</span> <span class="o">-</span> <span class="n">Open</span><span class="o">/</span><span class="n">Close</span> <span class="n">Minibufexplorer</span>
+<span class="n">F6</span> <span class="o">-</span> <span class="n">Open</span><span class="o">/</span><span class="n">Close</span> <span class="n">gundo</span>
+<span class="n">F10</span> <span class="o">-</span> <span class="n">Use</span> <span class="n">calendar</span>
+<span class="n">F11</span> <span class="o">-</span> <span class="n">Full</span> <span class="n">screen</span> <span class="n">the</span> <span class="n">terminal</span><span class="p">,</span> <span class="n">default</span>
+<span class="n">F12</span> <span class="o">-</span> <span class="n">Open</span> <span class="n">Browser</span> <span class="k">for</span> <span class="n">markdown</span> <span class="n">file</span>
 </pre></div>
 </div>
 <p>CtrlP:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;leader&gt;p - find file in current and sub folder.
-&lt;leader&gt;f - find file in MRU.
-&lt;leader&gt;c - clear MRU cache.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">p</span> <span class="o">-</span> <span class="n">find</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">current</span> <span class="ow">and</span> <span class="n">sub</span> <span class="n">folder</span><span class="o">.</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">f</span> <span class="o">-</span> <span class="n">find</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">MRU</span><span class="o">.</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">c</span> <span class="o">-</span> <span class="n">clear</span> <span class="n">MRU</span> <span class="n">cache</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>YCM:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;leader&gt;ya - force compile And diagnostics
-&lt;leader&gt;yb - goto definition
-&lt;leader&gt;yc - goto declaration
-&lt;leader&gt;yd - goto definition else declaration
-&lt;leader&gt;ye - detailed djagnostics
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">ya</span> <span class="o">-</span> <span class="n">force</span> <span class="nb">compile</span> <span class="n">And</span> <span class="n">diagnostics</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">yb</span> <span class="o">-</span> <span class="n">goto</span> <span class="n">definition</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">yc</span> <span class="o">-</span> <span class="n">goto</span> <span class="n">declaration</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">yd</span> <span class="o">-</span> <span class="n">goto</span> <span class="n">definition</span> <span class="k">else</span> <span class="n">declaration</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">ye</span> <span class="o">-</span> <span class="n">detailed</span> <span class="n">djagnostics</span>
 </pre></div>
 </div>
 <p>Ultisnips+vim-snippets:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;leader&gt;&lt;tab&gt; - expand trigger
-&lt;leader&gt;&lt;c-tab&gt; - jump forward trigger
-&lt;leader&gt;&lt;s-tab&gt; - jump backward trigger
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;&lt;</span><span class="n">tab</span><span class="o">&gt;</span> <span class="o">-</span> <span class="n">expand</span> <span class="n">trigger</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;&lt;</span><span class="n">c</span><span class="o">-</span><span class="n">tab</span><span class="o">&gt;</span> <span class="o">-</span> <span class="n">jump</span> <span class="n">forward</span> <span class="n">trigger</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;&lt;</span><span class="n">s</span><span class="o">-</span><span class="n">tab</span><span class="o">&gt;</span> <span class="o">-</span> <span class="n">jump</span> <span class="n">backward</span> <span class="n">trigger</span>
 </pre></div>
 </div>
 <p>For C/C++:</p>
-<div class="highlight-python"><div class="highlight"><pre>F7 - For C/C++ run make clean.
-F8 - For C/C++ close quickfix windows.
-F9 - For C/C++ run make.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">F7</span> <span class="o">-</span> <span class="n">For</span> <span class="n">C</span><span class="o">/</span><span class="n">C</span><span class="o">++</span> <span class="n">run</span> <span class="n">make</span> <span class="n">clean</span><span class="o">.</span>
+<span class="n">F8</span> <span class="o">-</span> <span class="n">For</span> <span class="n">C</span><span class="o">/</span><span class="n">C</span><span class="o">++</span> <span class="n">close</span> <span class="n">quickfix</span> <span class="n">windows</span><span class="o">.</span>
+<span class="n">F9</span> <span class="o">-</span> <span class="n">For</span> <span class="n">C</span><span class="o">/</span><span class="n">C</span><span class="o">++</span> <span class="n">run</span> <span class="n">make</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>For Java:</p>
-<div class="highlight-python"><div class="highlight"><pre>F7 - To add all missing imports.
-F8 - To remove all missing imports.
-F9 - For java run javac and java.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">F7</span> <span class="o">-</span> <span class="n">To</span> <span class="n">add</span> <span class="nb">all</span> <span class="n">missing</span> <span class="n">imports</span><span class="o">.</span>
+<span class="n">F8</span> <span class="o">-</span> <span class="n">To</span> <span class="n">remove</span> <span class="nb">all</span> <span class="n">missing</span> <span class="n">imports</span><span class="o">.</span>
+<span class="n">F9</span> <span class="o">-</span> <span class="n">For</span> <span class="n">java</span> <span class="n">run</span> <span class="n">javac</span> <span class="ow">and</span> <span class="n">java</span><span class="o">.</span>
 </pre></div>
 </div>
 <p>For Python:</p>
-<div class="highlight-python"><div class="highlight"><pre>F7 - run autopep8 by pymode.
-F8 - run &#39;pyflakes&#39;, &#39;pep8&#39;, &#39;mccabe&#39;, &#39;pep257&#39; by pymode.
-F9 - run script by pymode.
-&lt;leader&gt;b - create breakpoint by pymode.
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">F7</span> <span class="o">-</span> <span class="n">run</span> <span class="n">autopep8</span> <span class="n">by</span> <span class="n">pymode</span><span class="o">.</span>
+<span class="n">F8</span> <span class="o">-</span> <span class="n">run</span> <span class="s1">&#39;pyflakes&#39;</span><span class="p">,</span> <span class="s1">&#39;pep8&#39;</span><span class="p">,</span> <span class="s1">&#39;mccabe&#39;</span><span class="p">,</span> <span class="s1">&#39;pep257&#39;</span> <span class="n">by</span> <span class="n">pymode</span><span class="o">.</span>
+<span class="n">F9</span> <span class="o">-</span> <span class="n">run</span> <span class="n">script</span> <span class="n">by</span> <span class="n">pymode</span><span class="o">.</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">b</span> <span class="o">-</span> <span class="n">create</span> <span class="n">breakpoint</span> <span class="n">by</span> <span class="n">pymode</span><span class="o">.</span>
 
-&lt;leader&gt;k - show pydoc by jedi
-&lt;leader&gt;d - goto definition by jedi
-&lt;leader&gt;g - goto assignment by jedi
-&lt;leader&gt;r - rename by jedi
-&lt;leader&gt;n - show usage of a name by jedi
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">k</span> <span class="o">-</span> <span class="n">show</span> <span class="n">pydoc</span> <span class="n">by</span> <span class="n">jedi</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">d</span> <span class="o">-</span> <span class="n">goto</span> <span class="n">definition</span> <span class="n">by</span> <span class="n">jedi</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">g</span> <span class="o">-</span> <span class="n">goto</span> <span class="n">assignment</span> <span class="n">by</span> <span class="n">jedi</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">r</span> <span class="o">-</span> <span class="n">rename</span> <span class="n">by</span> <span class="n">jedi</span>
+<span class="o">&lt;</span><span class="n">leader</span><span class="o">&gt;</span><span class="n">n</span> <span class="o">-</span> <span class="n">show</span> <span class="n">usage</span> <span class="n">of</span> <span class="n">a</span> <span class="n">name</span> <span class="n">by</span> <span class="n">jedi</span>
 </pre></div>
 </div>
 <p>For html/css:</p>
-<div class="highlight-python"><div class="highlight"><pre>&lt;C-y&gt;, - insert html:5 to trigger emmet for html/css
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">y</span><span class="o">&gt;</span><span class="p">,</span> <span class="o">-</span> <span class="n">insert</span> <span class="n">html</span><span class="p">:</span><span class="mi">5</span> <span class="n">to</span> <span class="n">trigger</span> <span class="n">emmet</span> <span class="k">for</span> <span class="n">html</span><span class="o">/</span><span class="n">css</span>
 
-&lt;C-e&gt; - tag or tag#name to trigger sparkup for html
+<span class="o">&lt;</span><span class="n">C</span><span class="o">-</span><span class="n">e</span><span class="o">&gt;</span> <span class="o">-</span> <span class="n">tag</span> <span class="ow">or</span> <span class="n">tag</span><span class="c1">#name to trigger sparkup for html</span>
 </pre></div>
 </div>
 </div>
@@ -158,16 +160,20 @@ F9 - run script by pymode.
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">pydevops</a></h1>
+<h1 class="logo"><a href="index.html">dotfiles</a></h1>
+
 
 
 
 
 
 <p>
-<iframe src="https://ghbtns.com/github-btn.html?user=crazy-canux&repo=pydevops&type=watch&count=true&size=large"
+<iframe src="https://ghbtns.com/github-btn.html?user=crazy-canux&repo=dotfiles&type=watch&count=true&size=large&v=2"
   allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
 </p>
+
+
+
 
 
 <h3>Navigation</h3>
@@ -176,7 +182,7 @@ F9 - run script by pymode.
 <li class="toctree-l1"><a class="reference internal" href="zsh.html">ZSH</a></li>
 <li class="toctree-l1"><a class="reference internal" href="git.html">GIT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tmux.html">TMUX</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">VIM</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">VIM</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#install">Install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-use">How to use</a></li>
 </ul>
@@ -198,14 +204,11 @@ F9 - run script by pymode.
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -216,12 +219,12 @@ F9 - run script by pymode.
       &copy;2016, <a href="http://canuxcheng.com">Canux CHENG</a>.
       
       |
-      <a href="_sources/vim.txt"
+      <a href="_sources/vim.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
     
-    <a href="https://github.com/crazy-canux/pydevops" class="github">
+    <a href="https://github.com/crazy-canux/dotfiles" class="github">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
     </a>
     

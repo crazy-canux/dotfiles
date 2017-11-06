@@ -23,7 +23,7 @@ Install vim::
 
 Use vundle to manage plugins(recommend)::
 
-    echo "source ~/pydevops/etc/vim/vundle.vim" > ~/.vimrc
+    echo "source ~/dotfiles/etc/vim/vundle.vim" > ~/.vimrc
     rm -rf ~/.vim
     mkdir -p ~/.vim/plugins
     git clone https://github.com/VundleVim/Vundle.vim ~/.vim/plugins/
@@ -33,7 +33,7 @@ Use vundle to manage plugins(recommend)::
 
 Use pathogen to manage plugins::
 
-    echo "source ~/pydevops/etc/vim/pathogen.vim" > ~/.vimrc
+    echo "source ~/dotfiles/etc/vim/pathogen.vim" > ~/.vimrc
     rm -rf ~/.vim/bundle
     mkdir -p ~/.vim/bundle
     git clone <plugin-url> ~/.vim/bundle/<plugin-name>

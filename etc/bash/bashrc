@@ -1,7 +1,7 @@
 ###############################################################################
 # Canux's bash
 # canuxcheng@gmail.com
-# https://github.com/crazy-canux/pydevops
+# https://github.com/crazy-canux/dotfiles
 ###############################################################################
 
 # Original configration when you install the OS.
@@ -126,10 +126,10 @@ fi
 ###############################################################################
 
 # For virtuanenv and virtualenvwrapper
-#export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-#export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-#export WORKON_HOME=~/.virtualenvs
-#source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
 
 # Put some completions bash script file in ~/.bash.d
 if [[ -d ~/.bash.d ]]; then

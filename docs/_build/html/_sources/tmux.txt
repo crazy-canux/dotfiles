@@ -20,7 +20,7 @@ Install Tmux::
 
 Configuration::
 
-    echo "source ~/pydevops/etc/tmux/tmux.conf" > ~/.tmux.conf
+    echo "source ~/dotfiles/etc/tmux/tmux.conf" > ~/.tmux.conf
 
 Install TPM and tmux plugins(recommend)::
 

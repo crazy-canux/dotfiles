@@ -33,7 +33,7 @@ or::
 Configuration::
 
     chsh -s $(which zsh)
-    echo "source ~/myCode/pydevops/etc/zsh/zshrc" > ~/.zshrc
+    echo "source ~/myCode/dotfiles/etc/zsh/zshrc" > ~/.zshrc
 
 Customize your oh-my-ZSH
 ------------------------
@@ -51,7 +51,7 @@ Pick one theme in ~/.zsh.d/oh-my-zsh/themes::
 
     ZSH_THEME="random"
 
-You can manage other zsh themes with oh-my-zsh, just modify ~/pydevops/etc/zsh/zshrc::
+You can manage other zsh themes with oh-my-zsh, just modify ~/dotfiles/etc/zsh/zshrc::
 
     git clone <theme-url> ~/.zsh.d/oh-my-zsh/themes/<theme-name>
     ZSH_THEME="<theme-name>/<theme-name>"
@@ -63,7 +63,7 @@ Pick plugins in ~/.zsh.d/oh-my-zsh/plugins::
 
     plugins+=()
 
-You can manage other zsh plugins with oh-my-zsh, just modify ~/pydevops/etc/zsh/zshrc::
+You can manage other zsh plugins with oh-my-zsh, just modify ~/dotfiles/etc/zsh/zshrc::
 
     git clone <plugin-url> ~/.zsh.d/oh-my-zsh/custom/plugins/<plugin-name>
     plugins+=(<plugin-name>)

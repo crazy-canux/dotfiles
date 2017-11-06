@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# pydevops documentation build configuration file, created by
+# dotfiles documentation build configuration file, created by
 # sphinx-quickstart on Tue Nov  1 09:42:26 2016.
 #
 # This file is execfile()d with the current directory set to its
@@ -20,7 +20,8 @@ import os
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('..'))
-from pydevops import __version__
+#from dotfiles import __version__
+__version__ = '1.0.0'
 
 
 # -- General configuration ------------------------------------------------
@@ -52,7 +53,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'pydevops'
+project = u'dotfiles'
 copyright = u'2016, <a href="http://canuxcheng.com">Canux CHENG</a>'
 author = u'Canux CHENG'
 
@@ -121,7 +122,7 @@ html_theme = 'alabaster'
 # documentation.
 html_theme_options = {
     'github_user': 'crazy-canux',
-    'github_repo': 'pydevops',
+    'github_repo': 'dotfiles',
     'github_banner': True,
     'show_powered_by': False,
     'show_related': True,
@@ -221,7 +222,7 @@ html_search_language = 'en'
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'pydevopsdoc'
+htmlhelp_basename = 'dotfilesdoc'
 
 # -- Options for LaTeX output ---------------------------------------------
 
@@ -243,7 +244,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'pydevops.tex', u'pydevops Documentation',
+  (master_doc, 'dotfiles.tex', u'dotfiles Documentation',
    u'Canux CHENG', 'manual'),
 ]
 
@@ -273,7 +274,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'pydevops', u'pydevops Documentation',
+    (master_doc, 'dotfiles', u'dotfiles Documentation',
      [author], 1)
 ]
 
@@ -287,8 +288,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'pydevops', u'pydevops Documentation',
-   author, 'pydevops', 'One line description of project.',
+  (master_doc, 'dotfiles', u'dotfiles Documentation',
+   author, 'dotfiles', 'One line description of project.',
    'Miscellaneous'),
 ]
 

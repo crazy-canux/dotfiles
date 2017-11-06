@@ -1,37 +1,39 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
-    <title>GIT &mdash; pydevops 0.0.1 documentation</title>
-    
+    <title>GIT &#8212; dotfiles 1.0.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.0.1',
+        VERSION:     '1.0.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="pydevops 0.0.1 documentation" href="index.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="TMUX" href="tmux.html" />
     <link rel="prev" title="ZSH" href="zsh.html" />
    
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
-  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
 
   </head>
-  <body role="document">  
+  <body>
+  
 
     <div class="document">
       <div class="documentwrapper">
@@ -47,23 +49,23 @@
 <div class="section" id="install">
 <h2>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h2>
 <p>Install git:</p>
-<div class="highlight-python"><div class="highlight"><pre>sudo apt-get install git meld
-sudo yum install git meld
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sudo</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="n">git</span> <span class="n">meld</span>
+<span class="n">sudo</span> <span class="n">yum</span> <span class="n">install</span> <span class="n">git</span> <span class="n">meld</span>
 </pre></div>
 </div>
 <p>Configuration ~/.gitconfig:</p>
-<div class="highlight-python"><div class="highlight"><pre>[include]
-    path = ~/pydevops/etc/git/gitcofig
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">include</span><span class="p">]</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="o">~/</span><span class="n">dotfiles</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">gitcofig</span>
 </pre></div>
 </div>
 <div class="section" id="git-configuration">
 <h3>Git configuration<a class="headerlink" href="#git-configuration" title="Permalink to this headline">¶</a></h3>
-<p>/etc/gitconfig,use &#8220;git config &#8211;system&#8221;.</p>
-<p>~/.gitconfig,use &#8220;git config &#8211;global&#8221;.</p>
-<p>.git/config,use &#8220;git config &#8211;local&#8221;.</p>
+<p>/etc/gitconfig,use “git config –system”.</p>
+<p>~/.gitconfig,use “git config –global”.</p>
+<p>.git/config,use “git config –local”.</p>
 <p>Add your global configuration:</p>
-<div class="highlight-python"><div class="highlight"><pre>git config --global user.name &quot;yourname&quot;
-git config --global user.email &quot;youremail&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">name</span> <span class="s2">&quot;yourname&quot;</span>
+<span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">user</span><span class="o">.</span><span class="n">email</span> <span class="s2">&quot;youremail&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -71,11 +73,11 @@ git config --global user.email &quot;youremail&quot;
 <div class="section" id="set-proxy">
 <h2>Set proxy<a class="headerlink" href="#set-proxy" title="Permalink to this headline">¶</a></h2>
 <p>Set your proxy for http/https protocol:</p>
-<div class="highlight-python"><div class="highlight"><pre>git config --global http.proxy &quot;yourproxy_for_http/https&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">http</span><span class="o">.</span><span class="n">proxy</span> <span class="s2">&quot;yourproxy_for_http/https&quot;</span>
 </pre></div>
 </div>
 <p>Set your proxy for git protocol:</p>
-<div class="highlight-python"><div class="highlight"><pre>git config --global core.gitproxy &quot;yourproxy_for_git&quot;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="k">global</span> <span class="n">core</span><span class="o">.</span><span class="n">gitproxy</span> <span class="s2">&quot;yourproxy_for_git&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -87,23 +89,27 @@ git config --global user.email &quot;youremail&quot;
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
-<h1 class="logo"><a href="index.html">pydevops</a></h1>
+<h1 class="logo"><a href="index.html">dotfiles</a></h1>
+
 
 
 
 
 
 <p>
-<iframe src="https://ghbtns.com/github-btn.html?user=crazy-canux&repo=pydevops&type=watch&count=true&size=large"
+<iframe src="https://ghbtns.com/github-btn.html?user=crazy-canux&repo=dotfiles&type=watch&count=true&size=large&v=2"
   allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
 </p>
+
+
+
 
 
 <h3>Navigation</h3>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="bash.html">BASH</a></li>
 <li class="toctree-l1"><a class="reference internal" href="zsh.html">ZSH</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="">GIT</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">GIT</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#install">Install</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#set-proxy">Set proxy</a></li>
 </ul>
@@ -127,14 +133,11 @@ git config --global user.email &quot;youremail&quot;
 <div id="searchbox" style="display: none" role="search">
   <h3>Quick search</h3>
     <form class="search" action="search.html" method="get">
-      <input type="text" name="q" />
-      <input type="submit" value="Go" />
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
       <input type="hidden" name="check_keywords" value="yes" />
       <input type="hidden" name="area" value="default" />
     </form>
-    <p class="searchtip" style="font-size: 90%">
-    Enter search terms or a module, class or function name.
-    </p>
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script>
         </div>
@@ -145,12 +148,12 @@ git config --global user.email &quot;youremail&quot;
       &copy;2016, <a href="http://canuxcheng.com">Canux CHENG</a>.
       
       |
-      <a href="_sources/git.txt"
+      <a href="_sources/git.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
     
-    <a href="https://github.com/crazy-canux/pydevops" class="github">
+    <a href="https://github.com/crazy-canux/dotfiles" class="github">
         <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
     </a>
     
