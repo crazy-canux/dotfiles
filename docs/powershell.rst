@@ -9,16 +9,20 @@ Include:
 
 2. oh-my-posh
 
+3. post-git
+
 Install
 -------
 
 Install terminal::
 
-Configuration::
-
 Install oh-my-posh::
 
-Configuration::
+<https://github.com/JanDeDobbeleer/oh-my-posh>
+
+Install post-git::
+
+<https://github.com/dahlbyk/posh-git>
 
 Customize your BASH-IT
 ----------------------
