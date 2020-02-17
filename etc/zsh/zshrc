@@ -124,6 +124,8 @@ export ZSH=$HOME/.zsh.d/oh-my-zsh
 # User configuration
 ###############################################################################
 
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+
 # For virtuanenv and virtualenvwrapper
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
@@ -229,7 +231,8 @@ plugins+=(colored-man-pages colorize commnad-not-found copydir copyfile cp commo
 # https://github.com/bower/bower
 
 # Tools
-plugins+=(last-working-dir autojump z fasd git-extras gitfast git-flow git-flow-avh github git-hubflow repo girignore git-prompt git-remote-branch vi-mode zsh_reload zsh-navigation-tools)
+plugins+=(last-working-dir autojump z fasd repo vi-mode zsh_reload zsh-navigation-tools)
+#plugins+=(git-extras gitfast git-flow git-flow-avh github git-hubflow git-promt girignore git-remote-branch)
 
 # Database
 plugins+=(mysql-macports postgres)

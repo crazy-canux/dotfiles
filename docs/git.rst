@@ -7,6 +7,8 @@ Include:
 
 1. git
 
+2. oh-my-git
+
 Install
 -------
 
@@ -19,6 +21,10 @@ Configuration ~/.gitconfig::
 
     [include]
         path = ~/dotfiles/etc/git/gitcofig
+
+Install oh-my-git::
+
+<https://github.com/arialdomartini/oh-my-git>
 
 Git configuration
 ^^^^^^^^^^^^^^^^^

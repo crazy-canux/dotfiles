@@ -9,6 +9,7 @@ Include:
 
 2. tpm
 
+3. oh-my-tmux
 
 Install
 -------
@@ -37,6 +38,10 @@ Install plugin by hand::
     mkdir -p ~/.tmux/bundle
     git clone <plugin-url>
     source-file ~/.tmux.conf # In tmux run this
+
+Install oh-my-tmux::
+
+<https://github.com/gpakosz/.tmux>
 
 How to use
 ----------
