@@ -426,6 +426,8 @@ let g:pymode_rope_change_signature_bind = '<C-c>rs'
 """>>> go
 
 """"""""""config vim-go""""""""""
+" Need install tools to $GOPATH/bin:
+" :GoInstallBinaries
 
 """>>> ruby and rails
 
