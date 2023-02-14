@@ -1,307 +1,228 @@
-###############################################################################
-# canuxcheng@gmail.com
-# https://github.com/crazy-canux/dotfiles
-###############################################################################
-
-# Original configuration for zsh.
-
-# Set up the prompt
-autoload -Uz promptinit
-promptinit
-prompt adam1
-
-setopt histignorealldups sharehistory
-
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
-
-# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
-HISTSIZE=1000
-SAVEHIST=1000
-HISTFILE=~/.zsh_history
-
-# Use modern completion system
-autoload -Uz compinit
-compinit
-
-zstyle ':completion:*' auto-description 'specify: %d'
-zstyle ':completion:*' completer _expand _complete _correct _approximate
-zstyle ':completion:*' format 'Completing %d'
-zstyle ':completion:*' group-name ''
-zstyle ':completion:*' menu select=2
-eval "$(dircolors -b)"
-zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
-zstyle ':completion:*' list-colors ''
-zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
-zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
-zstyle ':completion:*' menu select=long
-zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
-zstyle ':completion:*' use-compctl false
-zstyle ':completion:*' verbose true
-
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-
-###############################################################################
-# Compatible for bash
-###############################################################################
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
 #
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# Completions definitions.
-# Put some bash script file in ~/.bash.d
-if [[ -d ~/.bash.d ]]; then
-    for i in ~/.bash.d/; do
-        if [[ -r $i ]]; then
-            . "$i"
-        fi
-    done
-    unset i
-fi
+# If you come from bash you might have to change your $PATH.
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-#if [ -f /usr/share/bash-completion/bash_completion ]; then
-#    . /usr/share/bash-completion/bash_completion
-#elif [ -f /etc/bash_completion ]; then
-#    . /etc/bash_completion
-#fi
-
-###############################################################################
-# oh-my-zsh
-# export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(curl -fsSL
-# https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-###############################################################################
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.zsh.d/oh-my-zsh
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-###############################################################################
-# User configuration
-###############################################################################
-
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-
-# For virtuanenv and virtualenvwrapper
-#export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python
-export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-export WORKON_HOME=~/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-
-# For go
-export GOROOT=/usr/local/go
-export GOPATH=$HOME/go
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
-
-# PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-# Put your shell command in ~/bin
-if [[ -d ~/bin ]]; then
-    PATH=~/bin:$PATH
-fi
-
-CHENG=~/myCode/shell
-if [[ -d $CHENG ]]; then
-    PATH=$CHENG:$PATH
-fi
-
-export MANPATH=/usr/share/man:/usr/local/man:$MANPATH
-
-# Set the term
-export TERM="xterm-256color"
-
-# You may need to manually set your language environment
-export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='vi'
-else
-    export EDITOR='vi'
-fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-#export SSH_KEY_PATH="~/.ssh/id_rsa.pub"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.zsh.d/.oh-my-zsh"
-# Set the term
-
-# Use cman to check the chinese manual
-alias cman='man -M /usr/share/man/zh_CN'
-
-# pip install thefuck
-# eval $(thefuck --alias)
-
-# EDITOR default use vi ad editor
-alias vi=vim
-
-# tar
-alias -s tar='tar xvf'
-
-# gzip gunzip
-alias -s gz='gunzip'
-alias -s tgz='tar -xzvf'
-alias -s tar.gz='tar -xzvf'
-
-# compress uncompress
-alias -s z='uncompress'
-alias -s tar.z='tar -xZvf'
-
-# bzip2 bunzip2
-alias -s bz2='bunzip2'
-alias -s tar.bz2='tar -xjvf'
-
-# xz unxz
-alias -s xz='unxz'
-alias -s tar.xz='tar -xJvf'
-
-# zip unzip
-alias -s zip='unzip'
-
-alias -s md=vim
-alias -s rst=vim
-alias -s cfg=vim
-
-###############################################################################
-# Set name of the theme to load.
-# Look in ~/.zsh.d/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-###############################################################################
-#ZSH_THEME="random"
-#ZSH_THEME="robbyrussell"
-#ZSH_THEME="ys"
-
-###############################################################################
-# Which plugins would you like to load?
-# Plugins can be found in ~/.zsh.d/.oh-my-zsh/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-###############################################################################
-# Productivity
-plugins+=(colored-man-pages colorize commnad-not-found copydir copyfile cp common-aliases dircycle dirpersist dirhistory encode64 extract history last-working-dir rsync safe-paste supervisor bower urltools web-search sudo docker gnu-utils vagrant boot2docker docker-compose man apache2-macports terminalapp)
-# https://github.com/Supervisor/supervisor
-# https://github.com/bower/bower
-
-# Tools
-plugins+=(last-working-dir autojump z fasd repo vi-mode zsh_reload zsh-navigation-tools)
-#plugins+=(git-extras gitfast git-flow git-flow-avh github git-hubflow git-promt girignore git-remote-branch)
-
-# Database
-plugins+=(mysql-macports postgres)
-
-# Java
-plugins+=(ant mvn spring gradle)
-# https://github.com/gradle/gradle
-# https://github.com/spring-projects/spring-boot
-
-# Python
-plugins+=(httpie celery django fabric pip python pyenv pep8 virtualenv virtualenvwrapper autopep8 pylint)
-# https://github.com/celery/celery
-# https://github.com/jkbrzt/httpie
-
-# Distro-related
-plugins+=(debian fedora suse osx yum systemd systemadmin)
+export ZSH="$HOME/.oh-my-zsh"
 
 ###############################################################################
 # Extern themes for oh-my-zsh
 # git clone <theme-url> ~/.zsh.d/oh-my-zsh/themes/<theme-name>
 ###############################################################################
-# 801 https://github.com/caiogondim/bullet-train-oh-my-zsh-theme.git
-#ZSH_THEME="bullet-train-oh-my-zsh-theme/bullet-train"
-# 645 https://github.com/bhilburn/powerlevel9k.git
-ZSH_THEME="powerlevel9k/powerlevel9k"
-POWERLEVEL9K_MODE='awesome-fontconfig'
-POWERLEVEL9K_OS_ICON_BACKGROUND="white"
-POWERLEVEL9K_OS_ICON_FOREGROUND="blue"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(os_icon context dir vcs status)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(time)
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-local user_symbol="$"
-if [[ $(print -P "%#") =~ "#" ]]; then
-    user_symbol = "#"
-fi
-POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="%{%B%F{yellow}%K{blue}%} $user_symbol%{%b%f%k%F{blue}%} %{%f%}"
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
-POWERLEVEL9K_SHOW_CHANGESET=true
-POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
-POWERLEVEL9K_TIME_FORMAT="%D{%H:%M:%S \uE868  %d.%m.%y}"
-# 506 https://github.com/oskarkrawczyk/honukai-iterm-zsh.git
-#ZSH_THEME="honukai-iterm-zsh/honukai"
-# https://github.com/mashaal/wild-cherry.git(Waiting for support oh-my-zsh)
-#ZSH_THEME="wild-cherry/zsh/wild-cherry"
+# https://github.com/romkatv/powerlevel10k
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Set name of the theme to load --- if set to "random", it will
+
+# load a random theme each time oh-my-zsh is loaded, in which case,
+
+# to know which specific one was loaded, run: echo $RANDOM_THEME
+
+# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
+
+#ZSH_THEME="robbyrussell"
+
+#ZSH_THEME="agnoster"
+
+# Set list of themes to pick from when loading at random
+
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+
+# a theme from this variable instead of looking in $ZSH/themes/
+
+# If set to an empty array, this variable will have no effect.
+
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# Uncomment the following line to use case-sensitive completion.
+
+# CASE_SENSITIVE="true"
+
+# Uncomment the following line to use hyphen-insensitive completion.
+
+# Case-sensitive completion must be off. _ and - will be interchangeable.
+
+# HYPHEN_INSENSITIVE="true"
+
+# Uncomment one of the following lines to change the auto-update behavior
+
+# zstyle ':omz:update' mode disabled  # disable automatic updates
+
+# zstyle ':omz:update' mode auto      # update automatically without asking
+
+# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
+
+# Uncomment the following line to change how often to auto-update (in days).
+
+# zstyle ':omz:update' frequency 13
+
+# Uncomment the following line if pasting URLs and other text is messed up.
+
+# DISABLE_MAGIC_FUNCTIONS="true"
+
+# Uncomment the following line to disable colors in ls.
+
+# DISABLE_LS_COLORS="true"
+
+# Uncomment the following line to disable auto-setting terminal title.
+
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment the following line to enable command auto-correction.
+
+# ENABLE_CORRECTION="true"
+
+# Uncomment the following line to display red dots whilst waiting for completion.
+
+# You can also set it to another string to have that shown instead of the default red dots.
+
+# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
+
+# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
+
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment the following line if you want to disable marking untracked files
+
+# under VCS as dirty. This makes repository status check for large repositories
+
+# much, much faster.
+
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Uncomment the following line if you want to change the command execution time
+
+# stamp shown in the history command output.
+
+# You can set one of the optional three formats:
+
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+
+# or set a custom format using the strftime function format specifications,
+
+# see 'man strftime' for details.
+
+# HIST_STAMPS="mm/dd/yyyy"
+
+# Would you like to use another custom folder than $ZSH/custom?
+
+# ZSH_CUSTOM=/path/to/new-custom-folder
+
+# Which plugins would you like to load?
+
+# Standard plugins can be found in $ZSH/plugins/
+
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+
+# Example format: plugins=(rails git textmate ruby lighthouse)
+
+# Add wisely, as too many plugins slow down shell startup.
+
+plugins=(ubuntu colorize ag autojump man command-not-found thefuck tmux vi-mode vim-interaction)
+
+plugins+=(rsync cp copypath copyfile copybuffer)
+
+plugins+=(git git-flow git-lfs git-extras gitfast gitignore)
+
+plugins+=(operator-sdk terraform helm aws jfrog kubectl kubectx docker docker-compose)
+
+plugins+=(npm node nvm golang pep8 autopep8 pip pipenv)
+
+plugins+=(redis-cli celery vault vscode)
 
 ###############################################################################
+
 # Extern plugins for oh-my-zsh
+
 # git clone <plugin-url> ~/.zsh.d/oh-my-zsh/custom/plugins/<plugin-name>
+
 ###############################################################################
+
 # https://github.com/zsh-users/zsh-completions
-plugins+=(zsh-completions)
-autoload -U compinit && compinit
+
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # https://github.com/zsh-users/zsh-autosuggestions
+
 plugins+=(zsh-autosuggestions)
 
 # https://github.com/zsh-users/zsh-syntax-highlighting
+
 plugins+=(zsh-syntax-highlighting)
 
 ###############################################################################
-# END
-# Source oh-my-zsh
+
 source $ZSH/oh-my-zsh.sh
-###############################################################################
+
+# User configuration
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+
+# export LANG=en_US.UTF-8
+
+# Preferred editor for local and remote sessions
+
+# if [[ -n $SSH_CONNECTION ]]; then
+
+#   export EDITOR='vim'
+
+# else
+
+#   export EDITOR='mvim'
+
+# fi
+
+# Compilation flags
+
+# export ARCHFLAGS="-arch x86_64"
+
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+
+# For a full list of active aliases, run `alias`.
+
+#
+
+# Example aliases
+
+# alias zshconfig="mate ~/.zshrc"
+
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# golang
+export PATH=$PATH:/usr/local/go/bin
+
+# nvm
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# kubectl, krew
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+# /proc/self/fd/12:type:12631: bad option: -t
+#source <(kubectl completion bash)
+
+# AWS
+export AWS_PROFILE=dev
+
+# terraform
+complete -C /usr/bin/terraform terraform
+
+# vault
+export VAULT_ADDR=https://eu-west-1.vault.aws.arm.com
+complete -C /usr/bin/vault vault
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

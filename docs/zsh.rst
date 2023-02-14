@@ -19,20 +19,14 @@ Install zsh::
 
 Install oh-my-zsh::
 
-    export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)""
+    sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+    sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
-or::
-
-    export ZSH="$HOME/.zsh.d/oh-my-zsh"; sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-
-or::
-
-    git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.zsh.d/oh-my-zsh
-    cp ~/.zsh.d/oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
-
-Configuration::
+set zsh as default shell
 
     chsh -s $(which zsh)
+
     echo "source ~/myCode/dotfiles/etc/zsh/zshrc" > ~/.zshrc
 
 Customize your oh-my-ZSH
@@ -56,6 +50,8 @@ You can manage other zsh themes with oh-my-zsh, just modify ~/dotfiles/etc/zsh/z
     git clone <theme-url> ~/.zsh.d/oh-my-zsh/themes/<theme-name>
     ZSH_THEME="<theme-name>/<theme-name>"
 
+<https://github.com/romkatv/powerlevel10k>
+
 Customize your plugins
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -67,6 +63,12 @@ You can manage other zsh plugins with oh-my-zsh, just modify ~/dotfiles/etc/zsh/
 
     git clone <plugin-url> ~/.zsh.d/oh-my-zsh/custom/plugins/<plugin-name>
     plugins+=(<plugin-name>)
+
+<https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md>
+
+<https://github.com/zsh-users/zsh-completions>
+
+<https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md>
 
 Customize your ZSH
 ------------------
