@@ -144,18 +144,13 @@ plugins+=(redis-cli celery vault vscode)
 # git clone <plugin-url> ~/.zsh.d/oh-my-zsh/custom/plugins/<plugin-name>
 
 ###############################################################################
-
 # https://github.com/zsh-users/zsh-completions
-
-fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
-
 # https://github.com/zsh-users/zsh-autosuggestions
-
-plugins+=(zsh-autosuggestions)
-
 # https://github.com/zsh-users/zsh-syntax-highlighting
 
-plugins+=(zsh-syntax-highlighting)
+plugins+=(zsh-syntax-highlighting zsh-autosuggestions)
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+autoload -U compinit && compinit
 
 ###############################################################################
 
